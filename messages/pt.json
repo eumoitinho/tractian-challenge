@@ -1,0 +1,260 @@
+{
+  "metadata": {
+    "title": "Tractian para Gerentes Industriais | TRACTIAN",
+    "description": "Veja riscos, custos e desempenho em tempo real. A Tractian entrega a visibilidade financeira e operacional que sustenta cada decisão e mantém a planta no ritmo certo."
+  },
+  "nav": {
+    "solutions": "Soluções",
+    "whoWeServe": "Indústrias",
+    "resources": "Recursos",
+    "company": "Sobre",
+    "pricing": "Planos",
+    "login": "Login",
+    "getDemo": "Demonstração"
+  },
+  "hero": {
+    "label": "OPERAÇÃO CONTÍNUA, ROI COMPROVADO",
+    "title": "Para o Gerente Industrial que decide com dados, sem adivinhação",
+    "subtitle": "Veja riscos, custos e desempenho em tempo real. A Tractian entrega a visibilidade financeira e operacional que sustenta cada decisão e mantém a planta no ritmo certo.",
+    "cta": "Solicitar Demo",
+    "quote": "\"A solução da Tractian nos proporciona maior visibilidade e confiabilidade operacional, além de contribuir significativamente para o aumento da disponibilidade dos ativos e a assertividade no planejamento.\"",
+    "quoteAuthor": "Jari S.",
+    "quoteRole": "Diretor Agroindustrial",
+    "quoteCompany": "UISA",
+    "heroImage": "https://tractian-webpage.s3.us-east-1.amazonaws.com/website/pages/who-we-serve/plant-manager/pt/header-image.png?q=75&w=3840",
+    "heroImageMobile": "https://tractian-webpage.s3.us-east-1.amazonaws.com/website/pages/who-we-serve/plant-manager/pt/header-image-mobile.png?q=75&w=3840"
+  },
+  "whyChoose": {
+    "label": "POR QUE GERENTES INDUSTRIAIS ESCOLHEM A TRACTIAN",
+    "title": "Visibilidade total, zero sobrecarga",
+    "tabs": {
+      "roi": {
+        "title": "Dados precisos comprovam cada centavo de ROI",
+        "content": "Mostre à liderança o valor real do seu programa de manutenção com relatórios integrados, rastreamento de custos e métricas de downtime que comprovam seu impacto em reais e horas economizadas."
+      },
+      "downtime": {
+        "title": "Antecipe falhas críticas, evite paradas caras",
+        "content": "Sensores com IA detectam sinais precoces de falha para que você possa planejar reparos nos seus termos — não durante uma crise. Menos surpresas, menos combate a incêndios, mais confiança."
+      },
+      "team": {
+        "title": "Equipes enxutas, performance máxima",
+        "content": "Automatize a criação de ordens de serviço, otimize agendamentos e dê ao seu time prioridades claras. Mesmo com equipe reduzida, você atingirá mais metas e perderá menos tempo."
+      },
+      "compliance": {
+        "title": "Auditorias e compliance sem papelada",
+        "content": "Cada ação é registrada, cada ativo é rastreado. A Tractian oferece registros prontos para auditoria e processos padronizados para que compliance seja uma preocupação a menos."
+      }
+    },
+    "image": "https://imgix.tractian.com/website/pages/who-we-serve/reliability-engineers/pt/dados-precisos.png?auto=format%2Ccompress&cs=origin&fit=max&q=75&w=3840"
+  },
+  "features": {
+    "title": "Projetada para supervisão inteligente e resultados concretos",
+    "tabs": {
+      "reports": {
+        "label": "Escale Baseado em Dados",
+        "title": "Mostre valor de forma incontestável.",
+        "description": "A Tractian acompanha as métricas que importam - de tendências de parada a taxas de execução - para que você apresente ROI claro em cada reunião de performance.",
+        "items": [
+          "Acompanhe backlog, paradas, custos de manutenção e projeções financeiras",
+          "Exporte dados para auditorias, relatórios e justificativas de CAPEX",
+          "Filtre por área, ativo, falha ou período e foque no que importa",
+          "Decida melhor com base em dados e tendências reais de performance"
+        ],
+        "image": "https://imgix.tractian.com/website/pages/who-we-serve/reliability-engineers/pt/escale-baseado-em-dados.png?auto=format%2Ccompress&cs=origin&fit=max&q=75&w=3840"
+      },
+      "oversight": {
+        "label": "Supervisão Operacional",
+        "title": "Veja cada canto da sua operação em um único dashboard.",
+        "description": "Tenha visibilidade em tempo real da saúde dos ativos, performance da equipe e progresso da manutenção — para que nada passe despercebido.",
+        "items": [
+          "Acompanhe scores de saúde e risco de falha dos ativos em tempo real",
+          "Monitore o progresso de ordens de serviço e taxas de execução",
+          "Identifique gargalos antes que impactem a produção",
+          "Centralize dados de sensores, CMMS e inspeções manuais"
+        ],
+        "image": "https://imgix.tractian.com/website/pages/who-we-serve/reliability-engineers/pt/escale-baseado-em-dados.png?auto=format%2Ccompress&cs=origin&fit=max&q=75&w=3840"
+      },
+      "multisite": {
+        "label": "Visibilidade Multiplantas",
+        "title": "Gerencie todas as suas plantas em um só lugar.",
+        "description": "Seja uma ou dez unidades, a Tractian oferece uma visão unificada entre sites para você padronizar e escalar.",
+        "items": [
+          "Compare métricas de performance entre plantas",
+          "Padronize processos de manutenção em toda a empresa",
+          "Replique melhores práticas dos sites com melhor desempenho",
+          "Receba alertas e relatórios de qualquer local em tempo real"
+        ],
+        "image": "https://imgix.tractian.com/website/pages/who-we-serve/reliability-engineers/pt/escale-baseado-em-dados.png?auto=format%2Ccompress&cs=origin&fit=max&q=75&w=3840"
+      },
+      "labor": {
+        "label": "Zero Gargalos de Mão de Obra",
+        "title": "Faça mais com a equipe que você já tem.",
+        "description": "A Tractian reduz a carga sobre sua equipe automatizando tarefas rotineiras e priorizando as ações mais críticas.",
+        "items": [
+          "Gere ordens de serviço automaticamente a partir de alertas dos sensores",
+          "Priorize tarefas por criticidade e impacto no ativo",
+          "Reduza tempo gasto em inspeções manuais e entrada de dados",
+          "Libere sua equipe para focar em trabalho de alto valor"
+        ],
+        "image": "https://imgix.tractian.com/website/pages/who-we-serve/reliability-engineers/pt/escale-baseado-em-dados.png?auto=format%2Ccompress&cs=origin&fit=max&q=75&w=3840"
+      }
+    }
+  },
+  "value": {
+    "title": "Você controla a operação. Nós te apoiamos.",
+    "cards": {
+      "whole": {
+        "title": "Feito para a planta inteira",
+        "description": "Unifique manutenção, confiabilidade e execução em um só painel. Sem silos, planilhas paralelas ou sistemas soltos. Todos se baseiam na mesma fonte de verdade. Decisões mais rápidas, entregas mais ágeis."
+      },
+      "execution": {
+        "title": "Pronto para usar desde o dia 1",
+        "description": "Esqueça treinamentos intermináveis e implementações lentas. Ferramentas intuitivas entregam resultados imediatos, sem ampliar seu time, contratar consultorias caras ou adotar soluções complexas."
+      },
+      "support": {
+        "title": "Suporte especialista dedicado",
+        "description": "Nossa equipe de especialistas trabalha junto com a sua, da instalação à expansão. Estamos no chão de fábrica quando necessário, treinamos seu time, ajustamos configurações e aceleramos a conquista das metas."
+      }
+    }
+  },
+  "testimonials": {
+    "title": "Saiba a opinião de quem usa Tractian todos os dias",
+    "items": [
+      {
+        "quote": "Fazer uma preventiva baseada em horas ou ouvindo se tem algum ruído diferente é arriscado, você pode ver o problema tarde demais. Agora, com o sistema da Tractian, o gerente de manutenção, coordenadores e o pessoal do PCM têm todos os dados em mãos. Então, você decide quando a máquina para e não a máquina decide parar quando ela quebra.",
+        "name": "Roberto P.",
+        "role": "Gerente Industrial - Caxias do Sul (RS)",
+        "company": "M. Dias Branco",
+        "image": "https://imgix.tractian.com/website/pages/who-we-serve/reliability-engineers/pt/roberto.png?auto=format%2Ccompress&cs=origin&fit=max&q=75&w=256"
+      },
+      {
+        "quote": "A solução da Tractian nos proporciona maior visibilidade e confiabilidade operacional, além de contribuir significativamente para o aumento da disponibilidade dos ativos e a assertividade no planejamento. Tudo isso sustentado pela IA, que nos apoia no dia a dia.",
+        "name": "Jari S.",
+        "role": "Diretor Agroindustrial",
+        "company": "UISA",
+        "image": "https://imgix.tractian.com/website/pages/who-we-serve/reliability-engineers/pt/jari.png?auto=format%2Ccompress&cs=origin&fit=max&q=75&w=256"
+      },
+      {
+        "quote": "Quando analisamos os sensores, além de recebermos o alerta de que o equipamento está falhando ou prestes a falhar, também recebemos uma indicação da causa provável, o que orienta nossa correção. [...] São vários equipamentos mapeando em tempo real, gerando insights e estatísticas que nos direcionam no troubleshooting com muito mais precisão.",
+        "name": "Bruno R.",
+        "role": "Gerente Industrial - Duque de Caxias (RJ)",
+        "company": "ICONIC",
+        "image": "https://imgix.tractian.com/website/pages/who-we-serve/plant-manager/pt/bruno-v2.png?auto=format%2Ccompress&cs=origin&fit=max&q=75&w=256"
+      },
+      {
+        "quote": "A Tractian é um parceiro que proporcionou diversas reduções financeiras para nossa manutenção. Hoje, contribui efetivamente para que nosso equipamento principal, o alto-forno, possa operar de forma contínua e ininterrupta, e que as manutenções sejam efetivamente programadas, e não mais intervenções corretivas.",
+        "name": "Edimilson R.",
+        "role": "Superintendente - Ribas do Rio Pardo (MS)",
+        "company": "Vetorial",
+        "image": "https://imgix.tractian.com/website/pages/who-we-serve/reliability-engineers/pt/edmilson.png?auto=format%2Ccompress&cs=origin&fit=max&q=75&w=256"
+      }
+    ]
+  },
+  "logos": {
+    "title": "Líderes industriais do Brasil e do mundo confiam na Tractian",
+    "items": [
+      { "name": "Danone", "src": "https://imgix.tractian.com/website/components/company-logos/danone.png?auto=format%2Ccompress&cs=origin&fit=max&q=75&w=828" },
+      { "name": "EMS", "src": "https://imgix.tractian.com/website/components/company-logos/ems.png?auto=format%2Ccompress&cs=origin&fit=max&q=75&w=640" },
+      { "name": "Bosch", "src": "https://imgix.tractian.com/website/components/company-logos/bosch.png?auto=format%2Ccompress&cs=origin&fit=max&q=75&w=828" },
+      { "name": "Nissan", "src": "https://imgix.tractian.com/website/components/company-logos/nissan.png?auto=format%2Ccompress&cs=origin&fit=max&q=75&w=828" },
+      { "name": "Embraer", "src": "https://imgix.tractian.com/website/components/company-logos/embraer.png?auto=format%2Ccompress&cs=origin&fit=max&q=75&w=1080" },
+      { "name": "CSN", "src": "https://imgix.tractian.com/website/components/company-logos/csn.png?auto=format%2Ccompress&cs=origin&fit=max&q=75&w=1080" },
+      { "name": "Suzano", "src": "https://imgix.tractian.com/website/components/company-logos/suzano.png?auto=format%2Ccompress&cs=origin&fit=max&q=75&w=828" },
+      { "name": "CMPC", "src": "https://imgix.tractian.com/website/components/company-logos/cmpc.png?auto=format%2Ccompress&cs=origin&fit=max&q=75&w=750" },
+      { "name": "Dexco", "src": "https://imgix.tractian.com/website/components/company-logos/dexco.png?auto=format%2Ccompress&cs=origin&fit=max&q=75&w=640" },
+      { "name": "Ingredion", "src": "https://imgix.tractian.com/website/components/company-logos/ingredion.png?auto=format%2Ccompress&cs=origin&fit=max&q=75&w=640" },
+      { "name": "Vibra", "src": "https://imgix.tractian.com/website/components/company-logos/vibra.png?auto=format%2Ccompress&cs=origin&fit=max&q=75&w=640" },
+      { "name": "Atvos", "src": "https://imgix.tractian.com/website/components/company-logos/atvos.png?auto=format%2Ccompress&cs=origin&fit=max&q=75&w=828" },
+      { "name": "Hydro", "src": "https://imgix.tractian.com/website/components/company-logos/hydro.png?auto=format%2Ccompress&cs=origin&fit=max&q=75&w=640" },
+      { "name": "Randoncorp", "src": "https://imgix.tractian.com/website/components/company-logos/randoncorp.png?auto=format%2Ccompress&cs=origin&fit=max&q=75&w=1080" }
+    ]
+  },
+  "steps": {
+    "label": "PASSO A PASSO",
+    "title": "Do primeiro contato ao rollout completo, conte conosco",
+    "items": [
+      {
+        "step": "1",
+        "title": "Entendemos sua planta de ponta a ponta",
+        "description": "Agende uma conversa rápida para mapear processos, desafios e estrutura da equipe. Mostraremos onde a Tractian se encaixa no seu dia a dia e em quais pontos você verá os ganhos e o ROI mais rápidos."
+      },
+      {
+        "step": "2",
+        "title": "Demonstração sob medida para suas prioridades",
+        "description": "Reúna as partes interessadas e veja, na prática, casos de uso parecidos com a sua operação. A demonstração é 100% alinhada aos seus objetivos, deixando claro como cada área pode se beneficiar."
+      },
+      {
+        "step": "3",
+        "title": "Construímos o business case e a projeção de ROI",
+        "description": "Apresentamos projeções de retorno e justificativa de custos de acordo com suas metas. Nossos engenheiros garantem conectividade, segurança e integração perfeita aos sistemas que você já utiliza."
+      },
+      {
+        "step": "4",
+        "title": "Implantamos, treinamos e conduzimos o go-live",
+        "description": "Nossa equipe técnica conduz a implementação sem parar a produção, oferece treinamento em campo e acompanha o desempenho. Desde o primeiro dia, você monitora valor gerado e escala a adoção sem atrito."
+      }
+    ]
+  },
+  "cta": {
+    "title": "Decida com clareza. Produza sem paradas.",
+    "button": "Escolha a Tractian"
+  },
+  "faq": {
+    "title": "Perguntas Frequentes",
+    "items": [
+      { "question": "Como a Tractian ajuda a reduzir paradas não planejadas?", "answer": "A Tractian usa sensores com IA que monitoram continuamente vibração, temperatura e outros parâmetros das suas máquinas. Quando anomalias são detectadas, você recebe alertas antecipados — para planejar reparos antes que uma quebra aconteça." },
+      { "question": "Consigo comprovar ROI usando a Tractian?", "answer": "Com certeza. A Tractian rastreia downtime evitado, custos de manutenção, taxas de conclusão de ordens de serviço e mais. Você pode exportar relatórios detalhados mostrando exatamente quanto tempo e dinheiro está economizando." },
+      { "question": "É difícil instalar e começar a usar a Tractian?", "answer": "A instalação é rápida e não invasiva. Nossa equipe cuida da configuração dos sensores e do software, e a maioria das plantas está operando em dias — não meses." },
+      { "question": "A Tractian funciona mesmo com equipe reduzida?", "answer": "Sim. A Tractian automatiza a criação de ordens de serviço, prioriza tarefas por criticidade e reduz inspeções manuais. Sua equipe foca no que mais importa ao invés de apagar incêndios." },
+      { "question": "Preciso trocar meus sistemas atuais para usar a Tractian?", "answer": "Não. A Tractian se integra com suas ferramentas existentes — incluindo SAP, Oracle e outras plataformas CMMS. Trabalhamos junto com sua configuração atual, não contra ela." },
+      { "question": "A Tractian ajuda na conformidade e preparação para auditorias?", "answer": "Cada ação de manutenção, leitura de sensor e ordem de serviço é registrada automaticamente. Você tem uma trilha de auditoria completa com timestamps e responsabilidades." },
+      { "question": "Quais relatórios a Tractian oferece?", "answer": "De dashboards executivos de alto nível a analytics granulares por ativo. Filtre por site, área, tipo de ativo, modo de falha ou período — e exporte dados para revisões, orçamentos e apresentações." },
+      { "question": "A Tractian é fácil de usar para Técnicos de Manutenção?", "answer": "Muito. O aplicativo móvel é intuitivo e feito para o chão de fábrica. Técnicos podem ver tarefas, registrar trabalho e acessar SOPs em poucos toques — sem treinamento extensivo." },
+      { "question": "Que tipo de suporte está incluso?", "answer": "Suporte especialista dedicado desde o primeiro dia. Você recebe um time dedicado para instalação, treinamento e otimização contínua. Estamos no local quando importa e sempre disponíveis remotamente." },
+      { "question": "Posso usar a Tractian em várias unidades?", "answer": "Sim. A arquitetura multiplantas da Tractian permite monitorar e gerenciar todas as suas unidades a partir de um único dashboard, com processos padronizados em cada localização." },
+      { "question": "Quais tipos de máquinas ou ativos a Tractian monitora?", "answer": "A Tractian funciona com praticamente qualquer equipamento rotativo ou crítico — motores, bombas, compressores, ventiladores, esteiras e mais. Se se move ou vibra, podemos monitorar." },
+      { "question": "A Tractian depende de Wi-Fi ou rede interna?", "answer": "Os sensores da Tractian usam conectividade própria (celular/LoRa), então você não precisa depender do Wi-Fi ou infraestrutura de TI da planta." },
+      { "question": "A Tractian ajuda a padronizar processos entre turnos e times?", "answer": "Sim. Com SOPs integrados, templates e workflows automatizados, você garante que cada equipe siga os mesmos procedimentos, independente do site ou turno." },
+      { "question": "Posso migrar meus dados atuais de manutenção?", "answer": "Sim. Nossa equipe de implementação ajuda a migrar dados históricos de planilhas, sistemas CMMS legados ou outras ferramentas para que você não perca nenhum conhecimento institucional." },
+      { "question": "A Tractian integra com meus sistemas atuais?", "answer": "Sim. A Tractian integra com SAP, Oracle NetSuite, Power BI e muitas outras plataformas enterprise via APIs e conectores nativos." },
+      { "question": "A Tractian é segura?", "answer": "A Tractian possui certificação SOC 2 Type II, é compatível com ISO 27001 e segue práticas de segurança enterprise incluindo criptografia, controles de acesso e testes de penetração regulares." },
+      { "question": "Quanto custa as soluções da Tractian?", "answer": "O preço depende do número de ativos, sensores e módulos necessários. Entre em contato conosco para um orçamento personalizado baseado no tamanho e requisitos da sua planta." },
+      { "question": "A Tractian atende apenas Gerentes Industriais?", "answer": "Não. A Tractian atende toda a cadeia de manutenção — de técnicos e supervisores a engenheiros de confiabilidade e diretores. Cada perfil tem visibilidade e ferramentas adaptadas ao seu papel." }
+    ]
+  },
+  "form": {
+    "title": "Solicitar Demo",
+    "firstName": "Nome",
+    "lastName": "Sobrenome",
+    "email": "E-mail Corporativo",
+    "phone": "Telefone",
+    "company": "Empresa",
+    "jobTitle": "Cargo",
+    "plantSize": "Tamanho da Planta",
+    "plantSizeOptions": {
+      "small": "Menos de 100 ativos",
+      "medium": "100–500 ativos",
+      "large": "500–1.000 ativos",
+      "enterprise": "1.000+ ativos"
+    },
+    "message": "Como podemos ajudar?",
+    "submit": "Solicitar Demo",
+    "submitting": "Enviando...",
+    "success": "Obrigado! Entraremos em contato em breve.",
+    "required": "Campo obrigatório",
+    "invalidEmail": "Por favor, insira um e-mail válido"
+  },
+  "footer": {
+    "conditionMonitoring": "Monitoramento de Condição",
+    "cmms": "CMMS da Tractian",
+    "oee": "Tractian OEE",
+    "pricingTitle": "Planos",
+    "integrations": "Integrações",
+    "resourcesTitle": "Recursos",
+    "support": "A Tractian",
+    "downloadApp": "Baixe nosso App",
+    "copyright": "© Tractian Tecnologia LTDA. Todos os direitos reservados.",
+    "phone": "0800 110 2020",
+    "address": "Rua Antonio das Chagas, 945 - Chácara Santo Antônio - Zona Sul, São Paulo - SP, 04711-020"
+  }
+}

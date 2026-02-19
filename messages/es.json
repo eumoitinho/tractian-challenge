@@ -1,0 +1,250 @@
+{
+  "metadata": {
+    "title": "Tractian para Gerentes de Planta | TRACTIAN",
+    "description": "Toma decisiones más inteligentes, más rápido. Tractian te da claridad, control y confianza para liderar la operación y demostrar el ROI de tu estrategia."
+  },
+  "nav": {
+    "solutions": "Soluciones",
+    "whoWeServe": "Industrias",
+    "resources": "Recursos",
+    "company": "Compañía",
+    "pricing": "Precios",
+    "login": "Login",
+    "getDemo": "Solicita una demo"
+  },
+  "hero": {
+    "label": "MANTÉN LA OPERACIÓN EN MARCHA. SUPERA TUS METAS.",
+    "title": "Para el Gerente de Planta que quiere liderar con confianza",
+    "subtitle": "Toma decisiones más inteligentes, más rápido. Tractian te da claridad, control y confianza para liderar la operación y demostrar el ROI de tu estrategia.",
+    "cta": "Agenda una demo",
+    "quote": "\"Ya no movemos nada si no vemos qué dice Tractian. Es parte de nuestras juntas operativas y decisiones de dirección.\"",
+    "quoteAuthor": "Ricardo Cházaro",
+    "quoteRole": "Gerente de Planta",
+    "quoteCompany": "Cyplus Idesa",
+    "heroImage": "https://tractian-webpage.s3.us-east-1.amazonaws.com/website/pages/who-we-serve/plant-manager/pt/header-image.png?q=75&w=3840",
+    "heroImageMobile": "https://tractian-webpage.s3.us-east-1.amazonaws.com/website/pages/who-we-serve/plant-manager/pt/header-image-mobile.png?q=75&w=3840"
+  },
+  "whyChoose": {
+    "label": "TRACTIAN PARA GERENTES DE PLANTA",
+    "title": "Lidera una operación eficiente con resultados comprobables",
+    "tabs": {
+      "roi": {
+        "title": "Demuestra el ROI, no solo el esfuerzo",
+        "content": "Muestra al liderazgo el valor real de tu programa de mantenimiento con reportes integrados, seguimiento de costos y métricas de downtime que demuestran tu impacto en dólares y horas ahorradas."
+      },
+      "downtime": {
+        "title": "Anticipa paros antes de que escalen",
+        "content": "Sensores con IA detectan señales tempranas de falla para que puedas planificar reparaciones en tus términos — no durante una crisis. Menos sorpresas, menos combate de incendios, más confianza."
+      },
+      "team": {
+        "title": "Equipos más efectivos y enfocados",
+        "content": "Automatiza la creación de órdenes de trabajo, optimiza la programación y dale a tu equipo prioridades claras. Incluso con personal limitado, alcanzarás más metas y perderás menos tiempo."
+      },
+      "compliance": {
+        "title": "Auditorías en cumplimiento, siempre",
+        "content": "Cada acción se registra, cada activo se rastrea. Tractian te da registros listos para auditoría y procesos estandarizados para que el compliance sea una preocupación menos."
+      }
+    },
+    "image": "https://imgix.tractian.com/website/pages/who-we-serve/plant-manager/en/prove-the-roi.png?auto=format%2Ccompress&cs=origin&fit=max&q=75&w=3840"
+  },
+  "features": {
+    "title": "Creado para una dirección inteligente y estratégica",
+    "tabs": {
+      "reports": {
+        "label": "Reportes con valor escalable",
+        "title": "Muestra lo que está funcionando con reportes pensados para dar visibilidad a la dirección.",
+        "description": "Tractian calcula las métricas que importan, desde tendencias de tiempo muerto hasta tasas de ejecución, para que puedas demostrar valor en cada revisión.",
+        "items": [
+          "Monitorea backlog, tiempo de paro, costos de mantenimiento y planificación financiera",
+          "Exporta datos para auditorías, reportes y justificación de presupuestos",
+          "Usa filtros por área, activo, tipo de falla o periodo de tiempo",
+          "Toma mejores decisiones basadas en tendencias reales de desempeño"
+        ],
+        "image": "https://imgix.tractian.com/website/pages/who-we-serve/plant-manager/en/reports-for-scalability.png?auto=format%2Ccompress&cs=origin&fit=max&q=75&w=3840"
+      },
+      "oversight": {
+        "label": "Supervisión operativa",
+        "title": "Ve cada rincón de tu operación desde un solo dashboard.",
+        "description": "Obtén visibilidad en tiempo real de la salud de activos, rendimiento del equipo y progreso del mantenimiento.",
+        "items": [
+          "Rastrea scores de salud y riesgo de falla de activos en tiempo real",
+          "Monitorea el progreso de órdenes de trabajo y tasas de ejecución",
+          "Identifica cuellos de botella antes de que impacten la producción",
+          "Centraliza datos de sensores, CMMS e inspecciones manuales"
+        ],
+        "image": "https://imgix.tractian.com/website/pages/who-we-serve/plant-manager/en/reports-for-scalability.png?auto=format%2Ccompress&cs=origin&fit=max&q=75&w=3840"
+      },
+      "multisite": {
+        "label": "Visibilidad Multisitio",
+        "title": "Gestiona todas tus plantas desde un solo lugar.",
+        "description": "Sea una o diez instalaciones, Tractian te da una vista unificada entre sitios para estandarizar y escalar.",
+        "items": [
+          "Compara métricas de rendimiento entre plantas",
+          "Estandariza procesos de mantenimiento en toda la empresa",
+          "Replica mejores prácticas de los sitios con mejor desempeño",
+          "Recibe alertas y reportes de cualquier ubicación en tiempo real"
+        ],
+        "image": "https://imgix.tractian.com/website/pages/who-we-serve/plant-manager/en/reports-for-scalability.png?auto=format%2Ccompress&cs=origin&fit=max&q=75&w=3840"
+      },
+      "labor": {
+        "label": "Sin brechas de personal",
+        "title": "Haz más con el equipo que ya tienes.",
+        "description": "Tractian reduce la carga de tu personal automatizando tareas rutinarias y priorizando las acciones más críticas.",
+        "items": [
+          "Genera órdenes de trabajo automáticamente desde alertas de sensores",
+          "Prioriza tareas por criticidad e impacto en el activo",
+          "Reduce tiempo en inspecciones manuales y entrada de datos",
+          "Libera a tu equipo para enfocarse en trabajo de alto valor"
+        ],
+        "image": "https://imgix.tractian.com/website/pages/who-we-serve/plant-manager/en/reports-for-scalability.png?auto=format%2Ccompress&cs=origin&fit=max&q=75&w=3840"
+      }
+    }
+  },
+  "value": {
+    "title": "Tú lideras. Nosotros aseguramos que funcione mejor.",
+    "cards": {
+      "whole": {
+        "title": "Una plataforma para toda la operación",
+        "description": "Unifica equipos, elimina sistemas aislados y toma decisiones más rápidas con todos los datos en un solo lugar."
+      },
+      "execution": {
+        "title": "Impacto desde el día uno",
+        "description": "Olvídate de meses de capacitación. Desde el primer día, Tractian entrega valor con herramientas intuitivas y sin necesidad de refuerzos externos."
+      },
+      "support": {
+        "title": "Soporte especializado",
+        "description": "Te acompañamos en cada paso: desde la instalación, configuración y hasta el crecimiento. Estamos contigo en planta para asegurar que tu equipo aproveche todo el potencial de la plataforma."
+      }
+    }
+  },
+  "testimonials": {
+    "title": "Esto opinan quienes lo usan a diario",
+    "items": [
+      {
+        "quote": "Ya no movemos nada si no vemos qué dice Tractian. Es parte de nuestras juntas operativas y decisiones de dirección.",
+        "name": "Ricardo C.",
+        "role": "Gerente de Planta",
+        "company": "Cyplus Idesa",
+        "image": "https://imgix.tractian.com/website/pages/who-we-serve/plant-manager/es/ricardo.png?auto=format%2Ccompress&cs=origin&fit=max&q=75&w=256"
+      },
+      {
+        "quote": "Con todo centralizado en una sola plataforma, dentro de Tractian, por fin tuvimos la visibilidad para actuar rápido, planear mejor y mostrar resultados reales.",
+        "name": "Paul M.",
+        "role": "Director de Mantenimiento",
+        "company": "The Fillo Factory",
+        "image": "https://imgix.tractian.com/website/pages/best-food-and-beverage-maintenance-software/en/paul-v2.png?auto=format%2Ccompress&cs=origin&fit=max&q=75&w=256"
+      },
+      {
+        "quote": "Tractian nos hace sentir como un verdadero socio estratégico. Tenemos muchas expectativas para el futuro, y esto nos da la confianza de poder contar con ustedes para el mantenimiento adecuado de nuestros sistemas.",
+        "name": "Miguel A.",
+        "role": "Director de Mantenimiento",
+        "company": "DHL",
+        "image": "https://imgix.tractian.com/website/pages/who-we-serve/plant-manager/es/miguel.png?auto=format%2Ccompress&cs=origin&fit=max&q=75&w=256"
+      },
+      {
+        "quote": "El mayor beneficio de la inversión en tecnología es la rentabilidad. Aunque parece un gasto de manera inmediata, realmente termina siendo una inversión.",
+        "name": "Oliver O.",
+        "role": "Director de Mantenimiento y Manufactura",
+        "company": "HOPE",
+        "image": "https://imgix.tractian.com/website/pages/who-we-serve/plant-manager/es/oliver.png?auto=format%2Ccompress&cs=origin&fit=max&q=75&w=256"
+      }
+    ]
+  },
+  "logos": {
+    "title": "Empresas líderes de sector confían en nosotros",
+    "items": [
+      { "name": "Berry", "src": "https://imgix.tractian.com/website/pages/who-we-serve/plant-manager/en/berry-logo.png?auto=format%2Ccompress&cs=origin&fit=max&q=75&w=128" },
+      { "name": "Voestalpine", "src": "https://imgix.tractian.com/website/pages/who-we-serve/plant-manager/en/voestalpine.png?auto=format%2Ccompress&cs=origin&fit=max&q=75&w=256" },
+      { "name": "Owens", "src": "https://imgix.tractian.com/website/pages/who-we-serve/plant-manager/en/owens.png?auto=format%2Ccompress&cs=origin&fit=max&q=75&w=128" },
+      { "name": "LDC", "src": "https://imgix.tractian.com/website/pages/who-we-serve/plant-manager/en/ldc.png?auto=format%2Ccompress&cs=origin&fit=max&q=75&w=128" }
+    ]
+  },
+  "steps": {
+    "label": "",
+    "title": "Desde la primera llamada hasta la implementación: te acompañamos en todo el proceso",
+    "items": [
+      {
+        "step": "1",
+        "title": "Conoceremos tu planta",
+        "description": "Agenda una llamada rápida para que podamos entender tus procesos, desafíos y estructura de equipo. Te mostraremos cómo Tractian se integra a tu día a día y en qué áreas verás resultados y ROI más rápido."
+      },
+      {
+        "step": "2",
+        "title": "Te entregaremos una demo personalizada",
+        "description": "Invita a tus líderes clave a una demo práctica alineada con tus prioridades. Compartiremos casos de uso relevantes de operaciones similares y te mostraremos exactamente cómo puede beneficiarse tu equipo."
+      },
+      {
+        "step": "3",
+        "title": "Construiremos un caso de negocio y análisis de ROI",
+        "description": "Presentaremos proyecciones de retorno y justificación de costos con base en tus objetivos. Al mismo tiempo, nuestros ingenieros garantizarán conectividad, seguridad e integración sin fricciones con tus sistemas."
+      },
+      {
+        "step": "4",
+        "title": "Desplegaremos, capacitaremos y activaremos",
+        "description": "Nuestros ingenieros implementarán Tractian en tu equipo con soporte personalizado, entrenamiento en campo y sin interrumpir tus operaciones. Desde el primer día, comenzarás a generar valor y escalar la adopción sin fricciones."
+      }
+    ]
+  },
+  "cta": {
+    "title": "Para las personas detrás de las máquinas.",
+    "button": "Elige Tractian"
+  },
+  "faq": {
+    "title": "Preguntas frecuentes",
+    "items": [
+      { "question": "¿Cómo puedo reducir los paros no planificados en mi planta?", "answer": "Tractian usa sensores con IA que monitorean continuamente vibración, temperatura y otros parámetros de tus máquinas. Cuando se detectan anomalías, recibes alertas tempranas — para planificar reparaciones antes de que ocurra una avería." },
+      { "question": "¿Puedo demostrar el ROI usando Tractian?", "answer": "Absolutamente. Tractian rastrea downtime evitado, costos de mantenimiento, tasas de completitud de órdenes de trabajo y más. Puedes exportar reportes detallados mostrando exactamente cuánto tiempo y dinero estás ahorrando." },
+      { "question": "¿Qué tan difícil es instalar y comenzar a usar Tractian?", "answer": "La instalación es rápida y no invasiva. Nuestro equipo se encarga de la configuración de sensores y software, y la mayoría de las plantas están operando en días — no meses." },
+      { "question": "¿Tractian realmente ayuda si tengo poco personal?", "answer": "Sí. Tractian automatiza la creación de órdenes de trabajo, prioriza tareas por criticidad y reduce inspecciones manuales. Tu equipo se enfoca en lo que más importa." },
+      { "question": "¿Necesito reemplazar mis sistemas actuales para usar Tractian?", "answer": "No. Tractian se integra con tus herramientas existentes — incluyendo SAP, Oracle y otras plataformas CMMS. Trabajamos junto con tu configuración actual, no contra ella." },
+      { "question": "¿Cómo apoya Tractian el cumplimiento normativo y la preparación para auditorías?", "answer": "Cada acción de mantenimiento, lectura de sensor y orden de trabajo se registra automáticamente. Tienes un trail de auditoría completo con timestamps y responsabilidades." },
+      { "question": "¿Qué tipo de reportes ofrece Tractian?", "answer": "Desde dashboards ejecutivos de alto nivel hasta analytics granulares por activo. Filtra por sitio, área, tipo de activo, modo de falla o periodo — y exporta datos para revisiones y presupuestos." },
+      { "question": "¿Es fácil de usar para los técnicos?", "answer": "Muy fácil. La app móvil es intuitiva y diseñada para el piso de fábrica. Los técnicos pueden ver tareas, registrar trabajo y acceder a SOPs en pocos toques." },
+      { "question": "¿Qué tipo de soporte incluye Tractian?", "answer": "Soporte personalizado desde el día uno. Recibes un equipo dedicado para instalación, entrenamiento y optimización continua. Estamos en sitio cuando importa y siempre disponibles remotamente." },
+      { "question": "¿Puedo usar Tractian en varias plantas?", "answer": "Sí. La arquitectura multisitio de Tractian permite monitorear y gestionar todas tus instalaciones desde un solo dashboard, con procesos estandarizados en cada ubicación." },
+      { "question": "¿Con qué tipo de máquinas o equipos funciona Tractian?", "answer": "Tractian funciona con prácticamente cualquier equipo rotativo o crítico — motores, bombas, compresores, ventiladores, transportadores y más." },
+      { "question": "¿Tractian requiere Wi-Fi o redes internas?", "answer": "Los sensores de Tractian usan conectividad propia (celular/LoRa), así que no necesitas depender del Wi-Fi o infraestructura de TI de la planta." },
+      { "question": "¿Tractian ayuda a estandarizar procesos entre equipos?", "answer": "Sí. Con SOPs integrados, templates y workflows automatizados, aseguras que cada equipo siga los mismos procedimientos sin importar el sitio o turno." },
+      { "question": "¿Puedo migrar mis datos actuales de mantenimiento?", "answer": "Sí. Nuestro equipo de implementación ayuda a migrar datos históricos de hojas de cálculo, sistemas CMMS heredados u otras herramientas." },
+      { "question": "¿Tractian se integra con mis herramientas actuales?", "answer": "Sí. Tractian se integra con SAP, Oracle NetSuite, Power BI y muchas otras plataformas enterprise vía APIs y conectores nativos." },
+      { "question": "¿Tractian es seguro?", "answer": "Tractian cuenta con certificación SOC 2 Type II, cumple con ISO 27001 y sigue prácticas de seguridad enterprise incluyendo encriptación, controles de acceso y pruebas de penetración regulares." },
+      { "question": "¿Cuánto cuesta Tractian?", "answer": "El precio depende del número de activos, sensores y módulos necesarios. Contáctanos para una cotización personalizada basada en el tamaño y requisitos de tu planta." },
+      { "question": "¿Tractian es solo para Gerentes de Planta?", "answer": "No. Tractian atiende toda la cadena de mantenimiento — desde técnicos y supervisores hasta ingenieros de confiabilidad y directores. Cada perfil tiene visibilidad y herramientas adaptadas a su rol." }
+    ]
+  },
+  "form": {
+    "title": "Agenda una demo",
+    "firstName": "Nombre",
+    "lastName": "Apellido",
+    "email": "Correo Corporativo",
+    "phone": "Teléfono",
+    "company": "Empresa",
+    "jobTitle": "Cargo",
+    "plantSize": "Tamaño de Planta",
+    "plantSizeOptions": {
+      "small": "Menos de 100 activos",
+      "medium": "100–500 activos",
+      "large": "500–1.000 activos",
+      "enterprise": "1.000+ activos"
+    },
+    "message": "¿Cómo podemos ayudar?",
+    "submit": "Solicitar Demo",
+    "submitting": "Enviando...",
+    "success": "¡Gracias! Nos pondremos en contacto pronto.",
+    "required": "Campo obligatorio",
+    "invalidEmail": "Por favor, ingresa un correo válido"
+  },
+  "footer": {
+    "conditionMonitoring": "Monitoreo Online",
+    "cmms": "Gestión de Activos",
+    "oee": "Gestión de Energia",
+    "pricingTitle": "Precios",
+    "integrations": "Integraciones",
+    "resourcesTitle": "Recursos",
+    "support": "Soporte",
+    "downloadApp": "Download Our App",
+    "copyright": "© Tractian Tecnología Industrial S. de R.L. de C.V.",
+    "phone": "+52 (800) 953-8998",
+    "address": "Córdoba 23, Cuauhtémoc, 06700, Ciudad de México, CDMX"
+  }
+}

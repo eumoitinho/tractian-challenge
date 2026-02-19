@@ -1,0 +1,306 @@
+{
+  "metadata": {
+    "title": "For the Plant Manager Who Wants to Lead with Confidence | TRACTIAN",
+    "description": "Make smarter decisions, faster. Tractian gives you clarity, control, and confidence — so you can lead the plant and prove the ROI."
+  },
+  "nav": {
+    "solutions": "Solutions",
+    "whoWeServe": "Who We Serve",
+    "resources": "Resources",
+    "company": "Company",
+    "pricing": "Pricing",
+    "login": "Login",
+    "getDemo": "Get Demo"
+  },
+  "hero": {
+    "label": "KEEP OPERATIONS RUNNING. HIT YOUR TARGETS.",
+    "title": "For the Plant Manager Who Wants to Lead with Confidence",
+    "subtitle": "Make smarter decisions, faster. Tractian gives you clarity, control, and confidence — so you can lead the plant and prove the ROI.",
+    "cta": "Get a Demo",
+    "quote": "\"With everything centralized within Tractian platform, we finally have the visibility to act fast, plan smarter, and show real results.\"",
+    "quoteAuthor": "Paul Morais",
+    "quoteRole": "Plant Manager",
+    "quoteCompany": "The Fillo Factory",
+    "heroImage": "https://tractian-webpage.s3.us-east-1.amazonaws.com/website/pages/who-we-serve/plant-manager/en/plant-manager-header-image.png?q=75&w=3840",
+    "heroImageMobile": "https://tractian-webpage.s3.us-east-1.amazonaws.com/website/pages/who-we-serve/plant-manager/en/plant-manager-header-image-mobile.png?q=75&w=3840"
+  },
+  "whyChoose": {
+    "label": "WHY PLANT MANAGERS CHOOSE TRACTIAN",
+    "title": "Run a tighter ship without extra burden",
+    "tabs": {
+      "roi": {
+        "title": "Prove the ROI, not just the effort",
+        "content": "Show leadership the real value of your maintenance program with built-in reports, cost tracking, and downtime metrics that prove your impact in dollars and hours saved."
+      },
+      "downtime": {
+        "title": "Get ahead of downtime before it escalates",
+        "content": "AI-powered sensors detect early signs of failure so you can plan repairs on your terms — not during a crisis. Fewer surprises, less firefighting, more confidence."
+      },
+      "team": {
+        "title": "Run a leaner, more effective team",
+        "content": "Automate work order creation, streamline scheduling, and give your team clear priorities. Even with limited staff, you'll hit more targets and waste less time."
+      },
+      "compliance": {
+        "title": "Keep audits simple, compliance covered",
+        "content": "Every action is logged, every asset is tracked. Tractian gives you audit-ready records and standardized processes so compliance is one less thing to worry about."
+      }
+    }
+  },
+  "features": {
+    "title": "Built for smarter oversight and real results",
+    "tabs": {
+      "reports": {
+        "label": "Reports for Scalability",
+        "title": "Show what's working with reports built for leadership visibility.",
+        "description": "Tractian tracks the metrics that matter — from downtime trends to execution rates — so you can prove value at every review.",
+        "items": [
+          "Monitor backlog, downtime, maintenance costs, financial planning",
+          "Export data for audits, reports, and budget justification",
+          "Use filters by area, asset, failure type, or timeframe",
+          "Make better decisions based on real performance trends"
+        ],
+        "image": "https://imgix.tractian.com/website/pages/who-we-serve/plant-manager/en/reports-for-scalability.png?auto=format%2Ccompress&cs=origin&fit=max&q=75&w=3840"
+      },
+      "oversight": {
+        "label": "Operational Oversight",
+        "title": "See every corner of your operation from a single dashboard.",
+        "description": "Get real-time visibility into asset health, team performance, and maintenance progress — so nothing slips through the cracks.",
+        "items": [
+          "Track asset health scores and failure risk in real time",
+          "Monitor work order progress and team execution rates",
+          "Identify bottlenecks before they impact production",
+          "Centralize data from sensors, CMMS, and manual inspections"
+        ],
+        "image": "https://imgix.tractian.com/website/pages/who-we-serve/plant-manager/en/reports-for-scalability.png?auto=format%2Ccompress&cs=origin&fit=max&q=75&w=3840"
+      },
+      "multisite": {
+        "label": "Multi-Site Visibility",
+        "title": "Manage all your plants from one place.",
+        "description": "Whether you oversee one facility or ten, Tractian gives you a unified view across sites so you can standardize and scale.",
+        "items": [
+          "Compare performance metrics across plants",
+          "Standardize maintenance processes company-wide",
+          "Roll out best practices from top-performing sites",
+          "Get alerts and reports from any location in real time"
+        ],
+        "image": "https://imgix.tractian.com/website/pages/who-we-serve/plant-manager/en/reports-for-scalability.png?auto=format%2Ccompress&cs=origin&fit=max&q=75&w=3840"
+      },
+      "labor": {
+        "label": "No Labor Gaps",
+        "title": "Do more with the team you already have.",
+        "description": "Tractian reduces the burden on your staff by automating routine tasks and surfacing the highest-priority actions first.",
+        "items": [
+          "Auto-generate work orders from sensor alerts",
+          "Prioritize tasks by criticality and asset impact",
+          "Reduce time spent on manual inspections and data entry",
+          "Free up your team to focus on high-value work"
+        ],
+        "image": "https://imgix.tractian.com/website/pages/who-we-serve/plant-manager/en/reports-for-scalability.png?auto=format%2Ccompress&cs=origin&fit=max&q=75&w=3840"
+      }
+    }
+  },
+  "value": {
+    "title": "You run the plant. We've got your back.",
+    "cards": {
+      "whole": {
+        "title": "Built for the whole plant",
+        "description": "Get everyone on the same page — no more silos or scattered systems. Our solutions help you track maintenance, reliability, and execution in one place so your team moves faster."
+      },
+      "execution": {
+        "title": "Execution-ready from day one",
+        "description": "Skip the lengthy training and slow ramp-up. With tools your team actually uses, you'll see impact quickly — without needing extra headcount, expensive consultants, or complex rollouts."
+      },
+      "support": {
+        "title": "White-glove support",
+        "description": "Our expert team works shoulder-to-shoulder with you, from install to scale-up. With hands-on support, we're on site when it matters — helping you train teams, fine-tune setups, and hit your goals faster."
+      }
+    }
+  },
+  "testimonials": {
+    "title": "Hear it from the people who use it every day",
+    "items": [
+      {
+        "quote": "With everything centralized within Tractian platform, we finally have the visibility to act fast, plan smarter, and show real results.",
+        "name": "Paul M.",
+        "role": "Maintenance Director",
+        "company": "The Fillo Factory",
+        "image": "https://imgix.tractian.com/website/pages/who-we-serve/plant-manager/en/paul-v2.png?auto=format%2Ccompress&cs=origin&fit=max&q=75&w=256"
+      },
+      {
+        "quote": "I like that I can track all of our assets from one location. If a motor is having issues in one part of the plant, and another on the other side of the plant, I am able to basically troubleshoot both motors from the same place.",
+        "name": "Nicholas D.",
+        "role": "Maintenance Lead Supervisor",
+        "company": "Koch Foods",
+        "image": "https://imgix.tractian.com/website/pages/who-we-serve/plant-manager/en/nicholas.png?auto=format%2Ccompress&cs=origin&fit=max&q=75&w=256"
+      },
+      {
+        "quote": "Now when I get to the plant, I just log in and everything I need is right there — step-by-step instructions, what I need to do. It's a lot easier, way faster, and less of a hassle.",
+        "name": "Fabiano J.",
+        "role": "Rental Fleet Manager",
+        "company": "CZM",
+        "image": "https://imgix.tractian.com/website/pages/who-we-serve/plant-manager/en/fabiano.png?auto=format%2Ccompress&cs=origin&fit=max&q=75&w=256"
+      },
+      {
+        "quote": "Nothing was too much trouble for them, and they went to the 'nth' degree to understand Lyka's business and asset care short & long-term strategic plan. This level of seeking to understand made the implementation particularly user friendly.",
+        "name": "Andy B.",
+        "role": "Head of Manufacturing and Supply Chain",
+        "company": "Lyka",
+        "image": "https://imgix.tractian.com/website/pages/who-we-serve/plant-manager/en/andy.png?auto=format%2Ccompress&cs=origin&fit=max&q=75&w=256"
+      }
+    ]
+  },
+  "logos": {
+    "title": "Trusted by hundreds of leaders from U.S. and global manufacturers",
+    "items": [
+      { "name": "Georgia Aquarium", "src": "https://imgix.tractian.com/website/components/company-logos/georgiaAquarium.png?auto=format%2Ccompress&cs=origin&fit=max&q=75&w=640" },
+      { "name": "Air Liquide", "src": "https://imgix.tractian.com/website/components/company-logos/airLiquide.png?auto=format%2Ccompress&cs=origin&fit=max&q=75&w=1080" },
+      { "name": "Scotts Miracle Gro", "src": "https://imgix.tractian.com/website/pages/home/v3/general/carousel-logos/CustomerScottsMiracleGro.png?auto=format%2Ccompress&cs=origin&fit=max&q=75&w=384" },
+      { "name": "Ingredion", "src": "https://imgix.tractian.com/website/components/company-logos/ingredion.png?auto=format%2Ccompress&cs=origin&fit=max&q=75&w=640" },
+      { "name": "Kraft Heinz", "src": "https://imgix.tractian.com/website/components/company-logos/kraftHeinz.png?auto=format%2Ccompress&cs=origin&fit=max&q=75&w=1080" },
+      { "name": "Whirlpool", "src": "https://imgix.tractian.com/website/components/company-logos/whirlpool.png?auto=format%2Ccompress&cs=origin&fit=max&q=75&w=640" },
+      { "name": "CSX", "src": "https://imgix.tractian.com/website/components/company-logos/csx.png?auto=format%2Ccompress&cs=origin&fit=max&q=75&w=1080" },
+      { "name": "Verizon", "src": "https://imgix.tractian.com/website/components/company-logos/verizon.png?auto=format%2Ccompress&cs=origin&fit=max&q=75&w=1080" },
+      { "name": "Kubota", "src": "https://imgix.tractian.com/website/components/company-logos/kubota.png?auto=format%2Ccompress&cs=origin&fit=max&q=75&w=828" },
+      { "name": "Cummins", "src": "https://imgix.tractian.com/website/components/company-logos/cummins.png?auto=format%2Ccompress&cs=origin&fit=max&q=75&w=640" },
+      { "name": "Mauser", "src": "https://imgix.tractian.com/website/components/company-logos/mauser.png?auto=format%2Ccompress&cs=origin&fit=max&q=75&w=1080" },
+      { "name": "Greif", "src": "https://imgix.tractian.com/website/components/company-logos/greif.png?auto=format%2Ccompress&cs=origin&fit=max&q=75&w=640" }
+    ]
+  },
+  "steps": {
+    "title": "From first call to full rollout — we've got you covered",
+    "items": [
+      {
+        "step": "1",
+        "title": "We'll get to know your plant",
+        "description": "Schedule a quick call so we can understand your processes, challenges, and team structure. We'll walk you through how Tractian fits into your day-to-day and highlight where you'll see the fastest wins and ROI."
+      },
+      {
+        "step": "2",
+        "title": "We'll deliver a tailored demo",
+        "description": "Bring in your key stakeholders for a hands-on demo aligned with your priorities. We'll share relevant use cases from similar operations and show exactly how your team can benefit."
+      },
+      {
+        "step": "3",
+        "title": "We'll build a business case and ROI analysis",
+        "description": "We'll outline ROI projections and cost justification based on your goals. Meanwhile, our engineers will ensure seamless connectivity, security, and integration with your current systems."
+      },
+      {
+        "step": "4",
+        "title": "We'll deploy, train, and go live",
+        "description": "Our engineers will roll out Tractian to your team with white-glove support, field training, and no disruption to operations. From day one, you'll start tracking value and scaling adoption without friction."
+      }
+    ]
+  },
+  "cta": {
+    "title": "More Than Machines. It's About People.",
+    "button": "Choose Tractian"
+  },
+  "faq": {
+    "title": "Frequently Asked Questions",
+    "items": [
+      {
+        "question": "How can I reduce unplanned downtime at my plant?",
+        "answer": "Tractian uses AI-powered sensors that continuously monitor your machines' vibration, temperature, and other parameters. When anomalies are detected, you get early alerts — so you can plan repairs before a breakdown happens."
+      },
+      {
+        "question": "Can I prove ROI using Tractian?",
+        "answer": "Absolutely. Tractian tracks downtime avoided, maintenance costs, work order completion rates, and more. You can export detailed reports to leadership showing exactly how much time and money you're saving."
+      },
+      {
+        "question": "How hard is it to install and start using Tractian?",
+        "answer": "Installation is quick and non-invasive. Our team handles the sensor setup and software configuration, and most plants are up and running within days — not months."
+      },
+      {
+        "question": "Can Tractian really help if my team is understaffed?",
+        "answer": "Yes. Tractian automates work order creation, prioritizes tasks by criticality, and reduces manual inspections. Your team focuses on what matters most instead of fighting fires."
+      },
+      {
+        "question": "Do I need to replace my current systems to use Tractian?",
+        "answer": "No. Tractian integrates with your existing tools — including SAP, Oracle, and other CMMS platforms. We work alongside your current setup, not against it."
+      },
+      {
+        "question": "How does Tractian support compliance and audit preparation?",
+        "answer": "Every maintenance action, sensor reading, and work order is automatically logged. You get a full audit trail with timestamps and accountability, making compliance reviews straightforward."
+      },
+      {
+        "question": "What kind of reporting does Tractian offer?",
+        "answer": "From high-level executive dashboards to granular asset-level analytics. Filter by site, area, asset type, failure mode, or timeframe — and export data for reviews, budgets, and board presentations."
+      },
+      {
+        "question": "Is Tractian easy for technicians to use?",
+        "answer": "Very. The mobile app is intuitive and built for the shop floor. Technicians can view tasks, log work, and access SOPs in just a few taps — no extensive training needed."
+      },
+      {
+        "question": "What kind of support is included with Tractian?",
+        "answer": "White-glove support from day one. You get a dedicated team for installation, training, and ongoing optimization. We're on site when it matters and always available remotely."
+      },
+      {
+        "question": "Can I use Tractian across multiple sites?",
+        "answer": "Yes. Tractian's multi-site architecture lets you monitor and manage all your facilities from a single dashboard, with standardized processes across every location."
+      },
+      {
+        "question": "What types of machines or equipment does Tractian work with?",
+        "answer": "Tractian works with virtually any rotating or critical equipment — motors, pumps, compressors, fans, conveyors, and more. If it moves or vibrates, we can monitor it."
+      },
+      {
+        "question": "Does Tractian require Wi-Fi or internal networks?",
+        "answer": "Tractian sensors use their own connectivity (cellular/LoRa), so you don't need to depend on your plant's Wi-Fi or IT infrastructure."
+      },
+      {
+        "question": "Can Tractian help with standardizing processes across teams?",
+        "answer": "Yes. With built-in SOPs, templates, and automated workflows, you can ensure every team follows the same procedures regardless of site or shift."
+      },
+      {
+        "question": "Can I migrate my existing maintenance data?",
+        "answer": "Yes. Our implementation team helps you migrate historical data from spreadsheets, legacy CMMS systems, or other tools so you don't lose any institutional knowledge."
+      },
+      {
+        "question": "Does Tractian integrate with my existing tools?",
+        "answer": "Yes. Tractian integrates with SAP, Oracle NetSuite, Power BI, and many other enterprise platforms via APIs and native connectors."
+      },
+      {
+        "question": "Is Tractian secure?",
+        "answer": "Tractian is SOC 2 Type II certified, ISO 27001 compliant, and follows enterprise-grade security practices including encryption, access controls, and regular penetration testing."
+      },
+      {
+        "question": "How much does Tractian cost?",
+        "answer": "Pricing depends on the number of assets, sensors, and modules you need. Contact us for a custom quote based on your plant's size and requirements."
+      }
+    ]
+  },
+  "form": {
+    "title": "Get a Demo",
+    "firstName": "First Name",
+    "lastName": "Last Name",
+    "email": "Work Email",
+    "phone": "Phone Number",
+    "company": "Company",
+    "jobTitle": "Job Title",
+    "plantSize": "Plant Size",
+    "plantSizeOptions": {
+      "small": "Under 100 assets",
+      "medium": "100–500 assets",
+      "large": "500–1,000 assets",
+      "enterprise": "1,000+ assets"
+    },
+    "message": "How can we help?",
+    "submit": "Request Demo",
+    "submitting": "Sending...",
+    "success": "Thank you! We'll be in touch shortly.",
+    "required": "This field is required",
+    "invalidEmail": "Please enter a valid email address"
+  },
+  "footer": {
+    "conditionMonitoring": "Tractian Condition Monitoring",
+    "cmms": "Tractian CMMS",
+    "oee": "Tractian OEE",
+    "pricingTitle": "Pricing",
+    "integrations": "Integrations",
+    "resourcesTitle": "Resources",
+    "support": "Support",
+    "downloadApp": "Download Our App",
+    "copyright": "© 2025 Tractian Technologies Inc. All Rights Reserved.",
+    "phone": "+1 (833) GET-TRAC",
+    "address": "201 17th Street NW, Atlanta, GA 30363"
+  }
+}
