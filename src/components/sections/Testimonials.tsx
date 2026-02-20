@@ -33,7 +33,6 @@ export function Testimonials() {
   const rawItems = (messages.testimonials as Record<string, unknown>)?.items as Record<string, string>[] || [];
   const scrollRef = useRef<HTMLDivElement>(null);
   const [activeIndex, setActiveIndex] = useState(0);
-  const [progress, setProgress] = useState(0);
   const timerRef = useRef<ReturnType<typeof setInterval>>();
   const touchStartRef = useRef(0);
 
@@ -50,7 +49,6 @@ export function Testimonials() {
   const goTo = useCallback((idx: number) => {
     const next = ((idx % total) + total) % total;
     setActiveIndex(next);
-    setProgress(0);
     if (scrollRef.current) {
       const child = scrollRef.current.children[next] as HTMLElement;
       if (child) {
@@ -60,26 +58,18 @@ export function Testimonials() {
   }, [total]);
 
   useEffect(() => {
-    const interval = 50;
     timerRef.current = setInterval(() => {
-      setProgress((p) => {
-        const next = p + (interval / AUTO_ADVANCE_MS) * 100;
-        if (next >= 100) {
-          setActiveIndex((prev) => {
-            const nextIdx = (prev + 1) % total;
-            if (scrollRef.current) {
-              const child = scrollRef.current.children[nextIdx] as HTMLElement;
-              if (child) {
-                scrollRef.current.scrollTo({ left: child.offsetLeft - 16, behavior: "smooth" });
-              }
-            }
-            return nextIdx;
-          });
-          return 0;
+      setActiveIndex((prev) => {
+        const nextIdx = (prev + 1) % total;
+        if (scrollRef.current) {
+          const child = scrollRef.current.children[nextIdx] as HTMLElement;
+          if (child) {
+            scrollRef.current.scrollTo({ left: child.offsetLeft - 16, behavior: "smooth" });
+          }
         }
-        return next;
+        return nextIdx;
       });
-    }, interval);
+    }, AUTO_ADVANCE_MS);
 
     return () => clearInterval(timerRef.current);
   }, [total]);
@@ -98,15 +88,14 @@ export function Testimonials() {
   const handleScroll = () => {
     if (!scrollRef.current) return;
     const { scrollLeft, clientWidth } = scrollRef.current;
-    const idx = Math.round(scrollLeft / (clientWidth * 0.85));
+    const idx = Math.round(scrollLeft / clientWidth);
     if (idx !== activeIndex && idx >= 0 && idx < total) {
       setActiveIndex(idx);
-      setProgress(0);
     }
   };
 
   return (
-    <section className="bg-white py-12 w-full sm:pl-4 sm:pr-4 lg:pt-16 lg:pb-16 xl:pl-0 xl:pr-0">
+    <section className="bg-white py-12 w-full overflow-x-hidden sm:pl-4 sm:pr-4 lg:pt-16 lg:pb-16 xl:pl-0 xl:pr-0">
       <div className="items-center flex-col flex w-full max-w-2xl gap-8 m-auto lg:max-w-6xl lg:gap-12">
         <h2 className="text-[20px] font-bold px-4 text-center min-[375px]:text-4xl sm:pl-0 sm:pr-0">
           {t("title")}
@@ -120,7 +109,7 @@ export function Testimonials() {
           className="flex w-full overflow-x-auto gap-6 px-4 snap-x snap-mandatory scrollbar-hide sm:grid sm:grid-cols-2 sm:overflow-visible sm:px-0 sm:gap-12 lg:flex lg:flex-row lg:justify-between"
         >
           {items.map((item, i) => (
-            <div key={i} className="flex-col flex min-w-[280px] w-[85vw] shrink-0 snap-start h-auto gap-4 sm:w-full sm:min-w-0 sm:shrink">
+            <div key={i} className="flex-col flex w-[calc(100vw-32px)] min-w-[calc(100vw-32px)] max-w-[340px] shrink-0 snap-start h-auto gap-4 sm:w-full sm:min-w-0 sm:max-w-none sm:shrink">
               <div className="items-center flex w-full text-blue-600">
                 <QuoteIcon />
                 {i === 1 && <G2Badge />}
@@ -152,24 +141,8 @@ export function Testimonials() {
             </div>
           ))}
         </div>
-
-        <div className="flex w-full gap-1.5 px-4 sm:hidden">
-          {items.map((_, i) => (
-            <button
-              key={i}
-              onClick={() => goTo(i)}
-              className="relative h-1 flex-1 rounded-full bg-slate-200 overflow-hidden cursor-pointer"
-            >
-              <div
-                className="absolute inset-y-0 left-0 bg-blue-600 rounded-full transition-all duration-100"
-                style={{
-                  width: i === activeIndex ? `${progress}%` : i < activeIndex ? "100%" : "0%",
-                }}
-              />
-            </button>
-          ))}
-        </div>
       </div>
     </section>
   );
 }
+

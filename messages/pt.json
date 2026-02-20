@@ -112,17 +112,17 @@
       "downtime": {
         "title": "Antecipe falhas críticas, evite paradas caras",
         "content": "Sensores com IA detectam sinais precoces de falha para que você possa planejar reparos nos seus termos — não durante uma crise. Menos surpresas, menos combate a incêndios, mais confiança.",
-        "image": "https://imgix.tractian.com/website/pages/who-we-serve/reliability-engineers/pt/antecipe-falhas.png?auto=format%2Ccompress&cs=origin&fit=max&q=75&w=3840"
+        "image": "https://imgix.tractian.com/website/pages/who-we-serve/reliability-engineers/pt/antecipe-falhas-criticas.png?auto=format%2Ccompress&cs=origin&fit=max&q=75&w=3840"
       },
       "team": {
         "title": "Equipes enxutas, performance máxima",
         "content": "Automatize a criação de ordens de serviço, otimize agendamentos e dê ao seu time prioridades claras. Mesmo com equipe reduzida, você atingirá mais metas e perderá menos tempo.",
-        "image": "https://imgix.tractian.com/website/pages/who-we-serve/reliability-engineers/pt/equipes-enxutas.png?auto=format%2Ccompress&cs=origin&fit=max&q=75&w=3840"
+        "image": "https://imgix.tractian.com/website/pages/who-we-serve/reliability-engineers/pt/performance-maxima.png?auto=format%2Ccompress&cs=origin&fit=max&q=75&w=3840"
       },
       "compliance": {
         "title": "Auditorias e compliance sem papelada",
         "content": "Cada ação é registrada, cada ativo é rastreado. A Tractian oferece registros prontos para auditoria e processos padronizados para que compliance seja uma preocupação a menos.",
-        "image": "https://imgix.tractian.com/website/pages/who-we-serve/reliability-engineers/pt/auditorias-compliance.png?auto=format%2Ccompress&cs=origin&fit=max&q=75&w=3840"
+        "image": "https://imgix.tractian.com/website/pages/who-we-serve/reliability-engineers/pt/auditorias-e-compliance.png?auto=format%2Ccompress&cs=origin&fit=max&q=75&w=3840"
       }
     },
     "image": "https://imgix.tractian.com/website/pages/who-we-serve/reliability-engineers/pt/dados-precisos.png?auto=format%2Ccompress&cs=origin&fit=max&q=75&w=3840"
