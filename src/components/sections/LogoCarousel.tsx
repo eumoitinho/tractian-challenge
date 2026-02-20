@@ -25,7 +25,7 @@ export function LogoCarousel() {
               <div key={i} className="items-center justify-center flex shrink-0 px-2">
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
-                  className="object-contain h-7 max-w-[100px] opacity-60 grayscale"
+                  className="object-contain h-7 max-w-[100px]"
                   src={logo.src}
                   alt={logo.name}
                 />
@@ -40,7 +40,7 @@ export function LogoCarousel() {
               <div className="inline-flex">
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
-                  className="object-contain h-8 max-w-[120px] opacity-60 grayscale hover:opacity-100 hover:grayscale-0 transition-all duration-200"
+                  className="object-contain h-8 max-w-[120px]"
                   src={logo.src}
                   alt={logo.name}
                 />

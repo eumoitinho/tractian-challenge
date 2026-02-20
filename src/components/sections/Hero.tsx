@@ -31,8 +31,8 @@ export function Hero() {
         </div>
         <div className="w-full">
           <div
-            className="w-full h-64 sm:h-80 bg-cover bg-center"
-            style={{ backgroundImage: `url("${heroImage}")` }}
+            className="w-full h-64 sm:h-80 bg-cover bg-center bg-no-repeat"
+            style={{ backgroundImage: `url("${heroImage}")`, backgroundPosition: "center center" }}
           />
         </div>
       </section>

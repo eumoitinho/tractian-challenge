@@ -288,7 +288,7 @@ export function Header() {
             <TractianLogo />
           </a>
           <button
-            className="p-2 text-slate-600"
+            className="p-2 text-blue-600"
             onClick={() => setIsMobileMenuOpen(true)}
             aria-label="Open Menu"
           >
@@ -498,7 +498,7 @@ export function Header() {
             <TractianLogo />
           </a>
           <button
-            className="p-2 text-slate-600"
+            className="p-2 text-blue-600"
             onClick={() => setIsMobileMenuOpen(false)}
             aria-label="Close Menu"
           >
