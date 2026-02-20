@@ -12,6 +12,88 @@
     "login": "Login",
     "getDemo": "Get Demo"
   },
+  "header": {
+    "solutions": [
+      {
+        "title": "Tractian Condition Monitoring",
+        "items": [
+          { "label": "Vibration Sensor & Analysis", "desc": "All the tools you need to remotely monitor machine health." },
+          { "label": "AI Failure Detection", "desc": "Spot issues early, trigger automatic alerts." },
+          { "label": "Reliability & Root Cause Analysis", "desc": "Get to the why faster, build your reliability program." },
+          { "label": "Downtime Prevention & Reporting", "desc": "Uncover failure trends, act before breakdowns happen." },
+          { "label": "Sensor Specifications", "desc": "Monitor real-time vibration, temperature, runtime, and RPM." }
+        ]
+      },
+      {
+        "title": "Tractian CMMS",
+        "items": [
+          { "label": "Troubleshooting & SOPs", "desc": "Guide technicians with smart SOPs and checklists." },
+          { "label": "Work Order Management", "desc": "Plan, assign, and track every work order in one place." },
+          { "label": "Parts Inventory Management", "desc": "Track critical parts and link them to maintenance tasks." },
+          { "label": "Preventive Maintenance", "desc": "Automate tasks, prevent failures, and cut downtime." },
+          { "label": "Integrations", "desc": "Connect Tractian with ERPs, sensors, and data systems." }
+        ]
+      },
+      {
+        "title": "Tractian OEE",
+        "items": [
+          { "label": "AI Production Tracking", "desc": "Get status of production, lines, stations with live insights." },
+          { "label": "Operator Performance", "desc": "Connect and empower the frontline." },
+          { "label": "Digitized Quality", "desc": "Take quality forms and measurements digital." },
+          { "label": "Custom Dashboards", "desc": "Drive operations with real-time data reports." },
+          { "label": "Utility & Process Analytics", "desc": "Analyze energy consumption and process metrics." }
+        ]
+      }
+    ],
+    "industries": {
+      "byRoleLabel": "By Role",
+      "bySectorLabel": "By Sector",
+      "roles": [
+        { "label": "Plant Manager" },
+        { "label": "Reliability Engineer" },
+        { "label": "Maintenance Engineer" },
+        { "label": "Manufacturing Engineer" }
+      ],
+      "sectors": [
+        { "label": "Automotive & Parts", "icon": "automotive-and-parts" },
+        { "label": "Mining & Metals", "icon": "mining-and-metals" },
+        { "label": "Chemicals", "icon": "chemicals" },
+        { "label": "Mills & Agriculture", "icon": "mills-and-agriculture" },
+        { "label": "Food & Beverage", "icon": "food-and-beverage" },
+        { "label": "Oil & Gas", "icon": "oil-and-gas" },
+        { "label": "Facilities", "icon": "facilities" },
+        { "label": "Fleet", "icon": "fleet" },
+        { "label": "Heavy Equipment", "icon": "heavy-equipment" },
+        { "label": "Manufacturing", "icon": "manufacturing" }
+      ]
+    },
+    "resources": {
+      "centerLabel": "Resources Center",
+      "hubLabel": "Customer Hub",
+      "center": [
+        { "label": "Case Studies", "icon": "resources-case-studies" },
+        { "label": "Ebooks", "icon": "resources-ebooks" },
+        { "label": "Blog", "icon": "resources-blog" },
+        { "label": "Templates", "icon": "resources-templates" },
+        { "label": "Calculators", "icon": "resources-calculators" },
+        { "label": "Events & Webinars", "icon": "resources-events-and-webinars" },
+        { "label": "SOPs", "icon": "resources-sops" },
+        { "label": "ChatGPT Plugins", "icon": "resources-chatgpt-plugins" }
+      ],
+      "hub": [
+        { "label": "Product Updates", "icon": "resources-product-updates" },
+        { "label": "Tractian Academy", "icon": "resources-tractian-academy" },
+        { "label": "Help Center", "icon": "resources-help-center" }
+      ]
+    },
+    "company": {
+      "aboutLabel": "About Tractian",
+      "othersLabel": "Others",
+      "about": ["About Us", "Careers", "Newsroom"],
+      "others": ["Contact Us", "Referrals", "Trust Center"]
+    },
+    "pricing": ["Condition Monitoring", "CMMS Software"]
+  },
   "hero": {
     "label": "KEEP OPERATIONS RUNNING. HIT YOUR TARGETS.",
     "title": "For the Plant Manager Who Wants to Lead with Confidence",
@@ -30,19 +112,23 @@
     "tabs": {
       "roi": {
         "title": "Prove the ROI, not just the effort",
-        "content": "Show leadership the real value of your maintenance program with built-in reports, cost tracking, and downtime metrics that prove your impact in dollars and hours saved."
+        "content": "Stop debating maintenance investments. Tractian gives you real numbers tied to real results - failures prevented, hours saved, resources optimized. It's the kind of data that makes budget conversations easier.",
+        "image": "https://imgix.tractian.com/website/pages/who-we-serve/plant-manager/en/prove-the-roi.png?auto=format%2Ccompress&cs=origin&fit=max&q=75&w=3840"
       },
       "downtime": {
         "title": "Get ahead of downtime before it escalates",
-        "content": "AI-powered sensors detect early signs of failure so you can plan repairs on your terms — not during a crisis. Fewer surprises, less firefighting, more confidence."
+        "content": "See the earliest signs of failure and take action before it snowballs into a crisis. Tractian helps your team to go from reactive firefighting to proactive planning - with fewer surprises and fewer urgent calls.",
+        "image": "https://imgix.tractian.com/website/pages/who-we-serve/plant-manager/en/get-ahead.png?auto=format%2Ccompress&cs=origin&fit=max&q=75&w=3840"
       },
       "team": {
         "title": "Run a leaner, more effective team",
-        "content": "Automate work order creation, streamline scheduling, and give your team clear priorities. Even with limited staff, you'll hit more targets and waste less time."
+        "content": "Labor is tight, training takes time, and turnover hurts. Tractian gives your existing team tools that are intuitive and powerful - helping them improve their skills, solve problems faster, follow plans clearly, and deliver more every shift.",
+        "image": "https://imgix.tractian.com/website/pages/who-we-serve/plant-manager/en/run-a-leaner.png?auto=format%2Ccompress&cs=origin&fit=max&q=75&w=3840"
       },
       "compliance": {
         "title": "Keep audits simple, compliance covered",
-        "content": "Every action is logged, every asset is tracked. Tractian gives you audit-ready records and standardized processes so compliance is one less thing to worry about."
+        "content": "Tractian helps standardize your processes, organize maintenance records, and generate reliable reports - so audits are easier, risks are reduced, and compliance becomes part of the daily routine.",
+        "image": "https://imgix.tractian.com/website/pages/who-we-serve/plant-manager/en/keeps-audit-simple.png?auto=format%2Ccompress&cs=origin&fit=max&q=75&w=3840"
       }
     }
   },
@@ -63,39 +149,40 @@
       },
       "oversight": {
         "label": "Operational Oversight",
-        "title": "See every corner of your operation from a single dashboard.",
-        "description": "Get real-time visibility into asset health, team performance, and maintenance progress — so nothing slips through the cracks.",
+        "title": "Run the plant with clarity and control.",
+        "description": "Standardize maintenance procedures, reduce safety risks, and always stay ready for audits. With Tractian, compliance is no longer a side process — it's built into your team's daily execution.",
         "items": [
-          "Track asset health scores and failure risk in real time",
-          "Monitor work order progress and team execution rates",
-          "Identify bottlenecks before they impact production",
-          "Centralize data from sensors, CMMS, and manual inspections"
+          "SOPs and work permits attached directly to work orders and inspections",
+          "Track safety-related tasks, validations, and overdue actions",
+          "Ensure repeatability and accountability across teams and shifts",
+          "Automatic reports of what was done, when, and by whom",
+          "Instantly export task logs and records for audits and compliance reviews"
         ],
-        "image": "https://imgix.tractian.com/website/pages/who-we-serve/plant-manager/en/reports-for-scalability.png?auto=format%2Ccompress&cs=origin&fit=max&q=75&w=3840"
+        "image": "https://imgix.tractian.com/website/pages/who-we-serve/plant-manager/en/operational-oversight.png?auto=format%2Ccompress&cs=origin&fit=max&q=75&w=3840"
       },
       "multisite": {
         "label": "Multi-Site Visibility",
-        "title": "Manage all your plants from one place.",
-        "description": "Whether you oversee one facility or ten, Tractian gives you a unified view across sites so you can standardize and scale.",
+        "title": "Standardize maintenance and reliability efforts across multiple facilities without increasing complexity.",
+        "description": "Manage and compare assets and teams performance in one place.",
         "items": [
-          "Compare performance metrics across plants",
-          "Standardize maintenance processes company-wide",
-          "Roll out best practices from top-performing sites",
-          "Get alerts and reports from any location in real time"
+          "Track KPIs across plants or business units",
+          "Unify processes, alerts, and planning under a single platform",
+          "Benchmark efficiency and uptime between sites",
+          "Apply learnings from one facility to others quickly"
         ],
-        "image": "https://imgix.tractian.com/website/pages/who-we-serve/plant-manager/en/reports-for-scalability.png?auto=format%2Ccompress&cs=origin&fit=max&q=75&w=3840"
+        "image": "https://imgix.tractian.com/website/pages/who-we-serve/plant-manager/en/multisite-visibility.png?auto=format%2Ccompress&cs=origin&fit=max&q=75&w=3840"
       },
       "labor": {
         "label": "No Labor Gaps",
-        "title": "Do more with the team you already have.",
-        "description": "Tractian reduces the burden on your staff by automating routine tasks and surfacing the highest-priority actions first.",
+        "title": "Get ahead of workload imbalances and ensure your staff is focused where it matters most.",
+        "description": "",
         "items": [
-          "Auto-generate work orders from sensor alerts",
-          "Prioritize tasks by criticality and asset impact",
-          "Reduce time spent on manual inspections and data entry",
-          "Free up your team to focus on high-value work"
+          "Visualize each technician or team's workload. Make data-driven decisions to ensure there are no gaps or overloaded teams",
+          "Flag gaps or bottlenecks in your planning",
+          "Reduce stress and improve results by aligning preventive tasks with real priorities",
+          "Automate scheduling to keep things moving"
         ],
-        "image": "https://imgix.tractian.com/website/pages/who-we-serve/plant-manager/en/reports-for-scalability.png?auto=format%2Ccompress&cs=origin&fit=max&q=75&w=3840"
+        "image": "https://imgix.tractian.com/website/pages/who-we-serve/plant-manager/en/no-labor-gaps.png?auto=format%2Ccompress&cs=origin&fit=max&q=75&w=3840"
       }
     }
   },
@@ -193,78 +280,81 @@
   },
   "cta": {
     "title": "More Than Machines. It's About People.",
+    "titleLine1": "More Than Machines.",
+    "titleLine2": "It's About People.",
     "button": "Choose Tractian"
   },
   "faq": {
+    "sectionLabel": "FAQ",
     "title": "Frequently Asked Questions",
     "items": [
       {
         "question": "How can I reduce unplanned downtime at my plant?",
-        "answer": "Tractian uses AI-powered sensors that continuously monitor your machines' vibration, temperature, and other parameters. When anomalies are detected, you get early alerts — so you can plan repairs before a breakdown happens."
+        "answer": "Tractian condition monitoring detects early-stage failures and sends alerts before breakdowns happen — giving you time to act. Combined with our CMMS, those alerts automatically generate work orders, assign tasks, and track progress, so nothing slips through the cracks. You prevent failures and stay organized while doing it."
       },
       {
         "question": "Can I prove ROI using Tractian?",
-        "answer": "Absolutely. Tractian tracks downtime avoided, maintenance costs, work order completion rates, and more. You can export detailed reports to leadership showing exactly how much time and money you're saving."
+        "answer": "Yes, easily. Tractian gives you the data to prove clear ROI through reduced unplanned downtime, lower maintenance costs (by avoiding expensive emergency repairs), and extended asset lifespan. Our insights help you quantify the financial impact and optimize operational efficiency."
       },
       {
         "question": "How hard is it to install and start using Tractian?",
-        "answer": "Installation is quick and non-invasive. Our team handles the sensor setup and software configuration, and most plants are up and running within days — not months."
+        "answer": "It's plug-and-play. Vibration sensors are installed in minutes, and our platform is intuitive — no complex onboarding or training required. Most teams are up and running within a day."
       },
       {
         "question": "Can Tractian really help if my team is understaffed?",
-        "answer": "Yes. Tractian automates work order creation, prioritizes tasks by criticality, and reduces manual inspections. Your team focuses on what matters most instead of fighting fires."
+        "answer": "Yes. Our condition monitoring pinpoints the issues, while the CMMS turns them into clear, actionable tasks. Together, they eliminate time spent digging through data, guessing priorities, or chasing paperwork. You get straight-to-the-point alerts, smart scheduling, and full visibility so your team can act fast — even with fewer hands."
       },
       {
         "question": "Do I need to replace my current systems to use Tractian?",
-        "answer": "No. Tractian integrates with your existing tools — including SAP, Oracle, and other CMMS platforms. We work alongside your current setup, not against it."
+        "answer": "No. Tractian is designed to work alongside your existing tools, including ERPs, maintenance systems, and spreadsheets. You can start where you are and scale without disruption."
       },
       {
         "question": "How does Tractian support compliance and audit preparation?",
-        "answer": "Every maintenance action, sensor reading, and work order is automatically logged. You get a full audit trail with timestamps and accountability, making compliance reviews straightforward."
+        "answer": "Tractian builds compliance into everyday maintenance. It tracks safety validations, work permits, SOPs, and historical logs in one place — so you can instantly export reports and prove due diligence during audits or inspections."
       },
       {
         "question": "What kind of reporting does Tractian offer?",
-        "answer": "From high-level executive dashboards to granular asset-level analytics. Filter by site, area, asset type, failure mode, or timeframe — and export data for reviews, budgets, and board presentations."
+        "answer": "Tractian offers leadership-ready insights, including maintenance costs, backlog, execution rates, asset health, and labor productivity. Reports can be customized by area, timeframe, or asset type — and exported for planning or presentations."
       },
       {
         "question": "Is Tractian easy for technicians to use?",
-        "answer": "Very. The mobile app is intuitive and built for the shop floor. Technicians can view tasks, log work, and access SOPs in just a few taps — no extensive training needed."
+        "answer": "Yes. Tractian is mobile-first and built for the field. Tasks, checklists, and diagnostics are available in just a few taps — helping your team execute work orders, validate fixes, and stay productive without extra admin."
       },
       {
         "question": "What kind of support is included with Tractian?",
-        "answer": "White-glove support from day one. You get a dedicated team for installation, training, and ongoing optimization. We're on site when it matters and always available remotely."
+        "answer": "You'll get full onboarding support, a dedicated account manager, and full access to our CAT-certified engineering team. Whether it's training, integration, or strategy, we're with you every step of the way."
       },
       {
         "question": "Can I use Tractian across multiple sites?",
-        "answer": "Yes. Tractian's multi-site architecture lets you monitor and manage all your facilities from a single dashboard, with standardized processes across every location."
+        "answer": "Absolutely. Tractian supports multi-site visibility out of the box. You can monitor performance across facilities, compare results, and standardize processes at scale."
       },
       {
         "question": "What types of machines or equipment does Tractian work with?",
-        "answer": "Tractian works with virtually any rotating or critical equipment — motors, pumps, compressors, fans, conveyors, and more. If it moves or vibrates, we can monitor it."
+        "answer": "Tractian is designed to support a wide range of critical equipment — from motors and pumps to compressors and other industrial assets — whether they're modern or aging."
       },
       {
         "question": "Does Tractian require Wi-Fi or internal networks?",
-        "answer": "Tractian sensors use their own connectivity (cellular/LoRa), so you don't need to depend on your plant's Wi-Fi or IT infrastructure."
+        "answer": "Tractian sensors use independent connectivity, so there's no need for internal network access or complex IT setup. Your data syncs automatically to our secure cloud platform. You can access the software from any desktop with internet access, or use the mobile app — even offline — right from the plant floor."
       },
       {
         "question": "Can Tractian help with standardizing processes across teams?",
-        "answer": "Yes. With built-in SOPs, templates, and automated workflows, you can ensure every team follows the same procedures regardless of site or shift."
+        "answer": "Yes. Tractian ensures repeatability through digital SOPs, safety tracking, and centralized documentation. It's easy to see what was done, when, and by whom — across all shifts and teams."
       },
       {
         "question": "Can I migrate my existing maintenance data?",
-        "answer": "Yes. Our implementation team helps you migrate historical data from spreadsheets, legacy CMMS systems, or other tools so you don't lose any institutional knowledge."
+        "answer": "Yes. We provide easy data migration tools and hands-on support to bring in your historical records from Excel, ERP, CMMS, or other systems. You won't lose your legacy data."
       },
       {
         "question": "Does Tractian integrate with my existing tools?",
-        "answer": "Yes. Tractian integrates with SAP, Oracle NetSuite, Power BI, and many other enterprise platforms via APIs and native connectors."
+        "answer": "Yes. We offer integrations with ERPs and support custom workflows through our open API. We also provide free migration from your current CMMS, along with easy-to-use tools to import data from Excel or other file formats."
       },
       {
         "question": "Is Tractian secure?",
-        "answer": "Tractian is SOC 2 Type II certified, ISO 27001 compliant, and follows enterprise-grade security practices including encryption, access controls, and regular penetration testing."
+        "answer": "Yes. Tractian is compliant with key security and quality standards, including SOC 2, ISO 27001, and ISO 9001. Our platform supports Single Sign-On (SSO), multi-factor authentication (MFA), and granular role-based access controls to ensure data is protected and only accessible to authorized users. All data is encrypted in transit and at rest. Visit our Trust Center page for further information."
       },
       {
         "question": "How much does Tractian cost?",
-        "answer": "Pricing depends on the number of assets, sensors, and modules you need. Contact us for a custom quote based on your plant's size and requirements."
+        "answer": "For our Bundled plan, combining Condition Monitoring Sensors and Maintenance Management Software, pricing depends on the size and complexity of your operation. We'll work with you to build a custom quote based on your needs, with no hidden fees. Everything you need is included in one simple, integrated package."
       }
     ]
   },
@@ -291,16 +381,137 @@
     "invalidEmail": "Please enter a valid email address"
   },
   "footer": {
-    "conditionMonitoring": "Tractian Condition Monitoring",
-    "cmms": "Tractian CMMS",
-    "oee": "Tractian OEE",
-    "pricingTitle": "Pricing",
-    "integrations": "Integrations",
-    "resourcesTitle": "Resources",
-    "support": "Support",
-    "downloadApp": "Download Our App",
-    "copyright": "© 2025 Tractian Technologies Inc. All Rights Reserved.",
+    "conditionMonitoring": {
+      "title": "Tractian Condition Monitoring",
+      "links": [
+        "Vibration Sensor & Analysis",
+        "AI Failure Detection",
+        "Reliability & Root Cause Analysis",
+        "Downtime Prevention & Reporting",
+        "Sensor Specifications"
+      ]
+    },
+    "cmms": {
+      "title": "Tractian CMMS",
+      "links": [
+        "Troubleshooting & SOPs",
+        "Work Order Management",
+        "Parts Inventory Management",
+        "Preventive Maintenance",
+        "Mobile App"
+      ]
+    },
+    "oee": {
+      "title": "Tractian OEE",
+      "links": [
+        "AI Production Tracking",
+        "Operator Performance",
+        "Digitized Quality",
+        "Custom Dashboards",
+        "Utility & Process Analytics"
+      ]
+    },
+    "pricing": {
+      "title": "Pricing",
+      "links": [
+        "Condition Monitoring",
+        "CMMS Software",
+        "OEE Platform"
+      ]
+    },
+    "integrations": {
+      "title": "Integrations",
+      "links": [
+        "Oracle NetSuite",
+        "SAP",
+        "Power BI",
+        "All Integrations"
+      ]
+    },
+    "resources": {
+      "title": "Resources",
+      "links": [
+        "Case Studies",
+        "Ebooks",
+        "Blog",
+        "Maintenance Calculators",
+        "SOPs",
+        "Product Updates",
+        "Tractian Academy",
+        "Help Center"
+      ]
+    },
+    "company": {
+      "title": "Support",
+      "links": [
+        "About Us",
+        "Referrals",
+        "Careers",
+        "Newsroom",
+        "Hardware Warranty",
+        "Hosted Software SLA",
+        "Trust Center"
+      ]
+    },
+    "downloadApp": {
+      "title": "Download Our App",
+      "links": [
+        "Apple Store",
+        "Google Play Store",
+        "SAP Store"
+      ]
+    },
+    "privacyChoices": "Your Privacy Choices",
+    "copyright": "© 2026 Tractian Technologies Inc. All Rights Reserved.",
     "phone": "+1 (833) GET-TRAC",
     "address": "201 17th Street NW, Atlanta, GA 30363"
+  },
+  "demoModal": {
+    "title": "Request Your Demo",
+    "subtitle": "Fill in the fields to talk to a specialist and understand the benefits that our solutions offer for your operations.",
+    "name": "Full Name",
+    "email": "Work Email",
+    "phone": "Phone",
+    "jobTitle": "Job Title",
+    "industry": "Industry Sector",
+    "solution": "Solution Interest",
+    "assetsQuestion": "How many assets run in your operation?",
+    "submit": "Request demo",
+    "submitting": "Sending...",
+    "success": "Thank you! We'll be in touch shortly."
+  },
+  "cookies": {
+    "bannerText": "By clicking \"Accept All Cookies\", you agree to the storing of cookies on your device to enhance site navigation, analyze site usage, and assist in our marketing efforts.",
+    "settingsButton": "Cookies Settings",
+    "acceptButton": "Accept All Cookies"
+  },
+  "privacyModal": {
+    "title": "Privacy Preference Center",
+    "description": "When you visit any website, it may store or retrieve information on your browser, mostly in the form of cookies. This information might be about you, your preferences or your device and is mostly used to make the site work as you expect it to. The information does not usually directly identify you, but it can give you a more personalized web experience. Because we respect your right to privacy, you can choose not to allow some types of cookies. Click on the different category headings to find out more and change our default settings. However, blocking some types of cookies may impact your experience of the site and the services we are able to offer.",
+    "moreInfo": "More information",
+    "manageTitle": "Manage Consent Preferences",
+    "alwaysActive": "Always Active",
+    "active": "Active",
+    "inactive": "Inactive",
+    "rejectAll": "Reject All",
+    "confirmChoices": "Confirm My Choices",
+    "categories": {
+      "functional": {
+        "title": "Functional Cookies",
+        "description": "These cookies enable the website to provide enhanced functionality and personalisation. They may be set by us or by third party providers whose services we have added to our pages."
+      },
+      "strictlyNecessary": {
+        "title": "Strictly Necessary Cookies",
+        "description": "These cookies are necessary for the website to function and cannot be switched off in our systems. They are usually only set in response to actions made by you which amount to a request for services."
+      },
+      "targeting": {
+        "title": "Targeting Cookies",
+        "description": "These cookies may be set through our site by our advertising partners. They may be used by those companies to build a profile of your interests and show you relevant adverts on other sites."
+      },
+      "performance": {
+        "title": "Performance Cookies",
+        "description": "These cookies allow us to count visits and traffic sources so we can measure and improve the performance of our site. They help us to know which pages are the most and least popular."
+      }
+    }
   }
 }

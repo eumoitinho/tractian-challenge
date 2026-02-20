@@ -20,12 +20,12 @@ async function loadMessages(locale: Locale) {
     return cached;
   }
   try {
-    const localeModule = await import(`../messages/${locale}.json`);
+    const localeModule = await import(`../../messages/${locale}.json`);
     messagesCache.set(locale, localeModule.default);
     return localeModule.default;
   } catch {
     const fallback = routing.defaultLocale;
-    const fallbackModule = await import(`../messages/${fallback}.json`);
+    const fallbackModule = await import(`../../messages/${fallback}.json`);
     messagesCache.set(fallback, fallbackModule.default);
     return fallbackModule.default;
   }

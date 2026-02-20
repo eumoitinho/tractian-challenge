@@ -12,6 +12,82 @@
     "login": "Login",
     "getDemo": "Demonstração"
   },
+  "header": {
+    "solutions": [
+      {
+        "title": "Monitoramento de Condição",
+        "items": [
+          { "label": "Sensor e Análise de Vibração", "desc": "Monitoramento remoto da saúde do ativo." },
+          { "label": "Detecção de Falhas com IA", "desc": "Identifique problemas cedo e receba alertas automáticos." },
+          { "label": "Confiabilidade e Análise de Causa Raiz", "desc": "Acelere o diagnóstico, fortaleça seu plano de confiabilidade." },
+          { "label": "Prevenção de Downtime e Relatórios", "desc": "Identifique tendências de falha e atue antes da quebra." },
+          { "label": "Especificações do Sensor", "desc": "Vibração, temperatura, horímetro e RPM em tempo real." }
+        ]
+      },
+      {
+        "title": "Software de Gestão",
+        "items": [
+          { "label": "Checklists & POPs Inteligentes", "desc": "Oriente as ações dos técnicos com um passo a passo." },
+          { "label": "Gestão de Ordens de Serviço", "desc": "Planeje, atribua e acompanhe cada OS em um só lugar." },
+          { "label": "Gerenciamento de Estoque & Inventário", "desc": "Controle peças críticas e as vincule às ações de manutenção." },
+          { "label": "Manutenção Preventiva", "desc": "Automatize tarefas, previna falhas e reduza paradas." },
+          { "label": "Integrações", "desc": "Conecte a Tractian a ERPs, sensores e sistemas de dados." }
+        ]
+      },
+      {
+        "title": "Monitoramento de Produção",
+        "items": [
+          { "label": "Monitoramento de Produção com IA", "desc": "Acompanhe status da produção com insights na hora certa." },
+          { "label": "Performance do Operador", "desc": "Conecte e capacite o time da linha de frente." },
+          { "label": "Qualidade Digitalizada", "desc": "Digitalize formulários e medições de qualidade." },
+          { "label": "Dashboards Personalizados", "desc": "Oriente a operação com relatórios em tempo real." },
+          { "label": "Análise de Utilidades & Processos", "desc": "Analise consumo de energia e métricas de processo." }
+        ]
+      }
+    ],
+    "industries": {
+      "byRoleLabel": "Por cargo",
+      "bySectorLabel": "Por setor",
+      "roles": [
+        { "label": "Gerência" },
+        { "label": "Confiabilidade" },
+        { "label": "Manutenção" }
+      ],
+      "sectors": [
+        { "label": "Automotiva", "icon": "automotive-and-parts" },
+        { "label": "Mineração", "icon": "mining-and-metals" },
+        { "label": "Química", "icon": "chemicals" },
+        { "label": "Usinas e Agrícola", "icon": "mills-and-agriculture" },
+        { "label": "Alimentícia & Bebidas", "icon": "food-and-beverage" },
+        { "label": "Papel e Celulose", "icon": "paper-and-pulp" }
+      ]
+    },
+    "resources": {
+      "centerLabel": "Central de Recursos",
+      "hubLabel": "Central do Cliente",
+      "center": [
+        { "label": "Estudos de Caso", "icon": "resources-case-studies" },
+        { "label": "Ebooks", "icon": "resources-ebooks" },
+        { "label": "Blog", "icon": "resources-blog" },
+        { "label": "Templates", "icon": "resources-templates" },
+        { "label": "Eventos e Webinars", "icon": "resources-events-and-webinars" },
+        { "label": "POPs", "icon": "resources-sops" },
+        { "label": "GPTs para Manutenção", "icon": "resources-chatgpt-plugins" }
+      ],
+      "hub": [
+        { "label": "Atualizações de Produto", "icon": "resources-product-updates" },
+        { "label": "Tractian Academy", "icon": "resources-tractian-academy" },
+        { "label": "Help Center", "icon": "resources-help-center" }
+      ]
+    },
+    "company": {
+      "aboutLabel": "A Tractian",
+      "othersLabel": "Suporte",
+      "about": ["Sobre nós", "Carreiras", "Imprensa"],
+      "others": ["Entre em Contato", "Indicações", "Trust Center"]
+    },
+    "pricing": ["Sensor de Vibração", "Software de Gestão (CMMS)"]
+  },
   "hero": {
     "label": "OPERAÇÃO CONTÍNUA, ROI COMPROVADO",
     "title": "Para o Gerente Industrial que decide com dados, sem adivinhação",
@@ -30,19 +106,23 @@
     "tabs": {
       "roi": {
         "title": "Dados precisos comprovam cada centavo de ROI",
-        "content": "Mostre à liderança o valor real do seu programa de manutenção com relatórios integrados, rastreamento de custos e métricas de downtime que comprovam seu impacto em reais e horas economizadas."
+        "content": "Mostre à liderança o valor real do seu programa de manutenção com relatórios integrados, rastreamento de custos e métricas de downtime que comprovam seu impacto em reais e horas economizadas.",
+        "image": "https://imgix.tractian.com/website/pages/who-we-serve/reliability-engineers/pt/dados-precisos.png?auto=format%2Ccompress&cs=origin&fit=max&q=75&w=3840"
       },
       "downtime": {
         "title": "Antecipe falhas críticas, evite paradas caras",
-        "content": "Sensores com IA detectam sinais precoces de falha para que você possa planejar reparos nos seus termos — não durante uma crise. Menos surpresas, menos combate a incêndios, mais confiança."
+        "content": "Sensores com IA detectam sinais precoces de falha para que você possa planejar reparos nos seus termos — não durante uma crise. Menos surpresas, menos combate a incêndios, mais confiança.",
+        "image": "https://imgix.tractian.com/website/pages/who-we-serve/reliability-engineers/pt/antecipe-falhas.png?auto=format%2Ccompress&cs=origin&fit=max&q=75&w=3840"
       },
       "team": {
         "title": "Equipes enxutas, performance máxima",
-        "content": "Automatize a criação de ordens de serviço, otimize agendamentos e dê ao seu time prioridades claras. Mesmo com equipe reduzida, você atingirá mais metas e perderá menos tempo."
+        "content": "Automatize a criação de ordens de serviço, otimize agendamentos e dê ao seu time prioridades claras. Mesmo com equipe reduzida, você atingirá mais metas e perderá menos tempo.",
+        "image": "https://imgix.tractian.com/website/pages/who-we-serve/reliability-engineers/pt/equipes-enxutas.png?auto=format%2Ccompress&cs=origin&fit=max&q=75&w=3840"
       },
       "compliance": {
         "title": "Auditorias e compliance sem papelada",
-        "content": "Cada ação é registrada, cada ativo é rastreado. A Tractian oferece registros prontos para auditoria e processos padronizados para que compliance seja uma preocupação a menos."
+        "content": "Cada ação é registrada, cada ativo é rastreado. A Tractian oferece registros prontos para auditoria e processos padronizados para que compliance seja uma preocupação a menos.",
+        "image": "https://imgix.tractian.com/website/pages/who-we-serve/reliability-engineers/pt/auditorias-compliance.png?auto=format%2Ccompress&cs=origin&fit=max&q=75&w=3840"
       }
     },
     "image": "https://imgix.tractian.com/website/pages/who-we-serve/reliability-engineers/pt/dados-precisos.png?auto=format%2Ccompress&cs=origin&fit=max&q=75&w=3840"
@@ -64,39 +144,39 @@
       },
       "oversight": {
         "label": "Supervisão Operacional",
-        "title": "Veja cada canto da sua operação em um único dashboard.",
-        "description": "Tenha visibilidade em tempo real da saúde dos ativos, performance da equipe e progresso da manutenção — para que nada passe despercebido.",
+        "title": "Tenha controle total da planta.",
+        "description": "Padronize procedimentos, reduza riscos e esteja sempre pronto para auditorias. Com a Tractian, compliance deixa de ser um processo paralelo e vira rotina da equipe.",
         "items": [
-          "Acompanhe scores de saúde e risco de falha dos ativos em tempo real",
-          "Monitore o progresso de ordens de serviço e taxas de execução",
-          "Identifique gargalos antes que impactem a produção",
-          "Centralize dados de sensores, CMMS e inspeções manuais"
+          "POPs e permissões de trabalho anexadas direto às ordens de serviço",
+          "Ações de segurança, validações e pendências visíveis em um só lugar",
+          "Repetibilidade e responsabilização garantidas entre turnos e equipes",
+          "Relatórios automáticos de quem fez o quê, quando e como",
+          "Exportação instantânea de apontamentos para revisões e inspeções"
         ],
-        "image": "https://imgix.tractian.com/website/pages/who-we-serve/reliability-engineers/pt/escale-baseado-em-dados.png?auto=format%2Ccompress&cs=origin&fit=max&q=75&w=3840"
+        "image": "https://imgix.tractian.com/website/pages/who-we-serve/reliability-engineers/pt/supervisao-operacional.png?auto=format%2Ccompress&cs=origin&fit=max&q=75&w=3840"
       },
       "multisite": {
         "label": "Visibilidade Multiplantas",
-        "title": "Gerencie todas as suas plantas em um só lugar.",
-        "description": "Seja uma ou dez unidades, a Tractian oferece uma visão unificada entre sites para você padronizar e escalar.",
+        "title": "Padronize a manutenção em todas as plantas, sem aumentar a complexidade.",
+        "description": "Gerencie e compare ativos e equipes em uma única plataforma, mantendo processos e KPIs consistentes de ponta a ponta.",
         "items": [
-          "Compare métricas de performance entre plantas",
-          "Padronize processos de manutenção em toda a empresa",
-          "Replique melhores práticas dos sites com melhor desempenho",
-          "Receba alertas e relatórios de qualquer local em tempo real"
+          "Acompanhe KPIs entre plantas ou unidades de negócio",
+          "Unifique alertas, processos e planejamento em um só sistema",
+          "Benchmarks de eficiência e disponibilidade entre plantas em segundos",
+          "Replique aprendizados de uma planta para as demais rapidamente"
         ],
-        "image": "https://imgix.tractian.com/website/pages/who-we-serve/reliability-engineers/pt/escale-baseado-em-dados.png?auto=format%2Ccompress&cs=origin&fit=max&q=75&w=3840"
+        "image": "https://imgix.tractian.com/website/pages/who-we-serve/reliability-engineers/pt/visibilidade-multiplantas.png?auto=format%2Ccompress&cs=origin&fit=max&q=75&w=3840"
       },
       "labor": {
         "label": "Zero Gargalos de Mão de Obra",
-        "title": "Faça mais com a equipe que você já tem.",
-        "description": "A Tractian reduz a carga sobre sua equipe automatizando tarefas rotineiras e priorizando as ações mais críticas.",
+        "title": "Equilibre cargas e maximize cada turno, garantindo que seu time foque no que mais importa.",
+        "description": "Antecipe desequilíbrios de cargas de trabalho e mantenha o time focado nas prioridades que geram maior impacto.",
         "items": [
-          "Gere ordens de serviço automaticamente a partir de alertas dos sensores",
-          "Priorize tarefas por criticidade e impacto no ativo",
-          "Reduza tempo gasto em inspeções manuais e entrada de dados",
-          "Libere sua equipe para focar em trabalho de alto valor"
+          "Visualize a carga de cada técnico ou equipe para evitar sobrecarga",
+          "Sinalize gargalos ou colisões no planejamento com um clique",
+          "Reduza atritos alinhando tarefas preventivas a prioridades reais"
         ],
-        "image": "https://imgix.tractian.com/website/pages/who-we-serve/reliability-engineers/pt/escale-baseado-em-dados.png?auto=format%2Ccompress&cs=origin&fit=max&q=75&w=3840"
+        "image": "https://imgix.tractian.com/website/pages/who-we-serve/reliability-engineers/pt/zero-gargalos.png?auto=format%2Ccompress&cs=origin&fit=max&q=75&w=3840"
       }
     }
   },
@@ -164,9 +244,7 @@
       { "name": "Dexco", "src": "https://imgix.tractian.com/website/components/company-logos/dexco.png?auto=format%2Ccompress&cs=origin&fit=max&q=75&w=640" },
       { "name": "Ingredion", "src": "https://imgix.tractian.com/website/components/company-logos/ingredion.png?auto=format%2Ccompress&cs=origin&fit=max&q=75&w=640" },
       { "name": "Vibra", "src": "https://imgix.tractian.com/website/components/company-logos/vibra.png?auto=format%2Ccompress&cs=origin&fit=max&q=75&w=640" },
-      { "name": "Atvos", "src": "https://imgix.tractian.com/website/components/company-logos/atvos.png?auto=format%2Ccompress&cs=origin&fit=max&q=75&w=828" },
-      { "name": "Hydro", "src": "https://imgix.tractian.com/website/components/company-logos/hydro.png?auto=format%2Ccompress&cs=origin&fit=max&q=75&w=640" },
-      { "name": "Randoncorp", "src": "https://imgix.tractian.com/website/components/company-logos/randoncorp.png?auto=format%2Ccompress&cs=origin&fit=max&q=75&w=1080" }
+      { "name": "Atvos", "src": "https://imgix.tractian.com/website/components/company-logos/atvos.png?auto=format%2Ccompress&cs=origin&fit=max&q=75&w=828" }
     ]
   },
   "steps": {
@@ -196,10 +274,12 @@
     ]
   },
   "cta": {
-    "title": "Decida com clareza. Produza sem paradas.",
+    "titleLine1": "Decida com clareza.",
+    "titleLine2": "Produza sem paradas.",
     "button": "Escolha a Tractian"
   },
   "faq": {
+    "sectionLabel": "FAQ",
     "title": "Perguntas Frequentes",
     "items": [
       { "question": "Como a Tractian ajuda a reduzir paradas não planejadas?", "answer": "A Tractian usa sensores com IA que monitoram continuamente vibração, temperatura e outros parâmetros das suas máquinas. Quando anomalias são detectadas, você recebe alertas antecipados — para planejar reparos antes que uma quebra aconteça." },
@@ -245,16 +325,139 @@
     "invalidEmail": "Por favor, insira um e-mail válido"
   },
   "footer": {
-    "conditionMonitoring": "Monitoramento de Condição",
-    "cmms": "CMMS da Tractian",
-    "oee": "Tractian OEE",
-    "pricingTitle": "Planos",
-    "integrations": "Integrações",
-    "resourcesTitle": "Recursos",
-    "support": "A Tractian",
-    "downloadApp": "Baixe nosso App",
+    "conditionMonitoring": {
+      "title": "Monitoramento de Condição Tractian",
+      "links": [
+        "Sensor e análise de vibração",
+        "Detecção de falhas com IA",
+        "Confiabilidade e análise de causa raiz",
+        "Prevenção de indisponibilidade e relatórios",
+        "Especificações do sensor"
+      ]
+    },
+    "cmms": {
+      "title": "Tractian CMMS",
+      "links": [
+        "Diagnóstico de falhas e SOPs",
+        "Gestão de ordens de serviço",
+        "Gestão de inventário de peças",
+        "Manutenção preventiva",
+        "Aplicativo Móvel"
+      ]
+    },
+    "oee": {
+      "title": "Tractian OEE",
+      "links": [
+        "Acompanhamento de produção com IA",
+        "Desempenho do operador",
+        "Qualidade digitalizada",
+        "Dashboards personalizados",
+        "Análise de utilidades e processos"
+      ]
+    },
+    "pricing": {
+      "title": "Planos",
+      "links": [
+        "Monitoramento de condição",
+        "CMMS Software",
+        "OEE Platform"
+      ]
+    },
+    "integrations": {
+      "title": "Integrações",
+      "links": [
+        "Oracle NetSuite",
+        "SAP",
+        "Power BI",
+        "Todas as Integrações"
+      ]
+    },
+    "resources": {
+      "title": "Recursos",
+      "links": [
+        "Casos de sucesso",
+        "Ebooks",
+        "Blog",
+        "Calculadoras",
+        "SOPs",
+        "Atualizações do produto",
+        "Tractian Academy",
+        "Centro de Ajuda"
+      ]
+    },
+    "company": {
+      "title": "A Tractian",
+      "links": [
+        "Sobre nós",
+        "Carreiras",
+        "Imprensa",
+        "Contato",
+        "Indicações",
+        "Garantia de Hardware",
+        "SLA de Software",
+        "Trust Center"
+      ]
+    },
+    "downloadApp": {
+      "title": "Baixe nosso App",
+      "links": [
+        "Apple Store",
+        "Google Play Store",
+        "SAP Store"
+      ]
+    },
+    "privacyChoices": "Suas escolhas de privacidade",
     "copyright": "© Tractian Tecnologia LTDA. Todos os direitos reservados.",
+    "cnpj": "CNPJ: 36.485.824/0001-03",
     "phone": "0800 110 2020",
     "address": "Rua Antonio das Chagas, 945 - Chácara Santo Antônio - Zona Sul, São Paulo - SP, 04711-020"
+  },
+  "demoModal": {
+    "title": "Solicite Sua Demonstração",
+    "subtitle": "Preencha os campos para falar com um especialista e entender os benefícios que nossas soluções oferecem para suas operações.",
+    "name": "Nome Completo",
+    "email": "E-mail Corporativo",
+    "phone": "Telefone",
+    "jobTitle": "Cargo",
+    "industry": "Setor da Indústria",
+    "solution": "Solução de Interesse",
+    "assetsQuestion": "Quantos ativos operam na sua planta?",
+    "submit": "Solicitar demonstração",
+    "submitting": "Enviando...",
+    "success": "Obrigado! Entraremos em contato em breve."
+  },
+  "cookies": {
+    "bannerText": "Ao clicar em \"Aceitar Todos os Cookies\", você concorda com o armazenamento de cookies no seu dispositivo para melhorar a navegação no site, analisar o uso do site e auxiliar em nossos esforços de marketing.",
+    "settingsButton": "Configurações de Cookies",
+    "acceptButton": "Aceitar Todos os Cookies"
+  },
+  "privacyModal": {
+    "title": "Central de Preferências de Privacidade",
+    "description": "Quando você visita qualquer site, ele pode armazenar ou recuperar informações no seu navegador, principalmente na forma de cookies. Essas informações podem ser sobre você, suas preferências ou seu dispositivo e são usadas principalmente para fazer o site funcionar como você espera. As informações geralmente não identificam você diretamente, mas podem proporcionar uma experiência web mais personalizada. Como respeitamos seu direito à privacidade, você pode optar por não permitir alguns tipos de cookies. Clique nos diferentes títulos de categoria para saber mais e alterar nossas configurações padrão. No entanto, bloquear alguns tipos de cookies pode afetar sua experiência no site e os serviços que podemos oferecer.",
+    "moreInfo": "Mais informações",
+    "manageTitle": "Gerenciar Preferências de Consentimento",
+    "alwaysActive": "Sempre Ativo",
+    "active": "Ativo",
+    "inactive": "Inativo",
+    "rejectAll": "Rejeitar Todos",
+    "confirmChoices": "Confirmar Minhas Escolhas",
+    "categories": {
+      "functional": {
+        "title": "Cookies Funcionais",
+        "description": "Esses cookies permitem que o site forneça funcionalidades e personalização aprimoradas. Podem ser definidos por nós ou por provedores terceiros cujos serviços adicionamos às nossas páginas."
+      },
+      "strictlyNecessary": {
+        "title": "Cookies Estritamente Necessários",
+        "description": "Esses cookies são necessários para o funcionamento do site e não podem ser desativados em nossos sistemas. Geralmente são definidos apenas em resposta a ações feitas por você."
+      },
+      "targeting": {
+        "title": "Cookies de Segmentação",
+        "description": "Esses cookies podem ser definidos em nosso site por nossos parceiros de publicidade. Podem ser usados por essas empresas para criar um perfil dos seus interesses e mostrar anúncios relevantes em outros sites."
+      },
+      "performance": {
+        "title": "Cookies de Desempenho",
+        "description": "Esses cookies nos permitem contar visitas e fontes de tráfego para que possamos medir e melhorar o desempenho do nosso site. Eles nos ajudam a saber quais páginas são as mais e menos populares."
+      }
+    }
   }
 }
