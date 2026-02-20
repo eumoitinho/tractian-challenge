@@ -32,10 +32,10 @@ function AccordionContent({ isOpen, children }: { isOpen: boolean; children: Rea
 
   return (
     <div
-      className="overflow-hidden transition-[max-height,opacity] duration-300 ease-in-out"
-      style={{ maxHeight: `${height}px`, opacity: isOpen ? 1 : 0 }}
+      className="overflow-hidden transition-all duration-300 ease-in-out"
+      style={{ maxHeight: isOpen ? `${height}px` : "0px", opacity: isOpen ? 1 : 0 }}
     >
-      <div ref={contentRef}>
+      <div ref={contentRef} className="pt-1 pb-2">
         {children}
       </div>
     </div>
@@ -54,10 +54,10 @@ export function WhyChoose() {
 
   return (
     <section className="bg-slate-100 py-12 px-4 w-full lg:pt-16 lg:pb-16">
-      <div className="flex-col flex w-full max-w-2xl gap-16 m-auto lg:max-w-6xl">
-        <article className="flex-col flex w-full gap-4">
-          <p className="text-blue-600 uppercase">{t("label")}</p>
-          <h2 className="text-[2.50rem] leading-none font-bold">{t("title")}</h2>
+      <div className="flex-col flex w-full max-w-2xl gap-10 sm:gap-16 m-auto lg:max-w-6xl">
+        <article className="flex-col flex w-full gap-3">
+          <p className="text-blue-600 uppercase text-sm font-medium">{t("label")}</p>
+          <h2 className="text-[20px] leading-tight font-bold min-[375px]:text-[2.50rem] min-[375px]:leading-none">{t("title")}</h2>
         </article>
 
         <div className="items-start flex-col flex w-full gap-8 lg:min-h-[22.50rem] lg:flex-row lg:justify-between">

@@ -51,15 +51,15 @@ export function Features() {
 
   return (
     <section className="bg-white py-12 px-4 relative w-full lg:pl-16 lg:pr-16 lg:pt-20 lg:pb-20">
-      <div className="items-center flex-col flex max-w-xl gap-12 m-auto lg:max-w-6xl">
-        <article className="items-start flex-col flex w-full text-4xl font-bold lg:items-center">
-          <h2 className="text-center w-full mt-4">{t("title")}</h2>
+      <div className="items-center flex-col flex max-w-xl gap-8 sm:gap-12 m-auto lg:max-w-6xl">
+        <article className="items-start flex-col flex w-full text-[20px] font-bold min-[375px]:text-4xl lg:items-center">
+          <h2 className="text-center w-full">{t("title")}</h2>
         </article>
 
         <section className="w-full">
           <div className="flex-col flex w-full gap-12 m-auto">
 
-            <div className="flex-col py-1 relative flex w-full mt-2 mx-auto sm:flex-row sm:pt-0 sm:pb-0 lg:mt-0">
+            <div className="flex-col py-1 relative flex w-full mt-0 mx-auto sm:flex-row sm:pt-0 sm:pb-0">
               {tabKeys.map((key) => {
                 const isActive = active === key;
                 return (
@@ -73,7 +73,7 @@ export function Features() {
                   >
                     <button
                       onClick={() => handleTabChange(key)}
-                      className={`cursor-pointer py-1.5 px-6 text-center w-full h-14 transition-transform duration-200 lg:pl-2 lg:pr-2 sm:w-auto sm:items-start sm:p-4 xl:pl-4 xl:pr-4 2xl:pl-6 2xl:pr-6 ${
+                      className={`cursor-pointer py-1.5 px-4 text-center text-sm sm:text-base w-full h-12 sm:h-14 transition-transform duration-200 lg:pl-2 lg:pr-2 sm:w-auto sm:items-start sm:p-4 xl:pl-4 xl:pr-4 2xl:pl-6 2xl:pr-6 ${
                         isActive ? "scale-105" : "scale-100"
                       }`}
                     >
@@ -86,7 +86,7 @@ export function Features() {
 
 
             <article className="justify-between flex w-full">
-              <div className={`items-center flex-col justify-between flex w-full gap-16 transition-all duration-300 ease-in-out ${slideClass} lg:min-h-[27.31rem] lg:flex-row`}>
+              <div className={`items-center flex-col justify-between flex w-full gap-8 sm:gap-16 transition-all duration-300 ease-in-out ${slideClass} lg:min-h-[27.31rem] lg:flex-row`}>
 
                 <div className="flex-col flex w-full lg:max-w-[23.88rem]">
                   <article className="items-center flex-col flex gap-4 lg:max-w-[23.88rem] lg:items-start">

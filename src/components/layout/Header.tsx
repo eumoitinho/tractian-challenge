@@ -49,9 +49,9 @@ function HoverArrow({ className }: { className?: string }) {
 }
 
 const localeLabels: Record<string, string> = {
-  en: "English (US)",
-  pt: "Português (BR)",
-  es: "Español (ES)",
+  pt: "Português (Brasil)",
+  en: "English (United States)",
+  es: "Español (México)",
 };
 
 const SOLUTIONS_ICON_PATH = "/icons/header/solutions";
@@ -88,7 +88,6 @@ const SOLUTION_ITEM_ICONS = [
     `${SOLUTIONS_ICON_PATH}/solutions-utility-process-analytics.svg`,
   ],
 ];
-
 
 const COMPANY_OTHER_ICONS = [
   `${COMPANY_ICON_PATH}/company-contact-us.svg`,
@@ -163,6 +162,7 @@ export function Header() {
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [langOpen, setLangOpen] = useState(false);
+  const [mobileExpanded, setMobileExpanded] = useState<string | null>(null);
   const navRef = useRef<HTMLElement>(null);
 
   const solutionsData = ht.raw("solutions") as SolutionColumn[];
@@ -202,6 +202,10 @@ export function Header() {
   const toggleDropdown = (name: string) => {
     setActiveDropdown(activeDropdown === name ? null : name);
     setLangOpen(false);
+  };
+
+  const toggleMobileSection = (key: string) => {
+    setMobileExpanded(mobileExpanded === key ? null : key);
   };
 
   const sectorColCount = industriesData.sectors.length <= 6 ? 3 : 4;
@@ -245,7 +249,7 @@ export function Header() {
                 <ChevronDown isOpen={langOpen} className="h-3 w-3" />
               </button>
               {langOpen && (
-                <div className="absolute top-full left-0 mt-2 w-48 bg-slate-50 border border-slate-300 lg:border-1 py-1 z-[60] rounded-sm">
+                <div className="absolute top-full left-0 mt-2 w-56 bg-slate-50 border border-slate-300 lg:border-1 py-1 z-[60] rounded-sm">
                   {Object.entries(localeLabels).map(([key, label]) => (
                     <button
                       key={key}
@@ -284,17 +288,18 @@ export function Header() {
             <TractianLogo />
           </a>
           <button
-            className="p-2 text-slate-600"
+            className="p-2 text-blue-600"
             onClick={() => setIsMobileMenuOpen(true)}
             aria-label="Open Menu"
           >
-            <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+            <svg className="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
               <path strokeLinecap="round" strokeLinejoin="round" d="M4 6h16M4 12h16M4 18h16" />
             </svg>
           </button>
         </div>
       </div>
 
+      {/* Desktop overlay */}
       <div
         className={cn(
           "fixed inset-0 top-20 bg-black/60 z-30 transition-opacity duration-200",
@@ -303,6 +308,7 @@ export function Header() {
         onClick={() => setActiveDropdown(null)}
       />
 
+      {/* Desktop Solutions dropdown */}
       <div className={cn(
         "absolute top-full left-0 w-full z-40 transition-all duration-200 origin-top",
         activeDropdown === "solutions" ? "opacity-100 translate-y-0 pointer-events-auto visible" : "opacity-0 -translate-y-2 pointer-events-none invisible"
@@ -311,11 +317,7 @@ export function Header() {
         <div className="relative mx-auto w-full max-w-[80rem] px-8 pt-8 pb-12">
           <div className="flex w-full lg:justify-between">
             {solutionsData.map((col, colIdx) => (
-              <div
-                key={colIdx}
-                className="flex flex-col border-l border-slate-300 pl-4"
-                style={{ gap: "24px" }}
-              >
+              <div key={colIdx} className="flex flex-col border-l border-slate-300 pl-4" style={{ gap: "24px" }}>
                 <a href="#" className="flex items-center gap-2 group">
                   <IconBox src={SOLUTION_COL_ICONS[colIdx]} size={20} boxClass="w-8 h-8" />
                   <span className="font-semibold text-lg leading-7 group-hover:text-blue-600 transition-colors flex items-center gap-1">
@@ -332,9 +334,7 @@ export function Header() {
                           {item.label}
                           <HoverArrow />
                         </span>
-                        <span className="text-slate-500 text-xs leading-4">
-                          {item.desc}
-                        </span>
+                        <span className="text-slate-500 text-xs leading-4">{item.desc}</span>
                       </article>
                     </a>
                   ))}
@@ -345,6 +345,7 @@ export function Header() {
         </div>
       </div>
 
+      {/* Desktop Who We Serve dropdown */}
       <div className={cn(
         "absolute top-full left-0 w-full z-40 transition-all duration-200 origin-top",
         activeDropdown === "who" ? "opacity-100 translate-y-0 pointer-events-auto visible" : "opacity-0 -translate-y-2 pointer-events-none invisible"
@@ -384,6 +385,7 @@ export function Header() {
         </div>
       </div>
 
+      {/* Desktop Resources dropdown */}
       <div className={cn(
         "absolute top-full left-1/2 -translate-x-1/2 z-40 transition-all duration-200 origin-top",
         activeDropdown === "resources" ? "opacity-100 translate-y-0 pointer-events-auto visible" : "opacity-0 -translate-y-2 pointer-events-none invisible"
@@ -422,6 +424,7 @@ export function Header() {
         </div>
       </div>
 
+      {/* Desktop Company dropdown */}
       <div className={cn(
         "absolute top-full left-1/2 -translate-x-1/2 z-40 transition-all duration-200 origin-top",
         activeDropdown === "company" ? "opacity-100 translate-y-0 pointer-events-auto visible" : "opacity-0 -translate-y-2 pointer-events-none invisible"
@@ -463,6 +466,7 @@ export function Header() {
         </div>
       </div>
 
+      {/* Desktop Pricing dropdown */}
       <div className={cn(
         "absolute top-full left-1/2 -translate-x-1/2 z-40 transition-all duration-200 origin-top",
         activeDropdown === "pricing" ? "opacity-100 translate-y-0 pointer-events-auto visible" : "opacity-0 -translate-y-2 pointer-events-none invisible"
@@ -470,14 +474,7 @@ export function Header() {
         <div className="w-[60.63rem] bg-slate-50 rounded-sm">
           <div className="flex items-center px-8 py-6">
             {pricingData.map((label, i) => (
-              <a
-                key={i}
-                href="#"
-                className={cn(
-                  "group flex items-center gap-4 flex-1 py-3",
-                  "border-l border-slate-300 pl-6"
-                )}
-              >
+              <a key={i} href="#" className={cn("group flex items-center gap-4 flex-1 py-3", "border-l border-slate-300 pl-6")}>
                 <IconBox src={SOLUTION_COL_ICONS[i]} size={20} boxClass="w-10 h-10" />
                 <span className="text-base font-bold text-slate-800 group-hover:text-blue-600 transition-colors flex items-center gap-1">
                   {label}
@@ -489,46 +486,198 @@ export function Header() {
         </div>
       </div>
 
+      {/* ===== MOBILE MENU ===== */}
       <div
         className={cn(
           "fixed inset-0 z-[100] bg-white transform transition-transform duration-300 ease-in-out lg:hidden flex flex-col",
           isMobileMenuOpen ? "translate-x-0" : "translate-x-full"
         )}
       >
-        <div className="flex justify-between items-center px-4 sm:px-8 h-16 border-b border-slate-200">
+        <div className="flex justify-between items-center px-4 h-16 border-b border-slate-200 shrink-0">
           <a href={`/${locale}`}>
             <TractianLogo />
           </a>
           <button
-            className="p-2 text-slate-600"
+            className="p-2 text-blue-600"
             onClick={() => setIsMobileMenuOpen(false)}
             aria-label="Close Menu"
           >
-            <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+            <svg className="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
               <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
             </svg>
           </button>
         </div>
 
-        <div className="flex-1 overflow-y-auto py-4 px-4 space-y-2">
-          {navItems.map((item) => (
+        <div className="flex-1 overflow-y-auto">
+          {/* Solutions */}
+          <div className="border-b border-slate-100">
             <button
-              key={item.key}
-              className="w-full text-left py-3 px-2 font-medium text-slate-700 border-b border-slate-100"
+              onClick={() => toggleMobileSection("solutions")}
+              className="w-full flex items-center justify-between py-4 px-4 font-semibold text-slate-700"
             >
-              {item.label}
+              {t("solutions")}
+              <ChevronDown isOpen={mobileExpanded === "solutions"} className="w-3 h-3" />
             </button>
-          ))}
+            {mobileExpanded === "solutions" && (
+              <div className="pb-4 px-4 space-y-6">
+                {solutionsData.map((col, colIdx) => (
+                  <div key={colIdx} className="space-y-3">
+                    <p className="text-sm font-semibold text-slate-800 border-l-2 border-blue-600 pl-3">{col.title}</p>
+                    <div className="space-y-2 pl-4">
+                      {col.items.map((item, i) => (
+                        <a key={i} href="#" className="flex items-center gap-2 py-1">
+                          <IconBox src={SOLUTION_ITEM_ICONS[colIdx][i]} size={16} boxClass="w-6 h-6" />
+                          <span className="text-sm text-slate-600">{item.label}</span>
+                        </a>
+                      ))}
+                    </div>
+                  </div>
+                ))}
+              </div>
+            )}
+          </div>
+
+          {/* Who We Serve */}
+          <div className="border-b border-slate-100">
+            <button
+              onClick={() => toggleMobileSection("who")}
+              className="w-full flex items-center justify-between py-4 px-4 font-semibold text-slate-700"
+            >
+              {t("whoWeServe")}
+              <ChevronDown isOpen={mobileExpanded === "who"} className="w-3 h-3" />
+            </button>
+            {mobileExpanded === "who" && (
+              <div className="pb-4 px-4 space-y-4">
+                <div className="space-y-2">
+                  <p className="text-xs font-medium text-slate-400 uppercase">{industriesData.byRoleLabel}</p>
+                  {industriesData.roles.map((role, i) => (
+                    <a key={i} href="#" className="flex items-center gap-2 py-1">
+                      <IconBox src={`${WHO_ICON_PATH}/who-we-serve-by-role.svg`} size={14} boxClass="w-6 h-6" />
+                      <span className="text-sm text-slate-600">{role.label}</span>
+                    </a>
+                  ))}
+                </div>
+                <div className="space-y-2">
+                  <p className="text-xs font-medium text-slate-400 uppercase">{industriesData.bySectorLabel}</p>
+                  {industriesData.sectors.map((sector, i) => (
+                    <a key={i} href="#" className="flex items-center gap-2 py-1">
+                      <IconBox src={`${WHO_ICON_PATH}/who-we-serve-${sector.icon}.svg`} size={14} boxClass="w-6 h-6" />
+                      <span className="text-sm text-slate-600">{sector.label}</span>
+                    </a>
+                  ))}
+                </div>
+              </div>
+            )}
+          </div>
+
+          {/* Resources */}
+          <div className="border-b border-slate-100">
+            <button
+              onClick={() => toggleMobileSection("resources")}
+              className="w-full flex items-center justify-between py-4 px-4 font-semibold text-slate-700"
+            >
+              {t("resources")}
+              <ChevronDown isOpen={mobileExpanded === "resources"} className="w-3 h-3" />
+            </button>
+            {mobileExpanded === "resources" && (
+              <div className="pb-4 px-4 space-y-4">
+                <div className="space-y-2">
+                  <p className="text-xs font-medium text-slate-400 uppercase">{resourcesData.centerLabel}</p>
+                  {resourcesData.center.map((item, i) => (
+                    <a key={i} href="#" className="flex items-center gap-2 py-1">
+                      <IconBox src={`${RESOURCES_ICON_PATH}/${item.icon}.svg`} size={14} boxClass="w-6 h-6" />
+                      <span className="text-sm text-slate-600">{item.label}</span>
+                    </a>
+                  ))}
+                </div>
+                <div className="space-y-2">
+                  <p className="text-xs font-medium text-slate-400 uppercase">{resourcesData.hubLabel}</p>
+                  {resourcesData.hub.map((item, i) => (
+                    <a key={i} href="#" className="flex items-center gap-2 py-1">
+                      <IconBox src={`${RESOURCES_ICON_PATH}/${item.icon}.svg`} size={14} boxClass="w-6 h-6" />
+                      <span className="text-sm text-slate-600">{item.label}</span>
+                    </a>
+                  ))}
+                </div>
+              </div>
+            )}
+          </div>
+
+          {/* Company */}
+          <div className="border-b border-slate-100">
+            <button
+              onClick={() => toggleMobileSection("company")}
+              className="w-full flex items-center justify-between py-4 px-4 font-semibold text-slate-700"
+            >
+              {t("company")}
+              <ChevronDown isOpen={mobileExpanded === "company"} className="w-3 h-3" />
+            </button>
+            {mobileExpanded === "company" && (
+              <div className="pb-4 px-4 space-y-2">
+                {[...companyData.about, ...companyData.others].map((label, i) => (
+                  <a key={i} href="#" className="block py-1.5 text-sm text-slate-600">{label}</a>
+                ))}
+              </div>
+            )}
+          </div>
+
+          {/* Pricing */}
+          <div className="border-b border-slate-100">
+            <button
+              onClick={() => toggleMobileSection("pricing")}
+              className="w-full flex items-center justify-between py-4 px-4 font-semibold text-slate-700"
+            >
+              {t("pricing")}
+              <ChevronDown isOpen={mobileExpanded === "pricing"} className="w-3 h-3" />
+            </button>
+            {mobileExpanded === "pricing" && (
+              <div className="pb-4 px-4 space-y-2">
+                {pricingData.map((label, i) => (
+                  <a key={i} href="#" className="block py-1.5 text-sm text-slate-600">{label}</a>
+                ))}
+              </div>
+            )}
+          </div>
+
+          {/* Language selector in mobile */}
+          <div className="border-b border-slate-100">
+            <button
+              onClick={() => toggleMobileSection("language")}
+              className="w-full flex items-center justify-between py-4 px-4 text-slate-700"
+            >
+              <div className="flex items-center gap-2">
+                <GlobeIcon className="text-slate-500 w-5 h-5" />
+                <span className="font-semibold">{localeLabels[locale]}</span>
+              </div>
+              <ChevronDown isOpen={mobileExpanded === "language"} className="w-3 h-3" />
+            </button>
+            {mobileExpanded === "language" && (
+              <div className="pb-4 px-4 space-y-1">
+                {Object.entries(localeLabels).map(([key, label]) => (
+                  <button
+                    key={key}
+                    onClick={() => { handleLocaleChange(key); setIsMobileMenuOpen(false); }}
+                    className={cn(
+                      "w-full text-left py-2 text-sm rounded-sm px-3",
+                      locale === key ? "bg-blue-50 text-blue-600 font-medium" : "text-slate-600"
+                    )}
+                  >
+                    {label}
+                  </button>
+                ))}
+              </div>
+            )}
+          </div>
         </div>
 
-        <div className="p-4 border-t border-slate-200 space-y-3 pb-8">
+        <div className="p-4 border-t border-slate-200 space-y-3 pb-8 shrink-0">
           <a
             href="https://app.tractian.com"
             className="block w-full text-center py-3 text-blue-600 font-medium border-2 border-blue-600 rounded-sm"
           >
             {t("login")}
           </a>
-          <button onClick={openDemoModal} className="block w-full py-3 text-white font-medium bg-blue-600 rounded-sm">
+          <button onClick={() => { openDemoModal(); setIsMobileMenuOpen(false); }} className="block w-full py-3 text-white font-medium bg-blue-600 rounded-sm">
             {t("getDemo")}
           </button>
         </div>
