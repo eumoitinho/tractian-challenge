@@ -197,7 +197,7 @@ export function DemoForm() {
 
   if (submitted) {
     return (
-      <section id="demo-form" className="py-12 px-4 sm:py-20 lg:py-28">
+      <section id="demo-form" className="py-12 px-4 overflow-x-hidden sm:py-20 lg:py-28">
         <div className="mx-auto max-w-lg rounded-sm border border-blue-200 bg-white p-8 sm:p-12 text-center">
           <CheckCircle className="mx-auto mb-4 h-12 w-12 sm:h-16 sm:w-16 text-green-500" />
           <h3 className="mb-2 text-xl sm:text-2xl font-bold text-slate-700">{t("success")}</h3>
@@ -207,7 +207,7 @@ export function DemoForm() {
   }
 
   return (
-    <section id="demo-form" className="py-12 px-4 sm:py-20 lg:py-28">
+    <section id="demo-form" className="py-12 px-4 overflow-x-hidden sm:py-20 lg:py-28">
       <div className="mx-auto max-w-2xl">
         <h2 className="mb-6 sm:mb-8 text-center text-[20px] sm:text-3xl font-bold text-slate-700">{t("title")}</h2>
 

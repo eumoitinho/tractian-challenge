@@ -13,7 +13,7 @@ export function Hero() {
   return (
     <>
       {/* Mobile hero - split layout */}
-      <section className="md:hidden">
+      <section className="md:hidden overflow-x-hidden">
         <div className="bg-blue-950 w-full px-4 py-10 sm:px-8 sm:py-14">
           <div className="flex flex-col items-center gap-6 max-w-lg mx-auto">
             <p className="text-blue-300 font-medium text-xs tracking-widest uppercase text-center">{t("label")}</p>

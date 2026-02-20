@@ -40,7 +40,7 @@ export function Faq() {
   const totalItems = faqItems.length;
 
   return (
-    <div className="bg-slate-100 py-12 w-full lg:pt-16 lg:pb-16">
+    <div className="bg-slate-100 py-12 w-full overflow-x-hidden lg:pt-16 lg:pb-16">
       <section className="items-center flex-col px-4 flex max-w-2xl gap-12 m-auto lg:max-w-6xl lg:gap-16">
         <article className="items-center flex-col flex w-full gap-4">
           <p className="text-blue-600 text-center uppercase text-sm font-medium">{t("sectionLabel")}</p>

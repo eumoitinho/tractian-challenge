@@ -37,7 +37,7 @@ export function ValueProps() {
   const t = useTranslations("value");
 
   return (
-    <section className="bg-slate-100 py-12 px-4 w-full lg:pt-16 lg:pb-16">
+    <section className="bg-slate-100 py-12 px-4 w-full overflow-x-hidden lg:pt-16 lg:pb-16">
       <div className="items-center flex-col flex w-full max-w-2xl gap-12 m-auto lg:max-w-6xl">
         <h2 className="text-[20px] font-bold text-center min-[375px]:text-4xl">{t("title")}</h2>
 

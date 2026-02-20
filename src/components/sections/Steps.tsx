@@ -6,7 +6,7 @@ export function Steps() {
   const t = useTranslations("steps");
 
   return (
-    <section className="bg-slate-100 py-12 px-4 lg:pt-16 lg:pb-16">
+    <section className="bg-slate-100 py-12 px-4 overflow-x-hidden lg:pt-16 lg:pb-16">
       <div className="items-start flex-col flex w-full max-w-2xl gap-8 sm:gap-12 m-auto lg:max-w-6xl lg:items-center">
         <h2 className="text-[20px] font-bold text-left sm:text-center min-[375px]:text-4xl lg:mb-4">{t("title")}</h2>
 
