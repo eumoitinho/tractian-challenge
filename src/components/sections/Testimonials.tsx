@@ -40,24 +40,22 @@ export function Testimonials() {
   return (
     <section className="bg-white py-12 w-full sm:pl-4 sm:pr-4 lg:pt-16 lg:pb-16 xl:pl-0 xl:pr-0">
       <div className="items-center flex-col flex w-full max-w-2xl gap-12 m-auto lg:max-w-6xl">
-        <h2 className="text-4xl font-bold px-4 text-center sm:pl-0 sm:pr-0">
+        <h2 className="text-[1.75rem] font-bold px-4 text-center min-[375px]:text-4xl sm:pl-0 sm:pr-0">
           {t("title")}
         </h2>
 
-        <div className="items-stretch hidden w-full h-auto gap-12 sm:grid sm:grid-cols-2 lg:flex lg:flex-row lg:justify-between">
+        <div className="flex w-full overflow-x-auto gap-6 px-4 snap-x snap-mandatory sm:grid sm:grid-cols-2 sm:overflow-visible sm:px-0 sm:gap-12 lg:flex lg:flex-row lg:justify-between">
           {items.map((item, i) => (
-            <div key={i} className="flex-col flex w-full h-auto gap-4">
+            <div key={i} className="flex-col flex min-w-[280px] w-[80vw] shrink-0 snap-start h-auto gap-4 sm:w-full sm:min-w-0 sm:shrink">
 
               <div className="items-center flex w-full text-blue-600">
                 <QuoteIcon />
                 {i === 1 && <G2Badge />}
               </div>
 
-
               <p className="text-slate-500 text-sm italic h-full">
                 {item.quote}
               </p>
-
 
               <div className="items-center flex gap-3 lg:justify-between">
                 <figure className="items-center justify-center flex w-12 h-12 min-w-[3rem] rounded-full overflow-hidden lg:h-14 lg:w-14 lg:min-w-[3.5rem]">

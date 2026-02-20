@@ -39,13 +39,13 @@ export function ValueProps() {
   return (
     <section className="bg-slate-100 py-12 px-4 w-full lg:pt-16 lg:pb-16">
       <div className="items-center flex-col flex w-full max-w-2xl gap-12 m-auto lg:max-w-6xl">
-        <h2 className="text-4xl font-bold text-center">{t("title")}</h2>
+        <h2 className="text-[1.75rem] font-bold text-center min-[375px]:text-4xl">{t("title")}</h2>
 
         <div className="items-stretch flex-col flex w-full h-auto gap-16 lg:flex-row lg:justify-between">
           {cardKeys.map((key, i) => {
             const Icon = cardIcons[i];
             return (
-              <div key={key} className="items-start flex w-full flex-row gap-4 lg:flex-col lg:items-center">
+              <div key={key} className="items-start flex w-full flex-col gap-4 min-[375px]:flex-row lg:flex-col lg:items-center">
                 <figure className="bg-white items-center justify-center flex rounded-sm p-3.5 lg:h-24 lg:w-24 lg:p-0">
                   <Icon />
                 </figure>

@@ -18,7 +18,7 @@ export function Hero() {
         <div className="items-center flex-col w-full flex gap-8 md:w-fit md:items-start">
           <article className="items-center flex-col relative w-full flex gap-4 md:items-start md:max-w-[30.63rem]">
             <p className="text-white font-light text-center md:text-left">{t("label")}</p>
-            <h1 className="text-white text-[2.50rem] font-bold leading-[3.25rem] text-center md:text-left">
+            <h1 className="text-white text-[1.75rem] font-bold leading-[2.25rem] text-center min-[375px]:text-[2.50rem] min-[375px]:leading-[3.25rem] md:text-left">
               {t("title")}
             </h1>
             <p className="text-white font-light text-center md:text-left">

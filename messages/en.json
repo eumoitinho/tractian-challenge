@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "title": "For the Plant Manager Who Wants to Lead with Confidence | TRACTIAN",
-    "description": "Make smarter decisions, faster. Tractian gives you clarity, control, and confidence — so you can lead the plant and prove the ROI."
+    "title": "For the Plant Manager Who Wants to Lead with Confidence",
+    "description": "Make smarter decisions, faster. Tractian gives you clarity, control, and confidence – so you can lead the plant and prove the ROI."
   },
   "nav": {
     "solutions": "Solutions",
@@ -97,7 +97,7 @@
   "hero": {
     "label": "KEEP OPERATIONS RUNNING. HIT YOUR TARGETS.",
     "title": "For the Plant Manager Who Wants to Lead with Confidence",
-    "subtitle": "Make smarter decisions, faster. Tractian gives you clarity, control, and confidence — so you can lead the plant and prove the ROI.",
+    "subtitle": "Make smarter decisions, faster. Tractian gives you clarity, control, and confidence – so you can lead the plant and prove the ROI.",
     "cta": "Get a Demo",
     "quote": "\"With everything centralized within Tractian platform, we finally have the visibility to act fast, plan smarter, and show real results.\"",
     "quoteAuthor": "Paul Morais",
@@ -138,7 +138,7 @@
       "reports": {
         "label": "Reports for Scalability",
         "title": "Show what's working with reports built for leadership visibility.",
-        "description": "Tractian tracks the metrics that matter — from downtime trends to execution rates — so you can prove value at every review.",
+        "description": "Tractian tracks the metrics that matter – from downtime trends to execution rates – so you can prove value at every review.",
         "items": [
           "Monitor backlog, downtime, maintenance costs, financial planning",
           "Export data for audits, reports, and budget justification",
@@ -150,7 +150,7 @@
       "oversight": {
         "label": "Operational Oversight",
         "title": "Run the plant with clarity and control.",
-        "description": "Standardize maintenance procedures, reduce safety risks, and always stay ready for audits. With Tractian, compliance is no longer a side process — it's built into your team's daily execution.",
+        "description": "Standardize maintenance procedures, reduce safety risks, and always stay ready for audits. With Tractian, compliance is no longer a side process – it's built into your team's daily execution.",
         "items": [
           "SOPs and work permits attached directly to work orders and inspections",
           "Track safety-related tasks, validations, and overdue actions",
@@ -191,15 +191,15 @@
     "cards": {
       "whole": {
         "title": "Built for the whole plant",
-        "description": "Get everyone on the same page — no more silos or scattered systems. Our solutions help you track maintenance, reliability, and execution in one place so your team moves faster."
+        "description": "Get everyone on the same page – no more silos or scattered systems. Our solutions help you track maintenance, reliability, and execution in one place so your team moves faster."
       },
       "execution": {
         "title": "Execution-ready from day one",
-        "description": "Skip the lengthy training and slow ramp-up. With tools your team actually uses, you'll see impact quickly — without needing extra headcount, expensive consultants, or complex rollouts."
+        "description": "Skip the lengthy training and slow ramp-up. With tools your team actually uses, you'll see impact quickly – without needing extra headcount, expensive consultants, or complex rollouts."
       },
       "support": {
         "title": "White-glove support",
-        "description": "Our expert team works shoulder-to-shoulder with you, from install to scale-up. With hands-on support, we're on site when it matters — helping you train teams, fine-tune setups, and hit your goals faster."
+        "description": "Our expert team works shoulder-to-shoulder with you, from install to scale-up. With hands-on support, we're on site when it matters – helping you train teams, fine-tune setups, and hit your goals faster."
       }
     }
   },
@@ -221,7 +221,7 @@
         "image": "https://imgix.tractian.com/website/pages/who-we-serve/plant-manager/en/nicholas.png?auto=format%2Ccompress&cs=origin&fit=max&q=75&w=256"
       },
       {
-        "quote": "Now when I get to the plant, I just log in and everything I need is right there — step-by-step instructions, what I need to do. It's a lot easier, way faster, and less of a hassle.",
+        "quote": "Now when I get to the plant, I just log in and everything I need is right there – step-by-step instructions, what I need to do. It's a lot easier, way faster, and less of a hassle.",
         "name": "Fabiano J.",
         "role": "Rental Fleet Manager",
         "company": "CZM",
@@ -254,7 +254,7 @@
     ]
   },
   "steps": {
-    "title": "From first call to full rollout — we've got you covered",
+    "title": "From first call to full rollout – we've got you covered",
     "items": [
       {
         "step": "1",
@@ -290,7 +290,7 @@
     "items": [
       {
         "question": "How can I reduce unplanned downtime at my plant?",
-        "answer": "Tractian condition monitoring detects early-stage failures and sends alerts before breakdowns happen — giving you time to act. Combined with our CMMS, those alerts automatically generate work orders, assign tasks, and track progress, so nothing slips through the cracks. You prevent failures and stay organized while doing it."
+        "answer": "Tractian condition monitoring detects early-stage failures and sends alerts before breakdowns happen – giving you time to act. Combined with our CMMS, those alerts automatically generate work orders, assign tasks, and track progress, so nothing slips through the cracks. You prevent failures and stay organized while doing it."
       },
       {
         "question": "Can I prove ROI using Tractian?",
@@ -298,11 +298,11 @@
       },
       {
         "question": "How hard is it to install and start using Tractian?",
-        "answer": "It's plug-and-play. Vibration sensors are installed in minutes, and our platform is intuitive — no complex onboarding or training required. Most teams are up and running within a day."
+        "answer": "It's plug-and-play. Vibration sensors are installed in minutes, and our platform is intuitive – no complex onboarding or training required. Most teams are up and running within a day."
       },
       {
         "question": "Can Tractian really help if my team is understaffed?",
-        "answer": "Yes. Our condition monitoring pinpoints the issues, while the CMMS turns them into clear, actionable tasks. Together, they eliminate time spent digging through data, guessing priorities, or chasing paperwork. You get straight-to-the-point alerts, smart scheduling, and full visibility so your team can act fast — even with fewer hands."
+        "answer": "Yes. Our condition monitoring pinpoints the issues, while the CMMS turns them into clear, actionable tasks. Together, they eliminate time spent digging through data, guessing priorities, or chasing paperwork. You get straight-to-the-point alerts, smart scheduling, and full visibility so your team can act fast – even with fewer hands."
       },
       {
         "question": "Do I need to replace my current systems to use Tractian?",
@@ -310,15 +310,15 @@
       },
       {
         "question": "How does Tractian support compliance and audit preparation?",
-        "answer": "Tractian builds compliance into everyday maintenance. It tracks safety validations, work permits, SOPs, and historical logs in one place — so you can instantly export reports and prove due diligence during audits or inspections."
+        "answer": "Tractian builds compliance into everyday maintenance. It tracks safety validations, work permits, SOPs, and historical logs in one place – so you can instantly export reports and prove due diligence during audits or inspections."
       },
       {
         "question": "What kind of reporting does Tractian offer?",
-        "answer": "Tractian offers leadership-ready insights, including maintenance costs, backlog, execution rates, asset health, and labor productivity. Reports can be customized by area, timeframe, or asset type — and exported for planning or presentations."
+        "answer": "Tractian offers leadership-ready insights, including maintenance costs, backlog, execution rates, asset health, and labor productivity. Reports can be customized by area, timeframe, or asset type – and exported for planning or presentations."
       },
       {
         "question": "Is Tractian easy for technicians to use?",
-        "answer": "Yes. Tractian is mobile-first and built for the field. Tasks, checklists, and diagnostics are available in just a few taps — helping your team execute work orders, validate fixes, and stay productive without extra admin."
+        "answer": "Yes. Tractian is mobile-first and built for the field. Tasks, checklists, and diagnostics are available in just a few taps – helping your team execute work orders, validate fixes, and stay productive without extra admin."
       },
       {
         "question": "What kind of support is included with Tractian?",
@@ -330,15 +330,15 @@
       },
       {
         "question": "What types of machines or equipment does Tractian work with?",
-        "answer": "Tractian is designed to support a wide range of critical equipment — from motors and pumps to compressors and other industrial assets — whether they're modern or aging."
+        "answer": "Tractian is designed to support a wide range of critical equipment – from motors and pumps to compressors and other industrial assets – whether they're modern or aging."
       },
       {
         "question": "Does Tractian require Wi-Fi or internal networks?",
-        "answer": "Tractian sensors use independent connectivity, so there's no need for internal network access or complex IT setup. Your data syncs automatically to our secure cloud platform. You can access the software from any desktop with internet access, or use the mobile app — even offline — right from the plant floor."
+        "answer": "Tractian sensors use independent connectivity, so there's no need for internal network access or complex IT setup. Your data syncs automatically to our secure cloud platform. You can access the software from any desktop with internet access, or use the mobile app – even offline – right from the plant floor."
       },
       {
         "question": "Can Tractian help with standardizing processes across teams?",
-        "answer": "Yes. Tractian ensures repeatability through digital SOPs, safety tracking, and centralized documentation. It's easy to see what was done, when, and by whom — across all shifts and teams."
+        "answer": "Yes. Tractian ensures repeatability through digital SOPs, safety tracking, and centralized documentation. It's easy to see what was done, when, and by whom – across all shifts and teams."
       },
       {
         "question": "Can I migrate my existing maintenance data?",
@@ -462,7 +462,7 @@
       ]
     },
     "privacyChoices": "Your Privacy Choices",
-    "copyright": "© 2026 Tractian Technologies Inc. All Rights Reserved.",
+    "copyright": "© 2025 Tractian Technologies Inc. All Rights Reserved.",
     "phone": "+1 (833) GET-TRAC",
     "address": "201 17th Street NW, Atlanta, GA 30363"
   },

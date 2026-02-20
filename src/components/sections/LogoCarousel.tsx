@@ -19,6 +19,21 @@ export function LogoCarousel() {
           {t("title")}
         </h2>
 
+        <div className="flex w-full overflow-hidden lg:hidden">
+          <div className="flex items-center gap-12 animate-marquee">
+            {[...logos, ...logos, ...logos, ...logos].map((logo, i) => (
+              <div key={i} className="items-center justify-center flex shrink-0">
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  className="object-contain h-8 max-w-[120px]"
+                  src={logo.src}
+                  alt={logo.name}
+                />
+              </div>
+            ))}
+          </div>
+        </div>
+
         <div className="flex-wrap justify-center hidden w-full gap-8 m-auto lg:grid lg:max-w-6xl lg:grid-cols-6 lg:items-center lg:justify-center">
           {logos.map((logo, i) => (
             <div key={i} className="items-center justify-center flex w-full">

@@ -52,7 +52,7 @@ export function Features() {
   return (
     <section className="bg-white py-12 px-4 relative w-full lg:pl-16 lg:pr-16 lg:pt-20 lg:pb-20">
       <div className="items-center flex-col flex max-w-xl gap-12 m-auto lg:max-w-6xl">
-        <article className="items-start flex-col flex w-full text-4xl font-bold lg:items-center">
+        <article className="items-start flex-col flex w-full text-[1.75rem] font-bold min-[375px]:text-4xl lg:items-center">
           <h2 className="text-center w-full mt-4">{t("title")}</h2>
         </article>
 

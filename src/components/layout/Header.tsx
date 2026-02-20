@@ -49,9 +49,9 @@ function HoverArrow({ className }: { className?: string }) {
 }
 
 const localeLabels: Record<string, string> = {
-  en: "English (US)",
-  pt: "Português (BR)",
-  es: "Español (ES)",
+  pt: "Português (Brasil)",
+  en: "English (United States)",
+  es: "Español (México)",
 };
 
 const SOLUTIONS_ICON_PATH = "/icons/header/solutions";

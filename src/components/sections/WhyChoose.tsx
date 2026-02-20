@@ -57,7 +57,7 @@ export function WhyChoose() {
       <div className="flex-col flex w-full max-w-2xl gap-16 m-auto lg:max-w-6xl">
         <article className="flex-col flex w-full gap-4">
           <p className="text-blue-600 uppercase">{t("label")}</p>
-          <h2 className="text-[2.50rem] leading-none font-bold">{t("title")}</h2>
+          <h2 className="text-[1.75rem] leading-tight font-bold min-[375px]:text-[2.50rem] min-[375px]:leading-none">{t("title")}</h2>
         </article>
 
         <div className="items-start flex-col flex w-full gap-8 lg:min-h-[22.50rem] lg:flex-row lg:justify-between">

@@ -14,7 +14,7 @@ export function CtaSection() {
     >
       <div className="bg-blue-950/[0.8] justify-center py-12 px-4 flex w-full max-w-full md:max-w-[50%] md:justify-end lg:pl-12 lg:pr-12 lg:pt-16 lg:pb-16 xl:pl-16 xl:pr-0 xl:pt-20 xl:pb-20 2xl:min-h-[29.69rem] 2xl:items-center 2xl:pl-16 min-[2100px]:min-h-[32.81rem] min-[2100px]:pl-12 min-[2460px]:min-h-[35.00rem]">
         <div className="items-center flex-col flex w-full max-w-full gap-8 md:max-w-[19.88rem] md:items-start lg:max-w-full xl:max-w-xl">
-          <article className="items-center flex-col flex w-full text-[2.50rem] leading-none font-bold md:items-start">
+          <article className="items-center flex-col flex w-full text-[1.75rem] leading-tight font-bold min-[375px]:text-[2.50rem] min-[375px]:leading-none md:items-start">
             <h2>
               {t("titleLine1")} <br /> {t("titleLine2")}
             </h2>
