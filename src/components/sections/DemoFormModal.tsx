@@ -1,8 +1,10 @@
 "use client";
 
 import { useState, useEffect, useRef, type FormEvent } from "react";
-import { useTranslations } from "next-intl";
+import { useTranslations, useLocale } from "next-intl";
 import { useDemoModal } from "@/lib/demo-modal-context";
+import { useFormAnalytics } from "@/lib/analytics";
+import { processLead } from "@/lib/lead-pipeline/pipeline";
 
 const JOB_TITLES = [
   "Plant Manager",
@@ -42,7 +44,9 @@ const ASSET_OPTIONS = ["Less than 25", "25 - 49", "50 - 99", "100 - 249", "250+"
 export function DemoFormModal() {
   const { isOpen, close } = useDemoModal();
   const t = useTranslations("demoModal");
+  const locale = useLocale();
   const overlayRef = useRef<HTMLDivElement>(null);
+  const { trackFieldFocus, markSubmitted, getFormData } = useFormAnalytics("demo-modal");
 
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
@@ -72,8 +76,33 @@ export function DemoFormModal() {
   const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
     setSubmitting(true);
-    await new Promise((r) => setTimeout(r, 1500));
+
+    const nameParts = name.trim().split(/\s+/);
+    const result = await processLead(
+      {
+        firstName: nameParts[0] || "",
+        lastName: nameParts.slice(1).join(" ") || "",
+        email,
+        phone,
+        company: "",
+        jobTitle,
+        industry,
+        solution,
+        assets,
+      },
+      getFormData(),
+      locale
+    );
+
+    markSubmitted();
     setSubmitting(false);
+
+    if (!result.success) {
+      if (process.env.NODE_ENV === "development") {
+        console.warn("[DemoFormModal] Pipeline error:", result.error);
+      }
+    }
+
     setSubmitted(true);
     setTimeout(() => {
       setSubmitted(false);
@@ -136,6 +165,7 @@ export function DemoFormModal() {
                     placeholder={t("name")}
                     value={name}
                     onChange={(e) => setName(e.target.value)}
+                    onFocus={() => trackFieldFocus("name")}
                     required
                     className="w-full h-12 rounded-sm bg-white px-3 text-base text-slate-700 placeholder:text-slate-500 outline outline-1 outline-slate-400 outline-offset-0 focus:outline-blue-600 focus:outline-2 transition-all"
                   />
@@ -148,6 +178,7 @@ export function DemoFormModal() {
                     placeholder={t("email")}
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
+                    onFocus={() => trackFieldFocus("email")}
                     required
                     className="w-full h-12 rounded-sm bg-white px-3 text-base text-slate-700 placeholder:text-slate-500 outline outline-1 outline-slate-400 outline-offset-0 focus:outline-blue-600 focus:outline-2 transition-all"
                   />
@@ -168,6 +199,7 @@ export function DemoFormModal() {
                         placeholder={t("phone")}
                         value={phone}
                         onChange={(e) => setPhone(e.target.value)}
+                        onFocus={() => trackFieldFocus("phone")}
                         className="w-full h-12 rounded-r-sm bg-white px-3 text-base text-slate-700 placeholder:text-slate-500 outline outline-1 outline-slate-400 outline-offset-0 -ml-px focus:outline-blue-600 focus:outline-2 transition-all"
                       />
                     </div>
@@ -177,6 +209,7 @@ export function DemoFormModal() {
                     <select
                       value={jobTitle}
                       onChange={(e) => setJobTitle(e.target.value)}
+                      onFocus={() => trackFieldFocus("jobTitle")}
                       className="w-full h-12 rounded-sm bg-white px-3 pr-8 text-base text-slate-700 appearance-none outline outline-1 outline-slate-400 outline-offset-0 focus:outline-blue-600 focus:outline-2 transition-all cursor-pointer"
                     >
                       <option value="" className="text-slate-500">{t("jobTitle")}</option>
@@ -193,6 +226,7 @@ export function DemoFormModal() {
                   <select
                     value={industry}
                     onChange={(e) => setIndustry(e.target.value)}
+                    onFocus={() => trackFieldFocus("industry")}
                     className="w-full h-12 rounded-sm bg-white px-3 pr-8 text-base text-slate-700 appearance-none outline outline-1 outline-slate-400 outline-offset-0 focus:outline-blue-600 focus:outline-2 transition-all cursor-pointer"
                   >
                     <option value="" className="text-slate-500">{t("industry")}</option>
@@ -208,6 +242,7 @@ export function DemoFormModal() {
                   <select
                     value={solution}
                     onChange={(e) => setSolution(e.target.value)}
+                    onFocus={() => trackFieldFocus("solution")}
                     className="w-full h-12 rounded-sm bg-white px-3 pr-8 text-base text-slate-700 appearance-none outline outline-1 outline-slate-400 outline-offset-0 focus:outline-blue-600 focus:outline-2 transition-all cursor-pointer"
                   >
                     <option value="" className="text-slate-500">{t("solution")}</option>

@@ -2,6 +2,12 @@
 
 import { useState, useRef } from "react";
 import { useTranslations } from "next-intl";
+import {
+  updateConsent,
+  flushPendingEvents,
+  trackConsentUpdate,
+  type ConsentCategory,
+} from "@/lib/analytics";
 
 interface PrivacyModalProps {
   isOpen: boolean;
@@ -64,6 +70,26 @@ export function PrivacyModal({ isOpen, onClose }: PrivacyModalProps) {
     if (e.target === overlayRef.current) onClose();
   };
 
+  const categoryToConsentKey: Record<string, ConsentCategory> = {
+    functional: "functional",
+    strictlyNecessary: "strictly_necessary",
+    targeting: "targeting",
+    performance: "performance",
+  };
+
+  const persistConsent = (currentToggles: Record<string, boolean>) => {
+    const consentState: Record<string, boolean> = {};
+    for (const cat of CATEGORIES) {
+      const consentKey = categoryToConsentKey[cat.key];
+      if (consentKey) {
+        consentState[consentKey] = currentToggles[cat.key];
+      }
+    }
+    const result = updateConsent(consentState as Partial<Record<ConsentCategory, boolean>>);
+    trackConsentUpdate(result);
+    flushPendingEvents();
+  };
+
   const handleRejectAll = () => {
     const newToggles: Record<string, boolean> = {};
     CATEGORIES.forEach((cat) => {
@@ -71,11 +97,13 @@ export function PrivacyModal({ isOpen, onClose }: PrivacyModalProps) {
     });
     setToggles(newToggles);
     localStorage.setItem("tractian-cookies-accepted", "true");
+    persistConsent(newToggles);
     onClose();
   };
 
   const handleConfirm = () => {
     localStorage.setItem("tractian-cookies-accepted", "true");
+    persistConsent(toggles);
     onClose();
   };
 

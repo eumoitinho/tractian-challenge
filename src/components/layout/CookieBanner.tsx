@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import { useTranslations } from "next-intl";
+import { updateConsent, flushPendingEvents, trackConsentUpdate } from "@/lib/analytics";
 
 interface CookieBannerProps {
   onOpenSettings: () => void;
@@ -21,6 +22,14 @@ export function CookieBanner({ onOpenSettings }: CookieBannerProps) {
 
   const handleAccept = () => {
     localStorage.setItem("tractian-cookies-accepted", "true");
+    const consent = updateConsent({
+      strictly_necessary: true,
+      functional: true,
+      performance: true,
+      targeting: true,
+    });
+    trackConsentUpdate(consent);
+    flushPendingEvents();
     setVisible(false);
   };
 
