@@ -2,11 +2,13 @@
 
 import { useTranslations } from "next-intl";
 import { useDemoModal } from "@/lib/demo-modal-context";
+import Image from "next/image";
 
 export function Hero() {
   const t = useTranslations("hero");
   const { open: openDemoModal } = useDemoModal();
   const heroImage = t("heroImage");
+  const heroImageMobile = t("heroImageMobile");
 
   return (
     <>
@@ -29,10 +31,13 @@ export function Hero() {
             </button>
           </div>
         </div>
-        <div className="w-full">
-          <div
-            className="w-full h-64 sm:h-80 bg-cover bg-center bg-no-repeat"
-            style={{ backgroundImage: `url("${heroImage}")`, backgroundPosition: "center center" }}
+        <div className="w-full h-64 sm:h-80 relative overflow-hidden">
+          <Image
+            src={heroImageMobile}
+            alt=""
+            fill
+            className="object-cover object-center"
+            priority
           />
         </div>
       </section>
