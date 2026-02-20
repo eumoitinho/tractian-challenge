@@ -5,6 +5,7 @@ import { getMessages, getTranslations } from "next-intl/server";
 import { routing } from "@/i18n/routing";
 import { DemoModalProvider } from "@/lib/demo-modal-context";
 import { PrivacyModalProvider } from "@/lib/privacy-modal-context";
+import { AnalyticsProvider } from "@/components/analytics/AnalyticsProvider";
 import "@/styles/globals.css";
 
 type Props = {
@@ -49,11 +50,13 @@ export default async function LocaleLayout({ children, params }: Props) {
       </head>
       <body className="text-slate-700 antialiased">
         <NextIntlClientProvider messages={messages}>
-          <DemoModalProvider>
-            <PrivacyModalProvider>
-              {children}
-            </PrivacyModalProvider>
-          </DemoModalProvider>
+          <AnalyticsProvider>
+            <DemoModalProvider>
+              <PrivacyModalProvider>
+                {children}
+              </PrivacyModalProvider>
+            </DemoModalProvider>
+          </AnalyticsProvider>
         </NextIntlClientProvider>
       </body>
     </html>

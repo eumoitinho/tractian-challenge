@@ -1,9 +1,11 @@
 "use client";
 
 import { useState, type FormEvent } from "react";
-import { useTranslations } from "next-intl";
+import { useTranslations, useLocale } from "next-intl";
 import { cn } from "@/lib/utils";
 import { CheckCircle, Loader2 } from "lucide-react";
+import { useFormAnalytics } from "@/lib/analytics";
+import { processLead } from "@/lib/lead-pipeline/pipeline";
 
 type FormData = {
   firstName: string;
@@ -31,10 +33,12 @@ const initialData: FormData = {
 
 export function DemoForm() {
   const t = useTranslations("form");
+  const locale = useLocale();
   const [data, setData] = useState<FormData>(initialData);
   const [errors, setErrors] = useState<FormErrors>({});
   const [submitting, setSubmitting] = useState(false);
   const [submitted, setSubmitted] = useState(false);
+  const { trackFieldFocus, markSubmitted: markFormSubmitted, getFormData } = useFormAnalytics("demo-form");
 
   const validate = (): boolean => {
     const newErrors: FormErrors = {};
@@ -59,10 +63,28 @@ export function DemoForm() {
 
     setSubmitting(true);
 
-    await new Promise((resolve) => setTimeout(resolve, 1500));
+    const result = await processLead(
+      {
+        firstName: data.firstName,
+        lastName: data.lastName,
+        email: data.email,
+        phone: data.phone,
+        company: data.company,
+        jobTitle: data.jobTitle,
+        plantSize: data.plantSize,
+        message: data.message,
+      },
+      getFormData(),
+      locale
+    );
 
-    console.log("Form submitted:", data);
+    markFormSubmitted();
     setSubmitting(false);
+
+    if (!result.success && process.env.NODE_ENV === "development") {
+      console.warn("[DemoForm] Pipeline error:", result.error);
+    }
+
     setSubmitted(true);
   };
 
@@ -71,6 +93,10 @@ export function DemoForm() {
     if (errors[field]) {
       setErrors((prev) => ({ ...prev, [field]: undefined }));
     }
+  };
+
+  const handleFocus = (field: keyof FormData) => {
+    trackFieldFocus(field);
   };
 
   const inputClasses = (field: keyof FormData) =>
@@ -113,6 +139,7 @@ export function DemoForm() {
                   type="text"
                   value={data.firstName}
                   onChange={(e) => handleChange("firstName", e.target.value)}
+                  onFocus={() => handleFocus("firstName")}
                   className={inputClasses("firstName")}
                   placeholder={t("firstName")}
                 />
@@ -130,6 +157,7 @@ export function DemoForm() {
                   type="text"
                   value={data.lastName}
                   onChange={(e) => handleChange("lastName", e.target.value)}
+                  onFocus={() => handleFocus("lastName")}
                   className={inputClasses("lastName")}
                   placeholder={t("lastName")}
                 />
@@ -147,6 +175,7 @@ export function DemoForm() {
                   type="email"
                   value={data.email}
                   onChange={(e) => handleChange("email", e.target.value)}
+                  onFocus={() => handleFocus("email")}
                   className={inputClasses("email")}
                   placeholder={t("email")}
                 />
@@ -164,6 +193,7 @@ export function DemoForm() {
                   type="tel"
                   value={data.phone}
                   onChange={(e) => handleChange("phone", e.target.value)}
+                  onFocus={() => handleFocus("phone")}
                   className={inputClasses("phone")}
                   placeholder={t("phone")}
                 />
@@ -178,6 +208,7 @@ export function DemoForm() {
                   type="text"
                   value={data.company}
                   onChange={(e) => handleChange("company", e.target.value)}
+                  onFocus={() => handleFocus("company")}
                   className={inputClasses("company")}
                   placeholder={t("company")}
                 />
@@ -195,6 +226,7 @@ export function DemoForm() {
                   type="text"
                   value={data.jobTitle}
                   onChange={(e) => handleChange("jobTitle", e.target.value)}
+                  onFocus={() => handleFocus("jobTitle")}
                   className={inputClasses("jobTitle")}
                   placeholder={t("jobTitle")}
                 />
@@ -211,6 +243,7 @@ export function DemoForm() {
                 <select
                   value={data.plantSize}
                   onChange={(e) => handleChange("plantSize", e.target.value)}
+                  onFocus={() => handleFocus("plantSize")}
                   className={cn(inputClasses("plantSize"), "appearance-none")}
                 >
                   <option value="">{t("plantSize")}</option>
@@ -229,6 +262,7 @@ export function DemoForm() {
                 <textarea
                   value={data.message}
                   onChange={(e) => handleChange("message", e.target.value)}
+                  onFocus={() => handleFocus("message")}
                   rows={3}
                   className={cn(inputClasses("message"), "resize-none")}
                   placeholder={t("message")}
