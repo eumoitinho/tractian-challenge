@@ -71,9 +71,9 @@ export function Footer() {
           <figure className="hidden w-auto shrink-0 sm:flex">
             <TractianLogoFooter />
           </figure>
-          <div className="items-center flex flex-wrap w-full gap-4 sm:gap-6 sm:justify-end">
+          <div className="items-center flex flex-wrap w-full gap-3 sm:gap-5 sm:justify-end">
             {badges.map((badge) => (
-              <figure key={badge.name} className="items-center flex h-14">
+              <figure key={badge.name} className="items-center justify-center flex h-12 sm:h-14">
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
                   className={`object-contain h-auto max-w-full ${badge.className}`}

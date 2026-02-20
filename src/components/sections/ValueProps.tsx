@@ -41,19 +41,19 @@ export function ValueProps() {
       <div className="items-center flex-col flex w-full max-w-2xl gap-12 m-auto lg:max-w-6xl">
         <h2 className="text-[1.75rem] font-bold text-center min-[375px]:text-4xl">{t("title")}</h2>
 
-        <div className="items-stretch flex-col flex w-full h-auto gap-16 lg:flex-row lg:justify-between">
+        <div className="items-stretch flex-col flex w-full h-auto gap-8 sm:gap-12 lg:flex-row lg:justify-between lg:gap-8">
           {cardKeys.map((key, i) => {
             const Icon = cardIcons[i];
             return (
-              <div key={key} className="items-start flex w-full flex-col gap-4 min-[375px]:flex-row lg:flex-col lg:items-center">
-                <figure className="bg-white items-center justify-center flex rounded-sm p-3.5 lg:h-24 lg:w-24 lg:p-0">
+              <div key={key} className="items-start flex w-full flex-row gap-4 lg:flex-col lg:items-center">
+                <figure className="bg-white items-center justify-center flex rounded-sm p-3.5 shrink-0 lg:h-24 lg:w-24 lg:p-0">
                   <Icon />
                 </figure>
-                <article className="flex-col flex w-full gap-4 lg:items-center">
-                  <h3 className="text-xl font-bold text-center">
+                <article className="flex-col flex w-full gap-2 lg:gap-4 lg:items-center">
+                  <h3 className="text-lg font-bold text-left lg:text-xl lg:text-center">
                     {t(`cards.${key}.title`)}
                   </h3>
-                  <p className="text-slate-500 text-center">
+                  <p className="text-slate-500 text-left text-sm lg:text-base lg:text-center">
                     {t(`cards.${key}.description`)}
                   </p>
                 </article>
