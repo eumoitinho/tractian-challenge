@@ -41,7 +41,7 @@ export function CookieBanner({ onOpenSettings }: CookieBannerProps) {
 
   return (
     <div
-      className="fixed bottom-8 left-4 z-[2147483645] w-[700px] max-w-[calc(100vw-32px)] rounded-sm bg-slate-50 shadow-[0_0_18px_0_rgba(0,0,0,0.2)]"
+      className="fixed bottom-8 left-4 right-4 z-[2147483645] max-w-[700px] rounded-sm bg-slate-50 shadow-[0_0_18px_0_rgba(0,0,0,0.2)] overflow-hidden mx-auto"
       style={{ fontFamily: "Inter, sans-serif" }}
     >
       <button

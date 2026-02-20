@@ -129,13 +129,17 @@ export function Testimonials() {
                 {item.quote}
               </p>
               <div className="items-center flex gap-3 lg:justify-between">
-                <figure className="items-center justify-center flex w-12 h-12 min-w-[3rem] rounded-full overflow-hidden lg:h-14 lg:w-14 lg:min-w-[3.5rem]">
+                <figure className="items-center justify-center flex w-12 h-12 min-w-[3rem] rounded-full overflow-hidden lg:h-14 lg:w-14 lg:min-w-[3.5rem] bg-slate-200">
                   {item.image && (
                     /* eslint-disable-next-line @next/next/no-img-element */
                     <img
                       className="object-cover w-12 h-12 rounded-full lg:w-14 lg:h-14"
                       src={item.image}
                       alt={item.name}
+                      onError={(e) => {
+                        const img = e.target as HTMLImageElement;
+                        img.style.display = 'none';
+                      }}
                     />
                   )}
                 </figure>
