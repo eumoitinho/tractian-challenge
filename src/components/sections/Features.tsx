@@ -50,7 +50,7 @@ export function Features() {
     : "translate-x-0 opacity-100";
 
   return (
-    <section className="bg-white py-12 px-4 relative w-full lg:pl-16 lg:pr-16 lg:pt-20 lg:pb-20">
+    <section className="bg-white py-12 px-4 relative w-full overflow-x-hidden lg:pl-16 lg:pr-16 lg:pt-20 lg:pb-20\">
       <div className="items-center flex-col flex max-w-xl gap-8 sm:gap-12 m-auto lg:max-w-6xl">
         <article className="items-start flex-col flex w-full text-[20px] font-bold min-[375px]:text-4xl lg:items-center">
           <h2 className="text-center w-full">{t("title")}</h2>

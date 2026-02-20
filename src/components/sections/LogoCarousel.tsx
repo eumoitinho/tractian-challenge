@@ -13,7 +13,7 @@ export function LogoCarousel() {
   const logos = (messages.logos as Record<string, unknown>)?.items as LogoItem[] || [];
 
   return (
-    <section className="pt-4 pb-8 w-full overflow-hidden lg:pl-4 lg:pr-4 lg:pb-16">
+    <section className="pt-4 pb-8 w-full overflow-x-hidden lg:pl-4 lg:pr-4 lg:pb-16">
       <div className="items-center flex-col flex w-full max-w-full gap-8 m-auto lg:gap-12">
         <h2 className="text-slate-500 px-4 text-center max-w-2xl m-auto text-sm sm:text-base lg:pl-0 lg:pr-0">
           {t("title")}

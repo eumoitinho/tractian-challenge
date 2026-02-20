@@ -53,7 +53,7 @@ export function WhyChoose() {
   };
 
   return (
-    <section className="bg-slate-100 py-12 px-4 w-full lg:pt-16 lg:pb-16">
+    <section className="bg-slate-100 py-12 px-4 w-full overflow-x-hidden lg:pt-16 lg:pb-16">
       <div className="flex-col flex w-full max-w-2xl gap-10 sm:gap-16 m-auto lg:max-w-6xl">
         <article className="flex-col flex w-full gap-3">
           <p className="text-blue-600 uppercase text-sm font-medium">{t("label")}</p>

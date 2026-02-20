@@ -9,7 +9,7 @@ export function CtaSection() {
 
   return (
     <section
-      className='bg-[url("https://tractian-webpage.s3.us-east-1.amazonaws.com/website/pages/who-we-serve/maintenance-engineer/en/more-than-machines.png")] bg-no-repeat bg-cover w-full text-white 2xl:min-h-[29.69rem] min-[2100px]:min-h-[32.81rem] min-[2460px]:min-h-[35.00rem]'
+      className='bg-[url("https://tractian-webpage.s3.us-east-1.amazonaws.com/website/pages/who-we-serve/maintenance-engineer/en/more-than-machines.png")] bg-no-repeat bg-cover w-full overflow-x-hidden text-white 2xl:min-h-[29.69rem] min-[2100px]:min-h-[32.81rem] min-[2460px]:min-h-[35.00rem]'
       style={{ backgroundPosition: "100% 50%" }}
     >
       <div className="bg-blue-950/[0.8] justify-center py-12 px-4 flex w-full max-w-full md:max-w-[50%] md:justify-end lg:pl-12 lg:pr-12 lg:pt-16 lg:pb-16 xl:pl-16 xl:pr-0 xl:pt-20 xl:pb-20 2xl:min-h-[29.69rem] 2xl:items-center 2xl:pl-16 min-[2100px]:min-h-[32.81rem] min-[2100px]:pl-12 min-[2460px]:min-h-[35.00rem]">
