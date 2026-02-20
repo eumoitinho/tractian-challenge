@@ -96,8 +96,8 @@
     "quoteAuthor": "Ricardo Cházaro",
     "quoteRole": "Gerente de Planta",
     "quoteCompany": "Cyplus Idesa",
-    "heroImage": "https://tractian-webpage.s3.us-east-1.amazonaws.com/website/pages/who-we-serve/plant-manager/en/plant-manager-header-image.png?q=75&w=3840",
-    "heroImageMobile": "https://tractian-webpage.s3.us-east-1.amazonaws.com/website/pages/who-we-serve/plant-manager/en/plant-manager-header-image-mobile.png?q=75&w=3840"
+    "heroImage": "https://tractian-webpage.s3.us-east-1.amazonaws.com/website/pages/who-we-serve/plant-manager/es/header-image.png?q=75&w=3840",
+    "heroImageMobile": "https://tractian-webpage.s3.us-east-1.amazonaws.com/website/pages/who-we-serve/plant-manager/es/header-image-mobile.png?q=75&w=3840"
   },
   "whyChoose": {
     "label": "TRACTIAN PARA GERENTES DE PLANTA",
