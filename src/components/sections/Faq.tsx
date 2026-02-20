@@ -44,7 +44,7 @@ export function Faq() {
       <section className="items-center flex-col px-4 flex max-w-2xl gap-12 m-auto lg:max-w-6xl lg:gap-16">
         <article className="items-center flex-col flex w-full gap-4">
           <p className="text-blue-600 text-center uppercase text-sm font-medium">{t("sectionLabel")}</p>
-          <h2 className="text-[1.75rem] leading-tight font-bold text-center min-[375px]:text-[2.50rem] min-[375px]:leading-none">{t("title")}</h2>
+          <h2 className="text-[20px] leading-tight font-bold text-center min-[375px]:text-[2.50rem] min-[375px]:leading-none">{t("title")}</h2>
         </article>
 
         <div className="flex-col gap-y-3 flex w-full sm:gap-y-4">

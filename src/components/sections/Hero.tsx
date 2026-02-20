@@ -15,7 +15,7 @@ export function Hero() {
         <div className="bg-blue-950 w-full px-4 py-10 sm:px-8 sm:py-14">
           <div className="flex flex-col items-center gap-6 max-w-lg mx-auto">
             <p className="text-blue-300 font-medium text-xs tracking-widest uppercase text-center">{t("label")}</p>
-            <h1 className="text-white text-[1.75rem] font-bold leading-[2.25rem] text-center min-[375px]:text-[2.25rem] min-[375px]:leading-[2.75rem]">
+            <h1 className="text-white text-[24px] leading-[32px] font-bold text-center min-[375px]:text-[2.25rem] min-[375px]:leading-[2.75rem]">
               {t("title")}
             </h1>
             <p className="text-blue-200 font-light text-center text-sm leading-relaxed">

@@ -209,7 +209,7 @@ export function DemoForm() {
   return (
     <section id="demo-form" className="py-12 px-4 sm:py-20 lg:py-28">
       <div className="mx-auto max-w-2xl">
-        <h2 className="mb-6 sm:mb-8 text-center text-2xl sm:text-3xl font-bold text-slate-700">{t("title")}</h2>
+        <h2 className="mb-6 sm:mb-8 text-center text-[20px] sm:text-3xl font-bold text-slate-700">{t("title")}</h2>
 
         <form
           onSubmit={handleSubmit}

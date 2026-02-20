@@ -237,7 +237,7 @@ export function DemoFormModal() {
             </button>
 
             <article className="mb-6 flex flex-col gap-y-2 text-center sm:px-5">
-              <h2 className="font-semibold text-2xl sm:text-[32px] sm:leading-[40px] text-slate-700" style={{ fontFamily: "'Inter Tight', sans-serif" }}>
+              <h2 className="font-semibold text-[20px] sm:text-[32px] sm:leading-[40px] text-slate-700" style={{ fontFamily: "'Inter Tight', sans-serif" }}>
                 {t("title")}
               </h2>
               <p className="text-sm sm:text-base text-slate-500">

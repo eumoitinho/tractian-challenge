@@ -39,7 +39,7 @@ export function ValueProps() {
   return (
     <section className="bg-slate-100 py-12 px-4 w-full lg:pt-16 lg:pb-16">
       <div className="items-center flex-col flex w-full max-w-2xl gap-12 m-auto lg:max-w-6xl">
-        <h2 className="text-[1.75rem] font-bold text-center min-[375px]:text-4xl">{t("title")}</h2>
+        <h2 className="text-[20px] font-bold text-center min-[375px]:text-4xl">{t("title")}</h2>
 
         <div className="items-stretch flex-col flex w-full h-auto gap-8 sm:gap-12 lg:flex-row lg:justify-between lg:gap-8">
           {cardKeys.map((key, i) => {

@@ -108,7 +108,7 @@ export function Testimonials() {
   return (
     <section className="bg-white py-12 w-full sm:pl-4 sm:pr-4 lg:pt-16 lg:pb-16 xl:pl-0 xl:pr-0">
       <div className="items-center flex-col flex w-full max-w-2xl gap-8 m-auto lg:max-w-6xl lg:gap-12">
-        <h2 className="text-[1.75rem] font-bold px-4 text-center min-[375px]:text-4xl sm:pl-0 sm:pr-0">
+        <h2 className="text-[20px] font-bold px-4 text-center min-[375px]:text-4xl sm:pl-0 sm:pr-0">
           {t("title")}
         </h2>
 
