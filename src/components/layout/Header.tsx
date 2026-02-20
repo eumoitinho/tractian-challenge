@@ -640,22 +640,33 @@ export function Header() {
           </div>
 
           {/* Language selector in mobile */}
-          <div className="px-4 py-4 border-b border-slate-100">
-            <p className="text-xs font-medium text-slate-400 uppercase mb-2">Language</p>
-            <div className="space-y-1">
-              {Object.entries(localeLabels).map(([key, label]) => (
-                <button
-                  key={key}
-                  onClick={() => { handleLocaleChange(key); setIsMobileMenuOpen(false); }}
-                  className={cn(
-                    "w-full text-left py-2 text-sm rounded-sm px-3",
-                    locale === key ? "bg-blue-50 text-blue-600 font-medium" : "text-slate-600"
-                  )}
-                >
-                  {label}
-                </button>
-              ))}
-            </div>
+          <div className="border-b border-slate-100">
+            <button
+              onClick={() => toggleMobileSection("language")}
+              className="w-full flex items-center justify-between py-4 px-4 text-slate-700"
+            >
+              <div className="flex items-center gap-2">
+                <GlobeIcon className="text-slate-500 w-5 h-5" />
+                <span className="font-semibold">{localeLabels[locale]}</span>
+              </div>
+              <ChevronDown isOpen={mobileExpanded === "language"} className="w-3 h-3" />
+            </button>
+            {mobileExpanded === "language" && (
+              <div className="pb-4 px-4 space-y-1">
+                {Object.entries(localeLabels).map(([key, label]) => (
+                  <button
+                    key={key}
+                    onClick={() => { handleLocaleChange(key); setIsMobileMenuOpen(false); }}
+                    className={cn(
+                      "w-full text-left py-2 text-sm rounded-sm px-3",
+                      locale === key ? "bg-blue-50 text-blue-600 font-medium" : "text-slate-600"
+                    )}
+                  >
+                    {label}
+                  </button>
+                ))}
+              </div>
+            )}
           </div>
         </div>
 
