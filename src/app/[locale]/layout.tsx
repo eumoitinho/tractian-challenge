@@ -3,6 +3,8 @@ import type { Metadata } from "next";
 import { NextIntlClientProvider } from "next-intl";
 import { getMessages, getTranslations } from "next-intl/server";
 import { routing } from "@/i18n/routing";
+import { DemoModalProvider } from "@/lib/demo-modal-context";
+import { PrivacyModalProvider } from "@/lib/privacy-modal-context";
 import "@/styles/globals.css";
 
 type Props = {
@@ -32,10 +34,10 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
 export default async function LocaleLayout({ children, params }: Props) {
   const { locale } = params;
-  const messages = await getMessages();
+  const messages = await getMessages({ locale });
 
   return (
-    <html lang={locale} className="dark">
+    <html lang={locale}>
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link
@@ -45,9 +47,13 @@ export default async function LocaleLayout({ children, params }: Props) {
         />
         <link rel="icon" href="/favicon.ico" />
       </head>
-      <body className="bg-tractian-dark text-white antialiased">
+      <body className="text-slate-700 antialiased">
         <NextIntlClientProvider messages={messages}>
-          {children}
+          <DemoModalProvider>
+            <PrivacyModalProvider>
+              {children}
+            </PrivacyModalProvider>
+          </DemoModalProvider>
         </NextIntlClientProvider>
       </body>
     </html>
