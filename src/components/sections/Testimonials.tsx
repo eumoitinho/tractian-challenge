@@ -1,6 +1,9 @@
 "use client";
 
+import { useState, useEffect, useRef, useCallback } from "react";
 import { useTranslations, useMessages } from "next-intl";
+
+const AUTO_ADVANCE_MS = 6000;
 
 function QuoteIcon() {
   return (
@@ -28,6 +31,11 @@ export function Testimonials() {
   const t = useTranslations("testimonials");
   const messages = useMessages();
   const rawItems = (messages.testimonials as Record<string, unknown>)?.items as Record<string, string>[] || [];
+  const scrollRef = useRef<HTMLDivElement>(null);
+  const [activeIndex, setActiveIndex] = useState(0);
+  const [progress, setProgress] = useState(0);
+  const timerRef = useRef<ReturnType<typeof setInterval>>();
+  const touchStartRef = useRef(0);
 
   const items = rawItems.map((_, i) => ({
     quote: t(`items.${i}.quote`),
@@ -37,26 +45,89 @@ export function Testimonials() {
     image: rawItems[i]?.image || "",
   }));
 
+  const total = items.length;
+
+  const goTo = useCallback((idx: number) => {
+    const next = ((idx % total) + total) % total;
+    setActiveIndex(next);
+    setProgress(0);
+    if (scrollRef.current) {
+      const child = scrollRef.current.children[next] as HTMLElement;
+      if (child) {
+        scrollRef.current.scrollTo({ left: child.offsetLeft - 16, behavior: "smooth" });
+      }
+    }
+  }, [total]);
+
+  useEffect(() => {
+    const interval = 50;
+    timerRef.current = setInterval(() => {
+      setProgress((p) => {
+        const next = p + (interval / AUTO_ADVANCE_MS) * 100;
+        if (next >= 100) {
+          setActiveIndex((prev) => {
+            const nextIdx = (prev + 1) % total;
+            if (scrollRef.current) {
+              const child = scrollRef.current.children[nextIdx] as HTMLElement;
+              if (child) {
+                scrollRef.current.scrollTo({ left: child.offsetLeft - 16, behavior: "smooth" });
+              }
+            }
+            return nextIdx;
+          });
+          return 0;
+        }
+        return next;
+      });
+    }, interval);
+
+    return () => clearInterval(timerRef.current);
+  }, [total]);
+
+  const handleTouchStart = (e: React.TouchEvent) => {
+    touchStartRef.current = e.touches[0].clientX;
+  };
+
+  const handleTouchEnd = (e: React.TouchEvent) => {
+    const diff = touchStartRef.current - e.changedTouches[0].clientX;
+    if (Math.abs(diff) > 50) {
+      goTo(diff > 0 ? activeIndex + 1 : activeIndex - 1);
+    }
+  };
+
+  const handleScroll = () => {
+    if (!scrollRef.current) return;
+    const { scrollLeft, clientWidth } = scrollRef.current;
+    const idx = Math.round(scrollLeft / (clientWidth * 0.85));
+    if (idx !== activeIndex && idx >= 0 && idx < total) {
+      setActiveIndex(idx);
+      setProgress(0);
+    }
+  };
+
   return (
     <section className="bg-white py-12 w-full sm:pl-4 sm:pr-4 lg:pt-16 lg:pb-16 xl:pl-0 xl:pr-0">
-      <div className="items-center flex-col flex w-full max-w-2xl gap-12 m-auto lg:max-w-6xl">
+      <div className="items-center flex-col flex w-full max-w-2xl gap-8 m-auto lg:max-w-6xl lg:gap-12">
         <h2 className="text-[1.75rem] font-bold px-4 text-center min-[375px]:text-4xl sm:pl-0 sm:pr-0">
           {t("title")}
         </h2>
 
-        <div className="flex w-full overflow-x-auto gap-6 px-4 snap-x snap-mandatory sm:grid sm:grid-cols-2 sm:overflow-visible sm:px-0 sm:gap-12 lg:flex lg:flex-row lg:justify-between">
+        <div
+          ref={scrollRef}
+          onScroll={handleScroll}
+          onTouchStart={handleTouchStart}
+          onTouchEnd={handleTouchEnd}
+          className="flex w-full overflow-x-auto gap-6 px-4 snap-x snap-mandatory scrollbar-hide sm:grid sm:grid-cols-2 sm:overflow-visible sm:px-0 sm:gap-12 lg:flex lg:flex-row lg:justify-between"
+        >
           {items.map((item, i) => (
-            <div key={i} className="flex-col flex min-w-[280px] w-[80vw] shrink-0 snap-start h-auto gap-4 sm:w-full sm:min-w-0 sm:shrink">
-
+            <div key={i} className="flex-col flex min-w-[280px] w-[85vw] shrink-0 snap-start h-auto gap-4 sm:w-full sm:min-w-0 sm:shrink">
               <div className="items-center flex w-full text-blue-600">
                 <QuoteIcon />
                 {i === 1 && <G2Badge />}
               </div>
-
               <p className="text-slate-500 text-sm italic h-full">
                 {item.quote}
               </p>
-
               <div className="items-center flex gap-3 lg:justify-between">
                 <figure className="items-center justify-center flex w-12 h-12 min-w-[3rem] rounded-full overflow-hidden lg:h-14 lg:w-14 lg:min-w-[3.5rem]">
                   {item.image && (
@@ -75,6 +146,23 @@ export function Testimonials() {
                 </article>
               </div>
             </div>
+          ))}
+        </div>
+
+        <div className="flex w-full gap-1.5 px-4 sm:hidden">
+          {items.map((_, i) => (
+            <button
+              key={i}
+              onClick={() => goTo(i)}
+              className="relative h-1 flex-1 rounded-full bg-slate-200 overflow-hidden cursor-pointer"
+            >
+              <div
+                className="absolute inset-y-0 left-0 bg-blue-600 rounded-full transition-all duration-100"
+                style={{
+                  width: i === activeIndex ? `${progress}%` : i < activeIndex ? "100%" : "0%",
+                }}
+              />
+            </button>
           ))}
         </div>
       </div>
