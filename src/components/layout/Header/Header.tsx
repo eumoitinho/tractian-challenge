@@ -155,7 +155,7 @@ export const Header = () => {
         </div>
       </div>
 
-      <div className={cn("fixed inset-0 top-20 bg-black/60 z-30 transition-opacity duration-200 pointer-events-none", activeDropdown ? "opacity-100" : "opacity-0")} onClick={() => setActiveDropdown(null)} />
+      <div className={cn("fixed inset-0 top-20 bg-black/60 z-10 transition-opacity duration-200", activeDropdown ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none")} onClick={() => setActiveDropdown(null)} />
 
       <DesktopSolutionsDropdown isOpen={activeDropdown === "solutions"} solutionsData={solutionsData} />
       <WhoDropdown isOpen={activeDropdown === "who"} industriesData={industriesData} />
