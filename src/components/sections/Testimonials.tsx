@@ -167,7 +167,7 @@ export function Testimonials() {
                   }
                 }}
                 className={cn(
-                  "h-1 rounded-full cursor-pointer transition-all duration-300",
+                  "h-[2px] rounded-none cursor-pointer transition-all duration-300",
                   i === activeIndex ? "bg-blue-600 w-[48px]" : "bg-slate-300 w-[24px]"
                 )}
                 aria-label={`Go to testimonial ${i + 1}`}

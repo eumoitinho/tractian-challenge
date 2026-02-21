@@ -98,7 +98,7 @@ export function MobileMenu({
           <TractianLogo />
         </a>
         <button className="p-2 text-slate-500" onClick={onClose} aria-label="Close Menu">
-          <svg className="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1}>
+          <svg className="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1 }>
             <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
           </svg>
         </button>
