@@ -32,7 +32,7 @@ export function LanguageSwitcher({
       </button>
       {isOpen && (
         <div
-          className="items-center bottom-[-8.63rem] box-border text-slate-500 flex-col h-32 leading-6 absolute left-0 w-48 flex border-2 border-slate-300 border-solid rounded-sm p-2 bg-slate-50"
+          className="items-center bottom-[-8.63rem] box-border text-slate-500 flex-col h-32 leading-6 absolute left-0 w-48 flex border-2 border-slate-300 border-solid rounded-sm p-2 bg-slate-50 z-50"
           style={{
             columnRuleWidth: "2px",
             outlineWidth: "2px",
