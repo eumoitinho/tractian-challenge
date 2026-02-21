@@ -152,7 +152,7 @@ export function CompanyDropdown({ isOpen, companyData }: CompanyDropdownProps) {
         <div className="flex px-8 py-8">
           <div className="flex-1 border-l border-slate-300 pl-6">
             <h3 className="text-sm text-slate-400 font-medium mb-5">{companyData.aboutLabel}</h3>
-            <div className="grid grid-cols-3 gap-5">
+            <div className="grid grid-cols-3 gap-5 pr-8">
               {companyData.about.map((label, i) => (
                 <a
                   key={i}

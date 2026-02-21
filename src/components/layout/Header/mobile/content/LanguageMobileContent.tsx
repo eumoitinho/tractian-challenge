@@ -36,9 +36,9 @@ interface LanguageMobileTriggerProps {
 
 export function LanguageMobileTrigger({ locale }: LanguageMobileTriggerProps) {
   return (
-    <div className="flex items-center gap-2">
-      <GlobeIcon className="w-5 h-5" />
-      <span className="font-semibold">{localeLabels[locale]}</span>
+    <div className="flex items-center gap-x-4">
+      <GlobeIcon className="w-5 h-5 text-slate-500" />
+      <p className="font-medium text-slate-500 text-sm">{localeLabels[locale]}</p>
     </div>
   );
 }

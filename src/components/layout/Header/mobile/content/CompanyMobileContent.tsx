@@ -11,40 +11,40 @@ interface CompanyMobileContentProps {
 
 export function CompanyMobileContent({ companyData }: CompanyMobileContentProps) {
   return (
-    <div className="py-4 px-4 space-y-4">
-      <div className="space-y-3">
-        <p className="text-xs font-medium text-slate-400 uppercase">{companyData.aboutLabel}</p>
+    <div className="py-4 px-4 space-y-8">
+      <div className="flex flex-col gap-4">
+        <p className="uppercase text-slate-500 text-sm">{companyData.aboutLabel}</p>
         {companyData.about.map((label, i) => (
           <a
             key={i}
             href="#"
-            className="flex items-center gap-3"
+            className="group ml-4 flex flex-row items-center gap-4"
             onClick={() => trackNavClick(label, "#")}
           >
-            <div className="w-8 h-8 shrink-0 rounded-sm overflow-hidden border-2 border-neutral-200">
+            <figure className="h-[90px] w-[160px] shrink-0 rounded-sm overflow-hidden">
               <Image
                 src={COMPANY_ABOUT_IMAGES[i]}
                 alt={label}
-                width={32}
-                height={32}
-                className="w-full h-full object-cover"
+                width={1080}
+                height={720}
+                className="h-[90px] w-[160px] rounded-sm object-cover"
                 unoptimized
               />
-            </div>
-            <span className="text-sm text-slate-500">{label}</span>
+            </figure>
+            <p className="font-medium text-slate-500 text-base">{label}</p>
           </a>
         ))}
       </div>
-      <div className="space-y-3">
-        <p className="text-xs font-medium text-slate-400 uppercase">{companyData.othersLabel}</p>
+      <div className="flex flex-col gap-4">
+        <p className="uppercase text-slate-500 text-sm">{companyData.othersLabel}</p>
         {companyData.others.map((label, i) => (
           <a
             key={i}
             href="#"
-            className="flex items-center gap-3"
+            className="group flex items-center gap-2"
             onClick={() => trackNavClick(label, "#")}
           >
-            <IconBox src={COMPANY_OTHER_ICONS[i]} size={16} boxClass="w-8 h-8 border-2 border-neutral-200" />
+            <IconBox src={COMPANY_OTHER_ICONS[i]} size={20} boxClass="w-8 h-8 bg-white" />
             <span className="text-sm text-slate-500">{label}</span>
           </a>
         ))}

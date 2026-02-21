@@ -18,7 +18,7 @@ export function PricingMobileContent({ pricingData }: PricingMobileContentProps)
           className="flex items-center gap-3"
           onClick={() => trackNavClick(label, "#")}
         >
-          <IconBox src={SOLUTION_COL_ICONS[i % 3]} size={20} boxClass="w-8 h-8 border-2 border-neutral-200" />
+          <IconBox src={SOLUTION_COL_ICONS[i % 3]} size={20} boxClass="w-8 h-8 bg-white" />
           <span className="text-sm text-slate-500">{label}</span>
         </a>
       ))}

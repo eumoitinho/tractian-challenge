@@ -17,7 +17,7 @@ export const COMPANY_ICON_PATH = "/icons/header/company";
 
 export const SOLUTION_COL_ICONS = [
   `${SOLUTIONS_ICON_PATH}/solutions-condition-monitoring.svg`,
-  `${SOLUTIONS_ICON_PATH}/solutions-cmms.svg`,
+  `${SOLUTIONS_ICON_PATH}/solutions-custom-dashboards.svg`,
   `${SOLUTIONS_ICON_PATH}/solutions-oee.svg`,
 ];
 

@@ -93,12 +93,12 @@ export function MobileMenu({
         isOpen ? "translate-x-0" : "translate-x-full"
       )}
     >
-      <div className="flex justify-between items-center px-4 h-16 border-b border-slate-200 shrink-0 bg-slate-100">
+      <div className="flex justify-between items-center px-4 h-16 border-b border-slate-200 shrink-0 bg-slate-100 sticky top-0 z-10">
         <a href={`/${locale}`}>
           <TractianLogo />
         </a>
         <button className="p-2 text-slate-500" onClick={onClose} aria-label="Close Menu">
-          <svg className="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
+          <svg className="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1}>
             <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
           </svg>
         </button>
@@ -126,9 +126,9 @@ export function MobileMenu({
         </MobileNavSection>
 
         <div className="border-b border-slate-100">
-          <button onClick={() => handleToggleSection("language")} className="w-full flex items-center justify-between py-4 px-4 text-lg text-slate-700">
+          <button onClick={() => handleToggleSection("language")} className="w-full flex items-center justify-between px-4 py-3 text-slate-500">
             <LanguageMobileTrigger locale={locale} />
-            <ChevronDown isOpen={expandedSection === "language"} className="w-3 h-3" />
+            <ChevronDown isOpen={expandedSection === "language"} className="w-4 h-4 text-slate-500" />
           </button>
           {expandedSection === "language" && (
             <div className="bg-slate-100">

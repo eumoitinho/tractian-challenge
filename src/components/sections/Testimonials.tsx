@@ -2,6 +2,7 @@
 
 import { useState, useEffect, useRef, useCallback } from "react";
 import { useTranslations, useMessages } from "next-intl";
+import { cn } from "@/lib/utils";
 
 const AUTO_ADVANCE_MS = 6000;
 
@@ -95,41 +96,109 @@ export function Testimonials() {
   };
 
   return (
-    <section className="box-border text-slate-700 h-[32.63rem] leading-6 py-12 w-full bg-white sm:pl-4 sm:pr-4 lg:pt-16 lg:pb-16 xl:pl-0 xl:pr-0">
-      <div className="items-center flex-col h-96 max-w-2xl w-full flex gap-12 m-auto lg:max-w-6xl">
-        <h2 className="text-4xl font-bold h-10 leading-10 px-4 text-center w-[40.00rem] sm:pl-0 sm:pr-0">
+    <section className="box-border text-slate-700 leading-6 py-8 w-full bg-white sm:pt-12 sm:pb-12 lg:pt-16 lg:pb-16 xl:pl-0 xl:pr-0 overflow-x-hidden">
+      <div className="items-center flex-col w-full flex gap-8 m-auto max-w-2xl px-4 sm:max-w-none sm:px-4 lg:max-w-6xl lg:gap-12">
+        <h2 className="text-xl font-bold text-center sm:text-4xl sm:leading-10 sm:font-bold">
           {t("title")}
         </h2>
 
-        <div
-          ref={scrollRef}
-          onScroll={handleScroll}
-          onTouchStart={handleTouchStart}
-          onTouchEnd={handleTouchEnd}
-          className="items-stretch grid-cols-2 justify-between w-full hidden gap-12 sm:grid sm:grid-cols-2 lg:flex lg:flex-row lg:justify-between overflow-x-hidden"
-        >
+        {/* Mobile Carousel View */}
+        <div className="w-full sm:hidden">
+          <div
+            ref={scrollRef}
+            onScroll={handleScroll}
+            onTouchStart={handleTouchStart}
+            onTouchEnd={handleTouchEnd}
+            className="flex overflow-x-auto snap-x snap-mandatory scrollbar-hide scroll-smooth"
+            style={{ scrollBehavior: "smooth" }}
+          >
+            {items.map((item, i) => (
+              <div
+                key={i}
+                className="flex-none w-full snap-start px-4"
+              >
+                <div className="flex flex-col gap-4 bg-slate-50 p-4 rounded-sm border border-slate-200 transition-opacity duration-500"  style={{ opacity: i === activeIndex ? 1 : 0.6 }}>
+                  <div className="items-center h-6 w-full flex gap-2">
+                    <QuoteIcon />
+                    {i === 1 && <G2Badge />}
+                  </div>
+                  <p className="text-slate-500 text-xs italic leading-[1.25rem]">
+                    {item.quote}
+                  </p>
+                  <div className="items-center gap-3 flex">
+                    <figure className="items-center h-10 w-10 flex rounded-full flex-shrink-0 aspect-square">
+                      {item.image && (
+                        /* eslint-disable-next-line @next/next/no-img-element */
+                        <img
+                          className="text-black/[0] h-full w-full object-cover rounded-full"
+                          src={item.image}
+                          alt={item.name}
+                          onError={(e) => {
+                            const img = e.target as HTMLImageElement;
+                            img.style.display = "none";
+                          }}
+                        />
+                      )}
+                    </figure>
+                    <article className="flex-col flex-grow flex gap-0">
+                      <p className="text-xs font-bold leading-4">{item.name}</p>
+                      <p className="text-xs leading-4">{item.role}</p>
+                      <p className="text-xs font-bold leading-4">{item.company}</p>
+                    </article>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          {/* Carousel Indicators */}
+          <div className="flex items-center justify-center gap-1.5 mt-6">
+            {items.map((_, i) => (
+              <button
+                key={i}
+                onClick={() => {
+                  goTo(i);
+                  if (scrollRef.current) {
+                    const child = scrollRef.current.children[i] as HTMLElement;
+                    if (child) {
+                      setTimeout(() => {
+                        scrollRef.current?.scrollTo({
+                          left: child.offsetLeft - 16,
+                          behavior: "smooth",
+                        });
+                      }, 0);
+                    }
+                  }
+                }}
+                className={cn(
+                  "h-1 rounded-full cursor-pointer transition-all duration-300",
+                  i === activeIndex ? "bg-blue-600 w-3" : "bg-slate-300 w-1.5"
+                )}
+                aria-label={`Go to testimonial ${i + 1}`}
+              />
+            ))}
+          </div>
+        </div>
+
+        {/* Desktop Grid View */}
+        <div className="hidden sm:grid sm:grid-cols-2 lg:grid-cols-4 w-full gap-8 lg:gap-6">
           {items.map((item, i) => (
             <div key={i} className="flex-col w-full flex gap-4">
               <div className="items-center h-8 w-full flex gap-4">
                 <QuoteIcon />
                 {i === 1 && <G2Badge />}
               </div>
-              <p className="text-slate-500 text-sm italic h-full leading-[1.38rem] w-64">
+              <p className="text-slate-500 text-sm italic leading-[1.38rem] flex-grow">
                 {item.quote}
               </p>
-              <div className="items-center justify-between w-64 flex gap-3 lg:justify-between" style={{ height: i === 1 ? "80px" : i === 3 ? "80px" : "64px" }}>
-                <figure className="items-center h-12 justify-center w-12 flex rounded-full lg:h-14 lg:w-14">
+              <div className="items-start gap-3 flex">
+                <figure className="items-center h-12 w-12 flex rounded-full flex-shrink-0 aspect-square lg:h-14 lg:w-14">
                   {item.image && (
                     /* eslint-disable-next-line @next/next/no-img-element */
                     <img
-                      className="text-black/[0] h-full object-cover w-full rounded-full overflow-clip"
+                      className="text-black/[0] h-full w-full object-cover rounded-full"
                       src={item.image}
                       alt={item.name}
-                      style={{
-                        overflowBlock: "clip",
-                        overflowClipMargin: "content-box",
-                        overflowInline: "clip",
-                      }}
                       onError={(e) => {
                         const img = e.target as HTMLImageElement;
                         img.style.display = "none";
@@ -137,10 +206,10 @@ export function Testimonials() {
                     />
                   )}
                 </figure>
-                <article className="flex-col flex-grow w-full flex" style={{ height: i === 1 ? "80px" : i === 3 ? "80px" : "64px" }}>
-                  <p className="text-sm font-bold h-6 leading-[1.38rem] w-44">{item.name}</p>
-                  <p className="text-sm leading-[1.38rem] w-44" style={{ height: i === 1 ? "44px" : i === 3 ? "44px" : "24px" }}>{item.role}</p>
-                  <p className="text-sm font-bold h-6 leading-[1.38rem] w-44">{item.company}</p>
+                <article className="flex-col flex-grow flex">
+                  <p className="text-sm font-bold leading-[1.38rem]">{item.name}</p>
+                  <p className="text-sm leading-[1.38rem]">{item.role}</p>
+                  <p className="text-sm font-bold leading-[1.38rem]">{item.company}</p>
                 </article>
               </div>
             </div>
