@@ -106,37 +106,44 @@ export function Testimonials() {
           onScroll={handleScroll}
           onTouchStart={handleTouchStart}
           onTouchEnd={handleTouchEnd}
-          className="flex w-full overflow-x-auto gap-6 px-4 snap-x snap-mandatory scrollbar-hide sm:grid sm:grid-cols-2 sm:overflow-visible sm:px-0 sm:gap-12 lg:flex lg:flex-row lg:justify-between"
+          className="flex items-stretch text-slate-700 h-full leading-6 relative select-none w-full bg-white overflow-auto gap-0 snap-x snap-mandatory scrollbar-hide sm:grid sm:grid-cols-2 sm:overflow-visible sm:px-0 sm:gap-12 lg:flex lg:flex-row lg:justify-between"
         >
           {items.map((item, i) => (
-            <div key={i} className="flex-col flex w-[calc(100%-32px)] min-w-[280px] max-w-[340px] shrink-0 snap-start h-auto gap-4 sm:w-full sm:min-w-0 sm:max-w-none sm:shrink">
-              <div className="items-center flex w-full text-blue-600">
-                <QuoteIcon />
-                {i === 1 && <G2Badge />}
-              </div>
-              <p className="text-slate-500 text-sm italic h-full">
-                {item.quote}
-              </p>
-              <div className="items-center flex gap-3 lg:justify-between">
-                <figure className="items-center justify-center flex w-12 h-12 min-w-[3rem] rounded-full overflow-hidden lg:h-14 lg:w-14 lg:min-w-[3.5rem] bg-slate-200">
-                  {item.image && (
-                    /* eslint-disable-next-line @next/next/no-img-element */
-                    <img
-                      className="object-cover w-12 h-12 rounded-full lg:w-14 lg:h-14"
-                      src={item.image}
-                      alt={item.name}
-                      onError={(e) => {
-                        const img = e.target as HTMLImageElement;
-                        img.style.display = 'none';
-                      }}
-                    />
-                  )}
-                </figure>
-                <article className="flex-col flex-grow flex w-full text-sm">
-                  <p className="font-bold">{item.name}</p>
-                  <p>{item.role}</p>
-                  <p className="font-bold">{item.company}</p>
-                </article>
+            <div key={i} className="box-border mb-20 mr-6 relative w-full shrink-0 snap-start flex-col flex gap-4" style={{ backfaceVisibility: "hidden", flexShrink: "0" }}>
+              <div className="cursor-grab flex-col w-full flex gap-4">
+                <div className="items-center h-8 w-full flex gap-4">
+                  <QuoteIcon />
+                  {i === 1 && <G2Badge />}
+                </div>
+                <p className="text-slate-500 text-sm italic h-full leading-[1.38rem] w-64">
+                  {item.quote}
+                </p>
+                <div className="items-center h-auto w-64 flex gap-3">
+                  <figure className="items-center h-12 justify-center w-12 flex rounded-full">
+                    {item.image && (
+                      /* eslint-disable-next-line @next/next/no-img-element */
+                      <img
+                        className="text-black/[0] h-full object-cover w-full rounded-full overflow-clip"
+                        src={item.image}
+                        alt={item.name}
+                        style={{
+                          overflowBlock: "clip",
+                          overflowClipMargin: "content-box",
+                          overflowInline: "clip",
+                        }}
+                        onError={(e) => {
+                          const img = e.target as HTMLImageElement;
+                          img.style.display = 'none';
+                        }}
+                      />
+                    )}
+                  </figure>
+                  <article className="flex-col flex-grow h-auto w-full flex">
+                    <p className="text-sm font-bold h-6 leading-[1.38rem] w-52">{item.name}</p>
+                    <p className="text-sm h-6 leading-[1.38rem] w-52">{item.role}</p>
+                    <p className="text-sm font-bold h-6 leading-[1.38rem] w-52">{item.company}</p>
+                  </article>
+                </div>
               </div>
             </div>
           ))}
