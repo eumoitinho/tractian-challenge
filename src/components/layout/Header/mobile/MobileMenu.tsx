@@ -131,7 +131,9 @@ export function MobileMenu({
             <ChevronDown isOpen={expandedSection === "language"} className="w-3 h-3" />
           </button>
           {expandedSection === "language" && (
-            <LanguageMobileContent locale={locale} onLocaleChange={handleLocaleChange} />
+            <div className="bg-slate-100">
+              <LanguageMobileContent locale={locale} onLocaleChange={handleLocaleChange} />
+            </div>
           )}
         </div>
       </div>

@@ -10,25 +10,25 @@ interface SolutionsMobileContentProps {
 
 export function SolutionsMobileContent({ solutionsData }: SolutionsMobileContentProps) {
   return (
-    <div className="pb-4 px-4 space-y-8">
+    <div className="py-4 px-4 space-y-6">
       {solutionsData.map((col, colIdx) => (
-        <div key={colIdx} className="space-y-4">
-          <a href="#" className="flex items-center gap-2" onClick={() => trackNavClick(col.title, "#")}>
-            <IconBox src={SOLUTION_COL_ICONS[colIdx]} size={20} boxClass="w-8 h-8" />
-            <span className="font-semibold text-slate-800">{col.title}</span>
+        <div key={colIdx} className="space-y-3">
+          <a href="#" className="flex items-center gap-3" onClick={() => trackNavClick(col.title, "#")}>
+            <IconBox src={SOLUTION_COL_ICONS[colIdx]} size={20} boxClass="w-8 h-8 border-2 border-neutral-200" />
+            <span className="text-sm font-semibold text-slate-700">{col.title}</span>
           </a>
-          <div className="space-y-3">
+          <div className="ml-4 space-y-3">
             {col.items.map((item, i) => (
               <a
                 key={i}
                 href="#"
-                className="flex items-start gap-3 py-1"
+                className="flex items-center gap-3"
                 onClick={() => trackNavClick(item.label, "#")}
               >
-                <IconBox src={SOLUTION_ITEM_ICONS[colIdx][i]} size={20} boxClass="w-8 h-8" />
+                <IconBox src={SOLUTION_ITEM_ICONS[colIdx][i]} size={20} boxClass="w-8 h-8 border-2 border-neutral-200" />
                 <div className="flex flex-col min-w-0">
-                  <span className="text-sm font-semibold text-slate-700">{item.label}</span>
-                  <span className="text-xs text-slate-500">{item.desc}</span>
+                  <span className="text-sm text-slate-500">{item.label}</span>
+                  <span className="text-xs text-slate-400">{item.desc}</span>
                 </div>
               </a>
             ))}

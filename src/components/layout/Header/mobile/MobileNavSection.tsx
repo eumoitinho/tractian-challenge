@@ -17,7 +17,11 @@ export function MobileNavSection({ title, isOpen, onToggle, children }: MobileNa
         {title}
         <ChevronDown isOpen={isOpen} className="w-3 h-3" />
       </button>
-      {isOpen && children}
+      {isOpen && (
+        <div className="bg-slate-100">
+          {children}
+        </div>
+      )}
     </div>
   );
 }

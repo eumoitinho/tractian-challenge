@@ -95,9 +95,9 @@ export function Testimonials() {
   };
 
   return (
-    <section className="bg-white py-12 w-full overflow-x-hidden sm:pl-4 sm:pr-4 lg:pt-16 lg:pb-16 xl:pl-0 xl:pr-0">
-      <div className="items-center flex-col flex w-full max-w-2xl gap-8 m-auto lg:max-w-6xl lg:gap-12">
-        <h2 className="text-xl leading-8 font-bold px-4 text-center sm:text-4xl sm:leading-none sm:pl-0 sm:pr-0">
+    <section className="box-border text-slate-700 h-[32.63rem] leading-6 py-12 w-full bg-white sm:pl-4 sm:pr-4 lg:pt-16 lg:pb-16 xl:pl-0 xl:pr-0">
+      <div className="items-center flex-col h-96 max-w-2xl w-full flex gap-12 m-auto lg:max-w-6xl">
+        <h2 className="text-4xl font-bold h-10 leading-10 px-4 text-center w-[40.00rem] sm:pl-0 sm:pr-0">
           {t("title")}
         </h2>
 
@@ -106,44 +106,42 @@ export function Testimonials() {
           onScroll={handleScroll}
           onTouchStart={handleTouchStart}
           onTouchEnd={handleTouchEnd}
-          className="flex items-stretch text-slate-700 h-full leading-6 relative select-none w-full bg-white overflow-auto gap-0 snap-x snap-mandatory scrollbar-hide sm:grid sm:grid-cols-2 sm:overflow-visible sm:px-0 sm:gap-12 lg:flex lg:flex-row lg:justify-between"
+          className="items-stretch grid-cols-2 justify-between w-full hidden gap-12 sm:grid sm:grid-cols-2 lg:flex lg:flex-row lg:justify-between overflow-x-hidden"
         >
           {items.map((item, i) => (
-            <div key={i} className="box-border mb-20 mr-6 relative w-full shrink-0 snap-start flex-col flex gap-4" style={{ backfaceVisibility: "hidden", flexShrink: "0" }}>
-              <div className="cursor-grab flex-col w-full flex gap-4">
-                <div className="items-center h-8 w-full flex gap-4">
-                  <QuoteIcon />
-                  {i === 1 && <G2Badge />}
-                </div>
-                <p className="text-slate-500 text-sm italic h-full leading-[1.38rem] w-64">
-                  {item.quote}
-                </p>
-                <div className="items-center h-auto w-64 flex gap-3">
-                  <figure className="items-center h-12 justify-center w-12 flex rounded-full">
-                    {item.image && (
-                      /* eslint-disable-next-line @next/next/no-img-element */
-                      <img
-                        className="text-black/[0] h-full object-cover w-full rounded-full overflow-clip"
-                        src={item.image}
-                        alt={item.name}
-                        style={{
-                          overflowBlock: "clip",
-                          overflowClipMargin: "content-box",
-                          overflowInline: "clip",
-                        }}
-                        onError={(e) => {
-                          const img = e.target as HTMLImageElement;
-                          img.style.display = 'none';
-                        }}
-                      />
-                    )}
-                  </figure>
-                  <article className="flex-col flex-grow h-auto w-full flex">
-                    <p className="text-sm font-bold h-6 leading-[1.38rem] w-52">{item.name}</p>
-                    <p className="text-sm h-6 leading-[1.38rem] w-52">{item.role}</p>
-                    <p className="text-sm font-bold h-6 leading-[1.38rem] w-52">{item.company}</p>
-                  </article>
-                </div>
+            <div key={i} className="flex-col w-full flex gap-4">
+              <div className="items-center h-8 w-full flex gap-4">
+                <QuoteIcon />
+                {i === 1 && <G2Badge />}
+              </div>
+              <p className="text-slate-500 text-sm italic h-full leading-[1.38rem] w-64">
+                {item.quote}
+              </p>
+              <div className="items-center justify-between w-64 flex gap-3 lg:justify-between" style={{ height: i === 1 ? "80px" : i === 3 ? "80px" : "64px" }}>
+                <figure className="items-center h-12 justify-center w-12 flex rounded-full lg:h-14 lg:w-14">
+                  {item.image && (
+                    /* eslint-disable-next-line @next/next/no-img-element */
+                    <img
+                      className="text-black/[0] h-full object-cover w-full rounded-full overflow-clip"
+                      src={item.image}
+                      alt={item.name}
+                      style={{
+                        overflowBlock: "clip",
+                        overflowClipMargin: "content-box",
+                        overflowInline: "clip",
+                      }}
+                      onError={(e) => {
+                        const img = e.target as HTMLImageElement;
+                        img.style.display = "none";
+                      }}
+                    />
+                  )}
+                </figure>
+                <article className="flex-col flex-grow w-full flex" style={{ height: i === 1 ? "80px" : i === 3 ? "80px" : "64px" }}>
+                  <p className="text-sm font-bold h-6 leading-[1.38rem] w-44">{item.name}</p>
+                  <p className="text-sm leading-[1.38rem] w-44" style={{ height: i === 1 ? "44px" : i === 3 ? "44px" : "24px" }}>{item.role}</p>
+                  <p className="text-sm font-bold h-6 leading-[1.38rem] w-44">{item.company}</p>
+                </article>
               </div>
             </div>
           ))}
