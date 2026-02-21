@@ -119,8 +119,8 @@ export const Header = () => {
   };
 
   return (
-    <nav ref={navRef} className="bg-slate-100 items-center border-b-2 flex-col justify-center z-40 flex w-full h-20 border-slate-200 border-solid relative">
-      <div className="items-center justify-between px-4 flex w-full h-full max-w-screen-2xl lg:pl-8 lg:pr-8 overflow-x-hidden">
+    <nav ref={navRef} className="bg-slate-100 items-center border-b-2 flex-col justify-center z-40 flex w-full h-20 border-slate-200 border-solid">
+      <div className="items-center justify-between px-4 flex w-full h-full max-w-screen-2xl lg:pl-8 lg:pr-8">
         <div className="items-center justify-between hidden w-full h-full lg:flex">
           <section className="items-center gap-x-4 flex h-full">
             <a href={`/${locale}`} aria-label="Tractian Logo">
