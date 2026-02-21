@@ -101,8 +101,6 @@ export function Testimonials() {
         <h2 className="text-xl font-bold text-center sm:text-4xl sm:leading-10 sm:font-bold">
           {t("title")}
         </h2>
-
-        {/* Mobile Carousel View */}
         <div className="w-full sm:hidden">
           <div
             ref={scrollRef}
@@ -117,7 +115,7 @@ export function Testimonials() {
                 key={i}
                 className="flex-none w-full snap-start px-4"
               >
-                <div className="flex flex-col gap-4 p-4 rounded-sm border border-slate-200 transition-opacity duration-500"  style={{ opacity: i === activeIndex ? 1 : 0.6 }}>
+                <div className="flex flex-col gap-4 p-4 rounded-sm transition-opacity duration-500"  style={{ opacity: i === activeIndex ? 1 : 0.6 }}>
                   <div className="items-center h-6 w-full flex gap-2">
                     <QuoteIcon />
                     {i === 1 && <G2Badge />}
@@ -150,8 +148,6 @@ export function Testimonials() {
               </div>
             ))}
           </div>
-
-          {/* Carousel Indicators */}
           <div className="flex items-center justify-center gap-1.5 mt-6">
             {items.map((_, i) => (
               <button
@@ -172,15 +168,13 @@ export function Testimonials() {
                 }}
                 className={cn(
                   "h-1 rounded-full cursor-pointer transition-all duration-300",
-                  i === activeIndex ? "bg-blue-600 w-3" : "bg-slate-300 w-1.5"
+                  i === activeIndex ? "bg-blue-600 w-[48px]" : "bg-slate-300 w-[24px]"
                 )}
                 aria-label={`Go to testimonial ${i + 1}`}
               />
             ))}
           </div>
         </div>
-
-        {/* Desktop Grid View */}
         <div className="hidden sm:grid sm:grid-cols-2 lg:grid-cols-4 w-full gap-8 lg:gap-6">
           {items.map((item, i) => (
             <div key={i} className="flex-col w-full flex gap-4">
