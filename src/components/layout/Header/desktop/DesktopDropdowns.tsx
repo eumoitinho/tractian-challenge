@@ -3,8 +3,8 @@
 import Image from "next/image";
 import { cn } from "@/lib/utils";
 import { trackNavClick } from "@/lib/analytics/events";
-import { HoverArrow } from "./HeaderIcons";
-import { IconBox } from "./IconBox";
+import { HoverArrow } from "../shared/HeaderIcons";
+import { IconBox } from "../shared/IconBox";
 import {
   WHO_ICON_PATH,
   RESOURCES_ICON_PATH,
@@ -14,7 +14,7 @@ import {
   type IndustriesData,
   type ResourcesData,
   type CompanyData,
-} from "./constants";
+} from "../shared/constants";
 
 const DROPDOWN_OPEN = "opacity-100 translate-y-0 pointer-events-auto visible";
 const DROPDOWN_CLOSED = "opacity-0 -translate-y-2 pointer-events-none invisible";

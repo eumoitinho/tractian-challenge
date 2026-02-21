@@ -2,9 +2,9 @@
 
 import { cn } from "@/lib/utils";
 import { trackNavClick } from "@/lib/analytics/events";
-import { HoverArrow } from "./HeaderIcons";
-import { IconBox } from "./IconBox";
-import { SOLUTION_COL_ICONS, SOLUTION_ITEM_ICONS, type SolutionColumn } from "./constants";
+import { HoverArrow } from "../shared/HeaderIcons";
+import { IconBox } from "../shared/IconBox";
+import { SOLUTION_COL_ICONS, SOLUTION_ITEM_ICONS, type SolutionColumn } from "../shared/constants";
 
 interface DesktopSolutionsDropdownProps {
   isOpen: boolean;

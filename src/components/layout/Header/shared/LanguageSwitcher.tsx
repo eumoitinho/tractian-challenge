@@ -4,6 +4,7 @@ import { cn } from "@/lib/utils";
 import { ChevronDown, GlobeIcon } from "./HeaderIcons";
 import { localeLabels } from "./constants";
 
+
 interface LanguageSwitcherProps {
   locale: string;
   isOpen: boolean;

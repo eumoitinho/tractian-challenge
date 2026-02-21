@@ -6,18 +6,18 @@ import { useRouter, usePathname, type Locale } from "@/i18n/routing";
 import { cn } from "@/lib/utils";
 import { trackNavClick } from "@/lib/analytics/events";
 import { useDemoModal } from "@/lib/demo-modal-context";
-import TractianLogo from "./TractianLogo";
-import { ChevronDown } from "./HeaderIcons";
-import { DesktopSolutionsDropdown } from "./DesktopSolutionsDropdown";
-import { WhoDropdown, ResourcesDropdown, CompanyDropdown, PricingDropdown } from "./DesktopDropdowns";
-import { LanguageSwitcher } from "./LanguageSwitcher";
-import { MobileMenu } from "./MobileMenu";
+import TractianLogo from "./shared/TractianLogo";
+import { ChevronDown } from "./shared/HeaderIcons";
+import { DesktopSolutionsDropdown } from "./desktop/DesktopSolutionsDropdown";
+import { WhoDropdown, ResourcesDropdown, CompanyDropdown, PricingDropdown } from "./desktop/DesktopDropdowns";
+import { LanguageSwitcher } from "./shared/LanguageSwitcher";
+import { MobileMenu } from "./mobile/MobileMenu";
 import {
   type SolutionColumn,
   type IndustriesData,
   type ResourcesData,
   type CompanyData,
-} from "./constants";
+} from "./shared/constants";
 
 function useHeaderDropdowns() {
   const navRef = useRef<HTMLElement>(null);
