@@ -119,7 +119,7 @@ export const Header = () => {
   };
 
   return (
-    <nav ref={navRef} className="bg-slate-100 items-center border-b-2 flex-col justify-center z-40 flex w-full h-20 border-slate-200 border-solid">
+    <nav ref={navRef} className="bg-slate-100 items-center border-b-2 flex-col justify-center sticky top-0 z-40 flex w-full h-20 border-slate-200 border-solid">
       <div className="items-center justify-between px-4 flex w-full h-full max-w-screen-2xl lg:pl-8 lg:pr-8">
         <div className="items-center justify-between hidden w-full h-full lg:flex">
           <section className="items-center gap-x-4 flex h-full">
@@ -148,14 +148,14 @@ export const Header = () => {
             <TractianLogo />
           </a>
           <button className="p-2 text-slate-500" onClick={() => setIsMobileMenuOpen(true)} aria-label="Open Menu">
-            <svg className="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1}>
+            <svg className="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
               <path strokeLinecap="round" strokeLinejoin="round" d="M4 6h16M4 12h16M4 18h16" />
             </svg>
           </button>
         </div>
       </div>
 
-      <div className={cn("fixed inset-0 top-20 bg-black/60 z-10 transition-opacity duration-200", activeDropdown ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none")} onClick={() => setActiveDropdown(null)} />
+      <div className={cn("fixed inset-0 top-20 bg-black/60 z-30 transition-opacity duration-200", activeDropdown ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none")} onClick={() => setActiveDropdown(null)} />
 
       <DesktopSolutionsDropdown isOpen={activeDropdown === "solutions"} solutionsData={solutionsData} />
       <WhoDropdown isOpen={activeDropdown === "who"} industriesData={industriesData} />
