@@ -117,7 +117,7 @@ export function Testimonials() {
                 key={i}
                 className="flex-none w-full snap-start px-4"
               >
-                <div className="flex flex-col gap-4 bg-slate-50 p-4 rounded-sm border border-slate-200 transition-opacity duration-500"  style={{ opacity: i === activeIndex ? 1 : 0.6 }}>
+                <div className="flex flex-col gap-4 p-4 rounded-sm border border-slate-200 transition-opacity duration-500"  style={{ opacity: i === activeIndex ? 1 : 0.6 }}>
                   <div className="items-center h-6 w-full flex gap-2">
                     <QuoteIcon />
                     {i === 1 && <G2Badge />}
