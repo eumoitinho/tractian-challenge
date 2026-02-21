@@ -37,9 +37,9 @@ export function Hero() {
         </div>
 
         <div className="absolute inset-0 mx-auto hidden w-full items-center justify-end lg:flex 2xl:right-8 2xl:mr-0">
-          <div className="flex w-full max-w-[240px] flex-col gap-4 rounded-bl-sm rounded-tl-sm bg-white px-4 py-4 h-60 lg:py-6 2xl:max-w-[280px] 2xl:rounded-sm 2xl:px-5 3xl:max-w-[320px] 3xl:px-6 3xl:py-7 4xl:max-w-[335px]">
-            <p className="text-slate-500 text-sm leading-[1.38rem] h-28 w-52 2xl:text-base 4xl:text-lg">{t("quote")}</p>
-            <article className="flex w-full flex-col h-16">
+          <div className="flex w-full max-w-[240px] flex-col gap-4 rounded-bl-sm rounded-tl-sm bg-white px-4 py-4 h-auto lg:py-6 2xl:max-w-[280px] 2xl:rounded-sm 2xl:px-5 3xl:max-w-[320px] 3xl:px-6 3xl:py-7 4xl:max-w-[335px]">
+            <p className="text-slate-500 text-sm leading-[1.38rem] h-auto w-52 2xl:text-base 4xl:text-lg">{t("quote")}</p>
+            <article className="flex w-full flex-col h-auto">
               <p className="text-[13px] font-bold h-5 leading-5 w-52 2xl:text-sm 4xl:text-base">{t("quoteAuthor")}</p>
               <p className="text-[13px] h-5 leading-5 w-52 2xl:text-sm 4xl:text-base">{t("quoteRole")}</p>
               <p className="text-[13px] font-bold h-5 leading-5 w-52 2xl:text-sm 4xl:text-base">{t("quoteCompany")}</p>
