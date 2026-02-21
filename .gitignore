@@ -36,3 +36,6 @@ yarn-error.log*
 next-env.d.ts
 CLAUDE.md
 /docs/
+.playwright-mcp/console-2026-02-21T19-54-23-202Z.log
+.playwright-mcp/console-2026-02-21T19-56-16-295Z.log
+.playwright-mcp/console-2026-02-21T19-56-43-375Z.log
