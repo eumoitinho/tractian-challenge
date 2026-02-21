@@ -109,7 +109,7 @@ export function Testimonials() {
           className="flex w-full overflow-x-auto gap-6 px-4 snap-x snap-mandatory scrollbar-hide sm:grid sm:grid-cols-2 sm:overflow-visible sm:px-0 sm:gap-12 lg:flex lg:flex-row lg:justify-between"
         >
           {items.map((item, i) => (
-            <div key={i} className="flex-col flex w-[calc(100vw-32px)] min-w-[calc(100vw-32px)] max-w-[340px] shrink-0 snap-start h-auto gap-4 sm:w-full sm:min-w-0 sm:max-w-none sm:shrink">
+            <div key={i} className="flex-col flex w-[calc(100%-32px)] min-w-[280px] max-w-[340px] shrink-0 snap-start h-auto gap-4 sm:w-full sm:min-w-0 sm:max-w-none sm:shrink">
               <div className="items-center flex w-full text-blue-600">
                 <QuoteIcon />
                 {i === 1 && <G2Badge />}

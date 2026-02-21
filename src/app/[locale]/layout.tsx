@@ -49,15 +49,17 @@ export default async function LocaleLayout({ children, params }: Props) {
         <link rel="icon" href="/favicon.ico" />
       </head>
       <body className="text-slate-700 antialiased">
-        <NextIntlClientProvider messages={messages}>
-          <AnalyticsProvider>
-            <DemoModalProvider>
-              <PrivacyModalProvider>
-                {children}
-              </PrivacyModalProvider>
-            </DemoModalProvider>
-          </AnalyticsProvider>
-        </NextIntlClientProvider>
+        <div className="overflow-x-hidden w-full">
+          <NextIntlClientProvider messages={messages}>
+            <AnalyticsProvider>
+              <DemoModalProvider>
+                <PrivacyModalProvider>
+                  {children}
+                </PrivacyModalProvider>
+              </DemoModalProvider>
+            </AnalyticsProvider>
+          </NextIntlClientProvider>
+        </div>
       </body>
     </html>
   );

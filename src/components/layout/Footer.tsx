@@ -65,7 +65,7 @@ export function Footer() {
   const { open: openPrivacyModal } = usePrivacyModal();
 
   return (
-    <footer className="bg-slate-100 py-12 px-4 xl:pl-0 xl:pr-0">
+    <footer className="bg-slate-100 py-12 px-4 overflow-x-hidden xl:pl-0 xl:pr-0">
       <div className="flex-col flex w-full max-w-[72rem] gap-12 m-auto">
         <div className="flex-col flex w-full gap-4 sm:flex-row sm:items-center sm:justify-between">
           <figure className="hidden w-auto shrink-0 sm:flex">
