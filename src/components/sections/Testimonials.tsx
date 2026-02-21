@@ -2,6 +2,7 @@
 
 import { useState, useEffect, useRef, useCallback } from "react";
 import { useTranslations, useMessages } from "next-intl";
+import { cn } from "@/lib/utils";
 
 const AUTO_ADVANCE_MS = 6000;
 
@@ -95,47 +96,120 @@ export function Testimonials() {
   };
 
   return (
-    <section className="bg-white py-12 w-full overflow-x-hidden sm:pl-4 sm:pr-4 lg:pt-16 lg:pb-16 xl:pl-0 xl:pr-0">
-      <div className="items-center flex-col flex w-full max-w-2xl gap-8 m-auto lg:max-w-6xl lg:gap-12">
-        <h2 className="text-[20px] font-bold px-4 text-center min-[375px]:text-4xl sm:pl-0 sm:pr-0">
+    <section className="box-border text-slate-700 leading-6 py-8 w-full bg-white sm:pt-12 sm:pb-12 lg:pt-16 lg:pb-16 xl:pl-0 xl:pr-0 overflow-x-hidden">
+      <div className="items-center flex-col w-full flex gap-8 m-auto max-w-2xl px-4 sm:max-w-none sm:px-4 lg:max-w-6xl lg:gap-12">
+        <h2 className="text-xl font-bold text-center sm:text-4xl sm:leading-10 sm:font-bold">
           {t("title")}
         </h2>
 
-        <div
-          ref={scrollRef}
-          onScroll={handleScroll}
-          onTouchStart={handleTouchStart}
-          onTouchEnd={handleTouchEnd}
-          className="flex w-full overflow-x-auto gap-6 px-4 snap-x snap-mandatory scrollbar-hide sm:grid sm:grid-cols-2 sm:overflow-visible sm:px-0 sm:gap-12 lg:flex lg:flex-row lg:justify-between"
-        >
+        {/* Mobile Carousel View */}
+        <div className="w-full sm:hidden">
+          <div
+            ref={scrollRef}
+            onScroll={handleScroll}
+            onTouchStart={handleTouchStart}
+            onTouchEnd={handleTouchEnd}
+            className="flex overflow-x-auto snap-x snap-mandatory scrollbar-hide scroll-smooth"
+            style={{ scrollBehavior: "smooth" }}
+          >
+            {items.map((item, i) => (
+              <div
+                key={i}
+                className="flex-none w-full snap-start px-4"
+              >
+                <div className="flex flex-col gap-4 bg-slate-50 p-4 rounded-sm border border-slate-200 transition-opacity duration-500"  style={{ opacity: i === activeIndex ? 1 : 0.6 }}>
+                  <div className="items-center h-6 w-full flex gap-2">
+                    <QuoteIcon />
+                    {i === 1 && <G2Badge />}
+                  </div>
+                  <p className="text-slate-500 text-xs italic leading-[1.25rem]">
+                    {item.quote}
+                  </p>
+                  <div className="items-center gap-3 flex">
+                    <figure className="items-center h-10 w-10 flex rounded-full flex-shrink-0 aspect-square">
+                      {item.image && (
+                        /* eslint-disable-next-line @next/next/no-img-element */
+                        <img
+                          className="text-black/[0] h-full w-full object-cover rounded-full"
+                          src={item.image}
+                          alt={item.name}
+                          onError={(e) => {
+                            const img = e.target as HTMLImageElement;
+                            img.style.display = "none";
+                          }}
+                        />
+                      )}
+                    </figure>
+                    <article className="flex-col flex-grow flex gap-0">
+                      <p className="text-xs font-bold leading-4">{item.name}</p>
+                      <p className="text-xs leading-4">{item.role}</p>
+                      <p className="text-xs font-bold leading-4">{item.company}</p>
+                    </article>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          {/* Carousel Indicators */}
+          <div className="flex items-center justify-center gap-1.5 mt-6">
+            {items.map((_, i) => (
+              <button
+                key={i}
+                onClick={() => {
+                  goTo(i);
+                  if (scrollRef.current) {
+                    const child = scrollRef.current.children[i] as HTMLElement;
+                    if (child) {
+                      setTimeout(() => {
+                        scrollRef.current?.scrollTo({
+                          left: child.offsetLeft - 16,
+                          behavior: "smooth",
+                        });
+                      }, 0);
+                    }
+                  }
+                }}
+                className={cn(
+                  "h-1 rounded-full cursor-pointer transition-all duration-300",
+                  i === activeIndex ? "bg-blue-600 w-3" : "bg-slate-300 w-1.5"
+                )}
+                aria-label={`Go to testimonial ${i + 1}`}
+              />
+            ))}
+          </div>
+        </div>
+
+        {/* Desktop Grid View */}
+        <div className="hidden sm:grid sm:grid-cols-2 lg:grid-cols-4 w-full gap-8 lg:gap-6">
           {items.map((item, i) => (
-            <div key={i} className="flex-col flex w-[calc(100%-32px)] min-w-[280px] max-w-[340px] shrink-0 snap-start h-auto gap-4 sm:w-full sm:min-w-0 sm:max-w-none sm:shrink">
-              <div className="items-center flex w-full text-blue-600">
+            <div key={i} className="flex-col w-full flex gap-4">
+              <div className="items-center h-8 w-full flex gap-4">
                 <QuoteIcon />
                 {i === 1 && <G2Badge />}
               </div>
-              <p className="text-slate-500 text-sm italic h-full">
+              <p className="text-slate-500 text-sm italic leading-[1.38rem] flex-grow">
                 {item.quote}
               </p>
-              <div className="items-center flex gap-3 lg:justify-between">
-                <figure className="items-center justify-center flex w-12 h-12 min-w-[3rem] rounded-full overflow-hidden lg:h-14 lg:w-14 lg:min-w-[3.5rem] bg-slate-200">
+              <div className="items-start gap-3 flex">
+                <figure className="items-center h-12 w-12 flex rounded-full flex-shrink-0 aspect-square lg:h-14 lg:w-14">
                   {item.image && (
                     /* eslint-disable-next-line @next/next/no-img-element */
                     <img
-                      className="object-cover w-12 h-12 rounded-full lg:w-14 lg:h-14"
+                      className="text-black/[0] h-full w-full object-cover rounded-full"
                       src={item.image}
                       alt={item.name}
                       onError={(e) => {
                         const img = e.target as HTMLImageElement;
-                        img.style.display = 'none';
+                        img.style.display = "none";
                       }}
                     />
                   )}
                 </figure>
-                <article className="flex-col flex-grow flex w-full text-sm">
-                  <p className="font-bold">{item.name}</p>
-                  <p>{item.role}</p>
-                  <p className="font-bold">{item.company}</p>
+                <article className="flex-col flex-grow flex">
+                  <p className="text-sm font-bold leading-[1.38rem]">{item.name}</p>
+                  <p className="text-sm leading-[1.38rem]">{item.role}</p>
+                  <p className="text-sm font-bold leading-[1.38rem]">{item.company}</p>
                 </article>
               </div>
             </div>

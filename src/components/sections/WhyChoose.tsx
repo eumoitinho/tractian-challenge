@@ -57,7 +57,7 @@ export function WhyChoose() {
       <div className="flex-col flex w-full max-w-2xl gap-10 sm:gap-16 m-auto lg:max-w-6xl">
         <article className="flex-col flex w-full gap-3">
           <p className="text-blue-600 uppercase text-sm font-medium">{t("label")}</p>
-          <h2 className="text-[20px] leading-tight font-bold min-[375px]:text-[2.50rem] min-[375px]:leading-none">{t("title")}</h2>
+          <h2 className="text-2xl leading-8 font-bold lg:text-[2.50rem] lg:leading-none">{t("title")}</h2>
         </article>
 
         <div className="items-start flex-col flex w-full gap-8 lg:min-h-[22.50rem] lg:flex-row lg:justify-between">
@@ -82,7 +82,7 @@ export function WhyChoose() {
                       <CheckIcon />
                     </figure>
                     <h3
-                      className={`flex-grow text-xl font-semibold w-full text-left transition-colors duration-300 ${
+                      className={`flex-grow font-medium w-full text-left transition-colors duration-300 lg:text-xl ${
                         isActive ? "" : "text-slate-400"
                       }`}
                     >
@@ -90,7 +90,7 @@ export function WhyChoose() {
                     </h3>
                   </div>
                   <AccordionContent isOpen={isActive}>
-                    <div className="flex-col flex text-left text-slate-500">
+                    <div className="flex-col flex text-left text-slate-500 text-sm leading-[1.38rem] lg:text-base lg:leading-normal">
                       {t(`tabs.${key}.content`)}
                     </div>
                   </AccordionContent>

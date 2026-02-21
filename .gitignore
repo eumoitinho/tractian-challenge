@@ -34,3 +34,12 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+CLAUDE.md
+/docs/
+# playwright mcp
+.playwright-mcp/
+
+# screenshots
+*.png
+*.jpeg
+mirror.jsx

@@ -39,21 +39,21 @@ export function ValueProps() {
   return (
     <section className="bg-slate-100 py-12 px-4 w-full overflow-x-hidden lg:pt-16 lg:pb-16">
       <div className="items-center flex-col flex w-full max-w-2xl gap-12 m-auto lg:max-w-6xl">
-        <h2 className="text-[20px] font-bold text-center min-[375px]:text-4xl">{t("title")}</h2>
+        <h2 className="text-xl leading-8 font-bold text-center sm:text-4xl sm:leading-none">{t("title")}</h2>
 
         <div className="items-stretch flex-col flex w-full h-auto gap-8 sm:gap-12 lg:flex-row lg:justify-between lg:gap-8">
           {cardKeys.map((key, i) => {
             const Icon = cardIcons[i];
             return (
               <div key={key} className="items-start flex w-full flex-row gap-4 lg:flex-col lg:items-center">
-                <figure className="bg-white items-center justify-center flex rounded-sm p-3.5 shrink-0 lg:h-24 lg:w-24 lg:p-0">
+                <figure className="bg-white items-center justify-center flex h-16 w-16 rounded-sm p-3.5 shrink-0 lg:h-24 lg:w-24 lg:p-0">
                   <Icon />
                 </figure>
                 <article className="flex-col flex w-full gap-2 lg:gap-4 lg:items-center">
-                  <h3 className="text-lg font-bold text-left lg:text-xl lg:text-center">
+                  <h3 className="font-bold text-left lg:text-xl lg:text-center">
                     {t(`cards.${key}.title`)}
                   </h3>
-                  <p className="text-slate-500 text-left text-sm lg:text-base lg:text-center">
+                  <p className="text-slate-500 text-left text-sm leading-[1.38rem] lg:text-base lg:leading-normal lg:text-center">
                     {t(`cards.${key}.description`)}
                   </p>
                 </article>

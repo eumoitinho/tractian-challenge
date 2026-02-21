@@ -115,13 +115,8 @@ export function PrivacyModal({ isOpen, onClose }: PrivacyModalProps) {
       onClick={handleOverlayClick}
     >
       <div
-        className="relative flex flex-col bg-slate-50 overflow-hidden"
+        className="relative flex flex-col bg-slate-50 overflow-hidden w-full h-full sm:w-[575px] sm:h-[693px] sm:max-w-[calc(100vw-32px)] sm:max-h-[calc(100vh-32px)] sm:rounded-sm"
         style={{
-          width: 575,
-          maxWidth: "calc(100vw - 32px)",
-          height: 693,
-          maxHeight: "calc(100vh - 32px)",
-          borderRadius: "2.5px",
           boxShadow: "rgb(153, 153, 153) 0px 2px 10px -3px",
         }}
       >
@@ -237,25 +232,23 @@ export function PrivacyModal({ isOpen, onClose }: PrivacyModalProps) {
         </div>
 
 
-        <div className="shrink-0 flex items-center gap-0 px-[30px] border-t" style={{ borderColor: "rgb(216, 216, 216)" }}>
+        <div className="shrink-0 flex flex-col gap-3 px-5 py-4 border-t sm:flex-row sm:items-center sm:gap-0 sm:px-[30px] sm:py-0" style={{ borderColor: "rgb(216, 216, 216)" }}>
           <button
             onClick={handleRejectAll}
-            className="h-[38px] px-[30px] rounded-sm border border-blue-800 bg-blue-800 text-white text-xs font-bold cursor-pointer hover:bg-blue-900 transition-colors"
-            style={{ margin: "19px 10px 16px 0" }}
+            className="h-12 w-full rounded-sm border border-blue-800 bg-blue-800 text-white text-sm font-bold cursor-pointer hover:bg-blue-900 transition-colors sm:h-[38px] sm:w-auto sm:px-[30px] sm:text-xs sm:my-4 sm:mr-[10px]"
           >
             {t("rejectAll")}
           </button>
           <button
             onClick={handleConfirm}
-            className="h-[38px] px-[30px] rounded-sm border border-blue-800 bg-blue-800 text-white text-xs font-bold cursor-pointer hover:bg-blue-900 transition-colors"
-            style={{ margin: "19px 20px 16px 0" }}
+            className="h-12 w-full rounded-sm border border-blue-800 bg-blue-800 text-white text-sm font-bold cursor-pointer hover:bg-blue-900 transition-colors sm:h-[38px] sm:w-auto sm:px-[30px] sm:text-xs sm:my-4 sm:mr-[20px]"
           >
             {t("confirmChoices")}
           </button>
         </div>
 
 
-        <div className="shrink-0 flex items-center justify-end px-4 h-[30px] bg-[#f4f4f4] text-[10px] text-slate-400">
+        <div className="shrink-0 flex items-center justify-center px-4 h-[40px] bg-[#f4f4f4] text-[11px] text-slate-400 sm:justify-end sm:h-[30px] sm:text-[10px]">
           Powered by OneTrust
         </div>
       </div>
