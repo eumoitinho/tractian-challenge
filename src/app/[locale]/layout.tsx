@@ -49,7 +49,7 @@ export default async function LocaleLayout({ children, params }: Props) {
         <link rel="icon" href="/favicon.ico" />
       </head>
       <body className="text-slate-700 antialiased">
-        <div className="overflow-x-hidden w-full">
+        <div className="w-full" style={{ overflowX: "clip" }}>
           <NextIntlClientProvider messages={messages}>
             <AnalyticsProvider>
               <DemoModalProvider>

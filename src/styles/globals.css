@@ -6,7 +6,7 @@
 
 @layer base {
   html, body {
-    @apply overflow-x-hidden;
+    overflow-x: clip;
   }
   body {
     @apply font-sans text-slate-700 antialiased;
