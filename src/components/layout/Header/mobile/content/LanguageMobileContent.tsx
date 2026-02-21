@@ -1,8 +1,9 @@
 "use client";
 
+import Image from "next/image";
 import { cn } from "@/lib/utils";
 import { GlobeIcon } from "../../shared/HeaderIcons";
-import { localeLabels } from "../../shared/constants";
+import { localeLabels, localeFlagUrls } from "../../shared/constants";
 
 interface LanguageMobileContentProps {
   locale: string;
@@ -17,10 +18,11 @@ export function LanguageMobileContent({ locale, onLocaleChange }: LanguageMobile
           key={key}
           onClick={() => onLocaleChange(key)}
           className={cn(
-            "w-full text-left py-2 text-sm rounded-sm px-3",
+            "w-full text-left py-2 text-sm rounded-sm px-3 flex items-center gap-2",
             locale === key ? "bg-blue-50 text-blue-600 font-medium" : "text-slate-600"
           )}
         >
+          <Image src={localeFlagUrls[key]} alt="" width={18} height={18} unoptimized className="w-[18px] h-[18px]" />
           {label}
         </button>
       ))}
@@ -35,7 +37,7 @@ interface LanguageMobileTriggerProps {
 export function LanguageMobileTrigger({ locale }: LanguageMobileTriggerProps) {
   return (
     <div className="flex items-center gap-2">
-      <GlobeIcon className="text-slate-500 w-5 h-5" />
+      <GlobeIcon className="w-5 h-5" />
       <span className="font-semibold">{localeLabels[locale]}</span>
     </div>
   );

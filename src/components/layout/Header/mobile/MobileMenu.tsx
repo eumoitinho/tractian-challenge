@@ -97,7 +97,7 @@ export function MobileMenu({
         <a href={`/${locale}`}>
           <TractianLogo />
         </a>
-        <button className="p-2 text-slate-400" onClick={onClose} aria-label="Close Menu">
+        <button className="p-2 text-slate-500" onClick={onClose} aria-label="Close Menu">
           <svg className="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
             <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
           </svg>
@@ -126,7 +126,7 @@ export function MobileMenu({
         </MobileNavSection>
 
         <div className="border-b border-slate-100">
-          <button onClick={() => handleToggleSection("language")} className="w-full flex items-center justify-between py-4 px-4 text-slate-700">
+          <button onClick={() => handleToggleSection("language")} className="w-full flex items-center justify-between py-4 px-4 text-lg text-slate-700">
             <LanguageMobileTrigger locale={locale} />
             <ChevronDown isOpen={expandedSection === "language"} className="w-3 h-3" />
           </button>

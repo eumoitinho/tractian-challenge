@@ -13,7 +13,7 @@ interface MobileNavSectionProps {
 export function MobileNavSection({ title, isOpen, onToggle, children }: MobileNavSectionProps) {
   return (
     <div className="border-b border-slate-100">
-      <button onClick={onToggle} className="w-full flex items-center justify-between py-4 px-4 font-semibold text-slate-700">
+      <button onClick={onToggle} className="w-full flex items-center justify-between py-4 px-4 text-lg font-semibold text-slate-700">
         {title}
         <ChevronDown isOpen={isOpen} className="w-3 h-3" />
       </button>

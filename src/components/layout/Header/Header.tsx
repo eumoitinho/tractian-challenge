@@ -147,7 +147,7 @@ export const Header = () => {
           <a href={`/${locale}`} aria-label="Tractian Logo">
             <TractianLogo />
           </a>
-          <button className="p-2 text-blue-600" onClick={() => setIsMobileMenuOpen(true)} aria-label="Open Menu">
+          <button className="p-2 text-slate-500" onClick={() => setIsMobileMenuOpen(true)} aria-label="Open Menu">
             <svg className="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
               <path strokeLinecap="round" strokeLinejoin="round" d="M4 6h16M4 12h16M4 18h16" />
             </svg>

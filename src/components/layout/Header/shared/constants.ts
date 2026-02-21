@@ -4,6 +4,12 @@ export const localeLabels: Record<string, string> = {
   es: "Español (México)",
 };
 
+export const localeFlagUrls: Record<string, string> = {
+  pt: "https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/1f1e7-1f1f7.svg",
+  en: "https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/1f1fa-1f1f8.svg",
+  es: "https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/1f1f2-1f1fd.svg",
+};
+
 export const SOLUTIONS_ICON_PATH = "/icons/header/solutions";
 export const WHO_ICON_PATH = "/icons/header/who-we-serve";
 export const RESOURCES_ICON_PATH = "/icons/header/resources";

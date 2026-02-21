@@ -4,7 +4,6 @@ import { cn } from "@/lib/utils";
 import { ChevronDown, GlobeIcon } from "./HeaderIcons";
 import { localeLabels } from "./constants";
 
-
 interface LanguageSwitcherProps {
   locale: string;
   isOpen: boolean;
@@ -28,7 +27,7 @@ export function LanguageSwitcher({
         className="items-center gap-x-2 cursor-pointer flex h-7 px-2 text-slate-500 hover:text-blue-600 transition-colors"
         onClick={onToggle}
       >
-        <GlobeIcon className="text-slate-500 hover:text-blue-600 transition-colors" />
+        <GlobeIcon className="w-5 h-5" />
         <ChevronDown isOpen={isOpen} className="h-3 w-3" />
       </button>
       {isOpen && (
@@ -38,7 +37,7 @@ export function LanguageSwitcher({
               key={key}
               onMouseDown={() => handleSelect(key)}
               className={cn(
-                "w-full text-left px-4 py-2 text-sm text-slate-500 transition-colors",
+                "w-full text-left px-4 py-2 text-sm text-slate-500 transition-colors flex items-center gap-2",
                 locale === key ? "bg-slate-100" : "hover:bg-white"
               )}
             >
