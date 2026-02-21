@@ -27,7 +27,7 @@ export function LanguageSwitcher({
         className="items-center gap-x-2 cursor-pointer flex h-7 px-2 text-slate-500 hover:text-blue-600 transition-colors"
         onClick={onToggle}
       >
-        <GlobeIcon className="text-slate-500" />
+        <GlobeIcon className="text-slate-500 hover:text-blue-600 transition-colors" />
         <ChevronDown isOpen={isOpen} className="h-3 w-3" />
       </button>
       {isOpen && (

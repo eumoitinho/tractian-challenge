@@ -2,7 +2,7 @@
 
 import { useState, useEffect, useRef } from "react";
 import { useTranslations, useLocale } from "next-intl";
-import { useRouter, usePathname } from "next/navigation";
+import { useRouter, usePathname, type Locale } from "@/i18n/routing";
 import { cn } from "@/lib/utils";
 import { trackNavClick } from "@/lib/analytics/events";
 import { useDemoModal } from "@/lib/demo-modal-context";
@@ -82,8 +82,7 @@ export const Header = () => {
   const pricingData = ht.raw("pricing") as string[];
 
   const handleLocaleChange = (newLocale: string) => {
-    const newPathname = pathname.replace(`/${locale}`, `/${newLocale}`);
-    router.replace(newPathname);
+    router.replace(pathname, { locale: newLocale as Locale });
     setLangOpen(false);
   };
 
