@@ -52,29 +52,29 @@ export function Features() {
   return (
     <section className="bg-white py-12 px-4 relative w-full overflow-x-hidden lg:pl-16 lg:pr-16 lg:pt-20 lg:pb-20\">
       <div className="items-center flex-col flex max-w-xl gap-8 sm:gap-12 m-auto lg:max-w-6xl">
-        <article className="items-start flex-col flex w-full text-[20px] font-bold min-[375px]:text-4xl lg:items-center">
+        <article className="items-start flex-col flex w-full text-xl font-bold leading-8 sm:text-4xl sm:leading-none lg:items-center">
           <h2 className="text-center w-full">{t("title")}</h2>
         </article>
 
         <section className="w-full">
           <div className="flex-col flex w-full gap-12 m-auto">
 
-            <div className="flex-col py-1 relative flex w-full mt-0 mx-auto sm:flex-row sm:pt-0 sm:pb-0">
+            <div className="bg-slate-100 rounded-sm p-1 flex-col flex gap-1 w-full sm:bg-transparent sm:rounded-none sm:p-0 sm:flex-row sm:gap-0">
               {tabKeys.map((key) => {
                 const isActive = active === key;
                 return (
                   <div
                     key={key}
-                    className={`items-center border-b-2 justify-center px-1 py-1 flex w-full border-solid col-span-1 transition-all duration-300 sm:p-0 ${
+                    className={`items-center justify-center flex w-full rounded-sm transition-all duration-300 sm:rounded-none sm:border-b-2 sm:border-solid ${
                       isActive
-                        ? "border-b-blue-600 font-bold"
-                        : "border-b-slate-300 text-slate-500"
+                        ? "bg-white sm:bg-transparent sm:border-b-blue-600 font-semibold sm:font-bold"
+                        : "text-slate-500 sm:border-b-slate-300"
                     }`}
                   >
                     <button
                       onClick={() => handleTabChange(key)}
-                      className={`cursor-pointer py-1.5 px-4 text-center text-sm sm:text-base w-full h-12 sm:h-14 transition-transform duration-200 lg:pl-2 lg:pr-2 sm:w-auto sm:items-start sm:p-4 xl:pl-4 xl:pr-4 2xl:pl-6 2xl:pr-6 ${
-                        isActive ? "scale-105" : "scale-100"
+                      className={`cursor-pointer py-2.5 px-3 text-left text-sm w-full sm:py-0 sm:px-4 sm:text-center sm:text-base sm:h-14 transition-transform duration-200 lg:pl-2 lg:pr-2 sm:w-auto sm:items-start sm:p-4 xl:pl-4 xl:pr-4 2xl:pl-6 2xl:pr-6 ${
+                        isActive ? "sm:scale-105" : "scale-100"
                       }`}
                     >
                       {t(`tabs.${key}.label`)}
@@ -93,10 +93,10 @@ export function Features() {
                     <h2 className="text-xl font-bold">
                       {t(`tabs.${active}.title`)}
                     </h2>
-                    <p className="text-slate-500">
+                    <p className="text-slate-500 text-sm leading-[1.38rem] sm:text-base sm:leading-normal">
                       {t(`tabs.${active}.description`)}
                     </p>
-                    <ul className="flex-col flex list-disc w-full ml-4 gap-1 text-slate-500">
+                    <ul className="flex-col flex list-disc w-full ml-4 gap-1 text-slate-500 text-sm leading-[1.38rem] sm:text-base sm:leading-normal">
                       {getTabItems(active).map((_, i) => (
                         <li key={i} className="list-item">
                           {t(`tabs.${active}.items.${i}`)}

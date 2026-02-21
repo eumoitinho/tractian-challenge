@@ -44,7 +44,7 @@ export function Faq() {
       <section className="items-center flex-col px-4 flex max-w-2xl gap-12 m-auto lg:max-w-6xl lg:gap-16">
         <article className="items-center flex-col flex w-full gap-4">
           <p className="text-blue-600 text-center uppercase text-sm font-medium">{t("sectionLabel")}</p>
-          <h2 className="text-[20px] leading-tight font-bold text-center min-[375px]:text-[2.50rem] min-[375px]:leading-none">{t("title")}</h2>
+          <h2 className="text-xl leading-8 font-semibold text-center sm:text-[2.50rem] sm:leading-none sm:font-bold">{t("title")}</h2>
         </article>
 
         <div className="flex-col gap-y-3 flex w-full sm:gap-y-4">
@@ -54,7 +54,7 @@ export function Faq() {
               <button
                 key={i}
                 onClick={() => setOpenIndex(isOpen ? -1 : i)}
-                className="cursor-pointer text-left w-full border border-slate-300 rounded-sm px-4 py-4 sm:px-6 sm:py-5 transition-colors hover:border-slate-400"
+                className="cursor-pointer text-left w-full border-2 border-slate-300 rounded-sm px-4 py-4 sm:px-6 sm:py-5 transition-colors hover:border-slate-400"
               >
                 <div className="items-center justify-between flex w-full gap-4">
                   <h3 className={`font-medium text-left text-sm sm:text-base transition-colors ${isOpen ? "text-blue-600" : "text-slate-700"}`}>
@@ -63,7 +63,7 @@ export function Faq() {
                   <ChevronRight className={`w-2.5 h-3.5 flex-shrink-0 transition-transform duration-300 ${isOpen ? "text-blue-600 rotate-90" : "text-slate-400"}`} />
                 </div>
                 <FaqAnswer isOpen={isOpen}>
-                  <p className="text-slate-500 text-left text-sm sm:text-base leading-relaxed">
+                  <p className="text-slate-500 text-left text-sm leading-[1.38rem] sm:text-base sm:leading-relaxed">
                     {t(`items.${i}.answer`)}
                   </p>
                 </FaqAnswer>

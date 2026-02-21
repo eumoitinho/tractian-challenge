@@ -41,7 +41,7 @@ export function CookieBanner({ onOpenSettings }: CookieBannerProps) {
 
   return (
     <div
-      className="fixed bottom-8 left-4 right-4 z-[2147483645] max-w-[700px] rounded-sm bg-slate-50 shadow-[0_0_18px_0_rgba(0,0,0,0.2)] overflow-hidden mx-auto"
+      className="fixed bottom-8 left-4 z-[2147483645] max-w-[700px] rounded-sm bg-slate-50 shadow-[0_0_18px_0_rgba(0,0,0,0.2)] overflow-hidden mx-auto"
       style={{ fontFamily: "Inter, sans-serif" }}
     >
       <button
@@ -61,7 +61,7 @@ export function CookieBanner({ onOpenSettings }: CookieBannerProps) {
         </p>
       </div>
 
-      <div className="px-[30px] pt-[10px] pb-[4px] flex items-center">
+      <div className="px-[30px] pt-[10px] pb-[4px] flex items-start justify-end">
         <button
           onClick={handleSettings}
           className="h-[42px] px-[10px] mr-[13px] mb-4 rounded-sm border border-slate-500 bg-slate-50 text-slate-500 text-[13px] font-semibold cursor-pointer hover:bg-slate-100 transition-colors"
