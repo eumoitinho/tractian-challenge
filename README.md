@@ -30,11 +30,17 @@ Each locale has its own URL structure, matching TRACTIAN's real routing:
 | Español | `/es/who-we-serve/gerente-de-planta` |
 
 
+## Prerequisites
+
+- **Node.js** >= 18.17 (LTS 22 recommended) — see `.nvmrc`
+- **npm** >= 9
+
 ## Getting Started
 
 ```bash
 git clone https://github.com/eumoitinho/tractian-challenge.git
 cd tractian-challenge
+nvm use            # uses .nvmrc (Node 22)
 npm install
 npm run dev
 ```
@@ -73,10 +79,25 @@ Open [http://localhost:3000/en/who-we-serve/plant-manager](http://localhost:3000
 │   │   ├── analytics/
 │   │   │   └── AnalyticsProvider.tsx
 │   │   ├── layout/
+│   │   │   ├── Header/
+│   │   │   │   ├── Header.tsx              # Thin orchestrator
+│   │   │   │   ├── index.ts                # Barrel export
+│   │   │   │   ├── desktop/
+│   │   │   │   │   ├── DesktopDropdowns.tsx
+│   │   │   │   │   └── DesktopSolutionsDropdown.tsx
+│   │   │   │   ├── mobile/
+│   │   │   │   │   ├── MobileMenu.tsx
+│   │   │   │   │   ├── MobileNavSection.tsx
+│   │   │   │   │   └── content/            # Per-section accordion bodies
+│   │   │   │   └── shared/
+│   │   │   │       ├── HeaderIcons.tsx
+│   │   │   │       ├── IconBox.tsx
+│   │   │   │       ├── TractianLogo.tsx
+│   │   │   │       ├── LanguageSwitcher.tsx
+│   │   │   │       └── constants.ts
 │   │   │   ├── CookieBanner.tsx
 │   │   │   ├── CookiePrivacyWrapper.tsx
 │   │   │   ├── Footer.tsx
-│   │   │   ├── Header.tsx
 │   │   │   └── PrivacyModal.tsx
 │   │   └── sections/
 │   │       ├── DemoForm.tsx
