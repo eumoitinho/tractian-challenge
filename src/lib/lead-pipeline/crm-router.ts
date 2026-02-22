@@ -42,29 +42,23 @@ export async function routeLeadToCRM(
     const success = await simulateWebhook(payload, attempt);
 
     if (success) {
-      if (process.env.NODE_ENV === "development") {
-        console.log(
-          `[CRM Router] Lead routed successfully (attempt ${attempt})`,
-          { idempotencyKey }
-        );
-      }
+      console.log(
+        `[CRM Router] Lead routed successfully (attempt ${attempt})`,
+        { idempotencyKey }
+      );
       return { success: true, attempts: attempt, idempotencyKey };
     }
 
     if (attempt < maxAttempts) {
       const backoff = Math.pow(2, attempt) * 500;
-      if (process.env.NODE_ENV === "development") {
-        console.log(
-          `[CRM Router] Attempt ${attempt} failed, retrying in ${backoff}ms`
-        );
-      }
+      console.log(
+        `[CRM Router] Attempt ${attempt} failed, retrying in ${backoff}ms`
+      );
       await sleep(backoff);
     }
   }
 
-  if (process.env.NODE_ENV === "development") {
-    console.warn("[CRM Router] All attempts failed", { idempotencyKey });
-  }
+  console.warn("[CRM Router] All attempts failed", { idempotencyKey });
 
   return { success: false, attempts: maxAttempts, idempotencyKey };
 }

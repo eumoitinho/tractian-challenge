@@ -35,6 +35,11 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 CLAUDE.md
+PRESENTATION.md
+PRODUCT_SPEC.md
+PRODUCT_SPEC_PT.md
+DESIGN_SYSTEM.md
+LEAD_SYSTEM.md
 /docs/
 # playwright mcp
 .playwright-mcp/

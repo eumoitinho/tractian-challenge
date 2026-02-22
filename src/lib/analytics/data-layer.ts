@@ -15,7 +15,5 @@ export function pushToDataLayer(payload: Record<string, unknown>): void {
   const entry = { ...payload, _timestamp: Date.now() };
   dataLayer.push(entry);
 
-  if (process.env.NODE_ENV === "development") {
-    console.log(`[DataLayer] ${String(payload.event)}`, entry);
-  }
+  console.log(`[DataLayer] ${String(payload.event)}`, entry);
 }

@@ -44,19 +44,17 @@ export async function processLead(
 
   const routeResult = await routeLeadToCRM(lead, enrichment, score);
 
-  if (process.env.NODE_ENV === "development") {
-    console.log("\n=== Lead Pipeline Result ===");
-    console.log("Lead:", lead.firstName, lead.lastName, `<${lead.email}>`);
-    console.table(score.breakdown);
-    console.log(`Score: ${score.total}/100 (${score.tier})`);
-    console.log("Enrichment:", enrichment);
-    console.log(
-      "CRM Route:",
-      routeResult.success ? "SUCCESS" : "FAILED",
-      `(${routeResult.attempts} attempts)`
-    );
-    console.log("===========================\n");
-  }
+  console.log("\n=== Lead Pipeline Result ===");
+  console.log("Lead:", lead.firstName, lead.lastName, `<${lead.email}>`);
+  console.table(score.breakdown);
+  console.log(`Score: ${score.total}/100 (${score.tier})`);
+  console.log("Enrichment:", enrichment);
+  console.log(
+    "CRM Route:",
+    routeResult.success ? "SUCCESS" : "FAILED",
+    `(${routeResult.attempts} attempts)`
+  );
+  console.log("===========================\n");
 
   return {
     success: true,
