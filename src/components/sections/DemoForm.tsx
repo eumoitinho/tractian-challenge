@@ -163,7 +163,7 @@ export function DemoForm() {
     markFormSubmitted();
     setSubmitting(false);
 
-    if (!result.success && process.env.NODE_ENV === "development") {
+    if (!result.success) {
       console.warn("[DemoForm] Pipeline error:", result.error);
     }
 

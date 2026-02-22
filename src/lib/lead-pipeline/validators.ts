@@ -28,7 +28,7 @@ export function validateLeadForm(
 
   if (!data.firstName.trim()) errors.firstName = "required";
   if (!data.lastName.trim()) errors.lastName = "required";
-  if (!data.company.trim()) errors.company = "required";
+  if (data.company && !data.company.trim()) errors.company = "required";
   if (!data.jobTitle.trim()) errors.jobTitle = "required";
 
   if (!data.email.trim()) {
